@@ -1,0 +1,338 @@
+[
+  {
+    "canonicalPlaceId": "HDC-PL-0001",
+    "displayName": "Central Park, Hulhumalé Phase 1 (Sample)",
+    "placeType": "park",
+    "geometryType": "polygon",
+    "geometry": {
+      "type": "polygon",
+      "coordinates": [
+        [
+          [73.5398, 4.2118],
+          [73.5412, 4.2118],
+          [73.5412, 4.2138],
+          [73.5398, 4.2138],
+          [73.5398, 4.2118]
+        ]
+      ]
+    },
+    "aliases": [
+      {
+        "aliasType": "estatePlotId",
+        "value": "EST-P1-PARK-014",
+        "sourceDepartment": "Estate",
+        "sourceSystem": "Estate Registry",
+        "sourceId": "ER-88412",
+        "confidenceScore": 0.97,
+        "matchStatus": "confirmed"
+      },
+      {
+        "aliasType": "planningPlotId",
+        "value": "PLN/PH1/OS-07",
+        "sourceDepartment": "Planning",
+        "sourceSystem": "Planning Cadastre",
+        "sourceId": "PC-2231",
+        "confidenceScore": 0.95,
+        "matchStatus": "confirmed",
+        "notes": "Planning labels this open space OS-07; Estate uses PARK-014 for the same area."
+      },
+      {
+        "aliasType": "gisObjectId",
+        "value": "GIS-OBJ-55310",
+        "sourceDepartment": "GIS",
+        "sourceSystem": "ArcGIS Enterprise",
+        "sourceId": "55310",
+        "confidenceScore": 0.99,
+        "matchStatus": "confirmed"
+      },
+      {
+        "aliasType": "informalName",
+        "value": "Hulhumalé Central Park",
+        "sourceDepartment": "Public Relations",
+        "sourceSystem": "Media",
+        "sourceId": "PR-CP",
+        "confidenceScore": 0.9,
+        "matchStatus": "confirmed"
+      }
+    ],
+    "notes": "Sample POC place record."
+  },
+  {
+    "canonicalPlaceId": "HDC-PL-0002",
+    "displayName": "Nirolhu Magu Pedestrian Corridor (Sample)",
+    "placeType": "road",
+    "geometryType": "line",
+    "geometry": {
+      "type": "line",
+      "coordinates": [
+        [73.5362, 4.2105],
+        [73.5378, 4.2128],
+        [73.5392, 4.2152],
+        [73.5404, 4.2173]
+      ]
+    },
+    "aliases": [
+      {
+        "aliasType": "roadSegmentId",
+        "value": "RD-NIR-021",
+        "sourceDepartment": "GIS",
+        "sourceSystem": "Road Network Layer",
+        "sourceId": "RN-021",
+        "confidenceScore": 0.98,
+        "matchStatus": "confirmed"
+      },
+      {
+        "aliasType": "planningPlotId",
+        "value": "PLN/PH1/RD-21A",
+        "sourceDepartment": "Planning",
+        "sourceSystem": "Planning Cadastre",
+        "sourceId": "PC-4410",
+        "confidenceScore": 0.92,
+        "matchStatus": "confirmed"
+      },
+      {
+        "aliasType": "informalName",
+        "value": "Nirolhu Magu",
+        "sourceDepartment": "Public Relations",
+        "sourceSystem": "Media",
+        "sourceId": "PR-NM",
+        "confidenceScore": 0.95,
+        "matchStatus": "confirmed"
+      }
+    ],
+    "notes": "Sample POC place record."
+  },
+  {
+    "canonicalPlaceId": "HDC-PL-0003",
+    "displayName": "East Waterfront Promenade Segment B (Sample)",
+    "placeType": "waterfront",
+    "geometryType": "polygon",
+    "geometry": {
+      "type": "polygon",
+      "coordinates": [
+        [
+          [73.5448, 4.2095],
+          [73.5458, 4.2095],
+          [73.5458, 4.2155],
+          [73.5448, 4.2155],
+          [73.5448, 4.2095]
+        ]
+      ]
+    },
+    "aliases": [
+      {
+        "aliasType": "publicSpaceId",
+        "value": "PS-WF-EB-02",
+        "sourceDepartment": "Estate",
+        "sourceSystem": "Estate Registry",
+        "sourceId": "ER-90122",
+        "confidenceScore": 0.96,
+        "matchStatus": "confirmed"
+      },
+      {
+        "aliasType": "gisObjectId",
+        "value": "GIS-OBJ-60914",
+        "sourceDepartment": "GIS",
+        "sourceSystem": "ArcGIS Enterprise",
+        "sourceId": "60914",
+        "confidenceScore": 0.99,
+        "matchStatus": "confirmed"
+      },
+      {
+        "aliasType": "oldPlotReference",
+        "value": "WF-EAST-B (2016 plan)",
+        "sourceDepartment": "Planning",
+        "sourceSystem": "Legacy Masterplan",
+        "sourceId": "LMP-118",
+        "confidenceScore": 0.7,
+        "matchStatus": "ambiguous",
+        "notes": "2016 masterplan boundary differs slightly from current GIS polygon."
+      }
+    ],
+    "notes": "Sample POC place record."
+  },
+  {
+    "canonicalPlaceId": "HDC-PL-0004",
+    "displayName": "Plot 10078, Phase 1 Mixed-Use (Sample)",
+    "placeType": "plot",
+    "geometryType": "polygon",
+    "geometry": {
+      "type": "polygon",
+      "coordinates": [
+        [
+          [73.5421, 4.2186],
+          [73.5432, 4.2186],
+          [73.5432, 4.2196],
+          [73.5421, 4.2196],
+          [73.5421, 4.2186]
+        ]
+      ]
+    },
+    "aliases": [
+      {
+        "aliasType": "estatePlotId",
+        "value": "10078",
+        "sourceDepartment": "Estate",
+        "sourceSystem": "Estate Registry",
+        "sourceId": "ER-10078",
+        "confidenceScore": 0.98,
+        "matchStatus": "confirmed"
+      },
+      {
+        "aliasType": "planningPlotId",
+        "value": "PLN/PH1/MU-78",
+        "sourceDepartment": "Planning",
+        "sourceSystem": "Planning Cadastre",
+        "sourceId": "PC-5078",
+        "confidenceScore": 0.85,
+        "matchStatus": "ambiguous",
+        "notes": "Same physical plot carries different labels in Estate (10078) and Planning (MU-78). Manual review recommended."
+      },
+      {
+        "aliasType": "landUseCode",
+        "value": "MU-C2",
+        "sourceDepartment": "Planning",
+        "sourceSystem": "Land Use Plan",
+        "sourceId": "LU-2210",
+        "confidenceScore": 0.9,
+        "matchStatus": "confirmed"
+      },
+      {
+        "aliasType": "oldPlotReference",
+        "value": "C1-LOT-78",
+        "sourceDepartment": "Estate",
+        "sourceSystem": "Legacy Lease Records",
+        "sourceId": "LL-078",
+        "confidenceScore": 0.6,
+        "matchStatus": "unresolved",
+        "notes": "Legacy lease lot numbering not yet reconciled with current plot grid."
+      }
+    ],
+    "notes": "Sample POC place record demonstrating Estate vs Planning labelling mismatch."
+  },
+  {
+    "canonicalPlaceId": "HDC-PL-0005",
+    "displayName": "Phase 2 Community Facility Site CF-03 (Sample)",
+    "placeType": "development area",
+    "geometryType": "polygon",
+    "geometry": {
+      "type": "polygon",
+      "coordinates": [
+        [
+          [73.5366, 4.2278],
+          [73.5384, 4.2278],
+          [73.5384, 4.2294],
+          [73.5366, 4.2294],
+          [73.5366, 4.2278]
+        ]
+      ]
+    },
+    "aliases": [
+      {
+        "aliasType": "projectId",
+        "value": "PRJ-2026-CF03",
+        "sourceDepartment": "Projects",
+        "sourceSystem": "Project Tracker",
+        "sourceId": "PT-7741",
+        "confidenceScore": 0.95,
+        "matchStatus": "confirmed"
+      },
+      {
+        "aliasType": "planningPlotId",
+        "value": "PLN/PH2/CF-03",
+        "sourceDepartment": "Planning",
+        "sourceSystem": "Planning Cadastre",
+        "sourceId": "PC-8803",
+        "confidenceScore": 0.94,
+        "matchStatus": "confirmed"
+      },
+      {
+        "aliasType": "gisObjectId",
+        "value": "GIS-OBJ-71204",
+        "sourceDepartment": "GIS",
+        "sourceSystem": "ArcGIS Enterprise",
+        "sourceId": "71204",
+        "confidenceScore": 0.99,
+        "matchStatus": "confirmed"
+      }
+    ],
+    "notes": "Sample POC place record."
+  },
+  {
+    "canonicalPlaceId": "HDC-PL-0006",
+    "displayName": "Planned Public Parking Area P2-PK-09 (Sample)",
+    "placeType": "development area",
+    "geometryType": "polygon",
+    "geometry": {
+      "type": "polygon",
+      "coordinates": [
+        [
+          [73.5326, 4.2242],
+          [73.5340, 4.2242],
+          [73.5340, 4.2254],
+          [73.5326, 4.2254],
+          [73.5326, 4.2242]
+        ]
+      ]
+    },
+    "aliases": [
+      {
+        "aliasType": "projectId",
+        "value": "PRJ-2026-PK09",
+        "sourceDepartment": "Projects",
+        "sourceSystem": "Project Tracker",
+        "sourceId": "PT-7910",
+        "confidenceScore": 0.93,
+        "matchStatus": "confirmed"
+      },
+      {
+        "aliasType": "estatePlotId",
+        "value": "EST-P2-PK-009",
+        "sourceDepartment": "Estate",
+        "sourceSystem": "Estate Registry",
+        "sourceId": "ER-99231",
+        "confidenceScore": 0.55,
+        "matchStatus": "unresolved",
+        "notes": "Estate registry boundary not yet digitized; pending GIS data steward review."
+      }
+    ],
+    "notes": "Sample POC place record with unresolved alias."
+  },
+  {
+    "canonicalPlaceId": "HDC-PL-0007",
+    "displayName": "Green Corridor, Phase 1-2 Link (Sample)",
+    "placeType": "public space",
+    "geometryType": "line",
+    "geometry": {
+      "type": "line",
+      "coordinates": [
+        [73.5390, 4.2200],
+        [73.5380, 4.2225],
+        [73.5372, 4.2252],
+        [73.5368, 4.2275]
+      ]
+    },
+    "aliases": [
+      {
+        "aliasType": "publicSpaceId",
+        "value": "PS-GC-01",
+        "sourceDepartment": "Estate",
+        "sourceSystem": "Estate Registry",
+        "sourceId": "ER-95511",
+        "confidenceScore": 0.9,
+        "matchStatus": "confirmed"
+      },
+      {
+        "aliasType": "informalName",
+        "value": "Shaded Walkway Link",
+        "sourceDepartment": "Public Relations",
+        "sourceSystem": "Media",
+        "sourceId": "PR-GC",
+        "confidenceScore": 0.8,
+        "matchStatus": "ambiguous",
+        "notes": "Informal name also used for an unrelated walkway near the central mosque."
+      }
+    ],
+    "notes": "Sample POC place record."
+  }
+]

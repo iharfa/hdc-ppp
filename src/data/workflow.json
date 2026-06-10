@@ -1,0 +1,72 @@
+[
+  {
+    "stepId": "draft",
+    "order": 1,
+    "name": "Draft",
+    "actor": "SPES officer",
+    "description": "SPES officer creates the participation record and adds project description, location, documents, survey questions, and participation method."
+  },
+  {
+    "stepId": "gis-linking",
+    "order": 2,
+    "name": "GIS linking",
+    "actor": "GIS data steward",
+    "description": "GIS data steward links the record to a canonical place ID. The system stores all known aliases from Estate, Planning, GIS, and project records."
+  },
+  {
+    "stepId": "internal-review",
+    "order": 3,
+    "name": "Internal review",
+    "actor": "Department reviewers",
+    "description": "Related departments review project facts, legal text, maps, and survey questions."
+  },
+  {
+    "stepId": "approved",
+    "order": 4,
+    "name": "Approved for publication",
+    "actor": "Senior approver",
+    "description": "Senior approver approves public release."
+  },
+  {
+    "stepId": "active",
+    "order": 5,
+    "name": "Active",
+    "actor": "Public",
+    "description": "The record appears publicly on the map and list. The public submits responses. Survey mode is either anonymous or eFaas verified."
+  },
+  {
+    "stepId": "closed",
+    "order": 6,
+    "name": "Closed",
+    "actor": "System",
+    "description": "Submission window ends. Public response collection stops."
+  },
+  {
+    "stepId": "moderation",
+    "order": 7,
+    "name": "Moderation and cleanup",
+    "actor": "Moderator",
+    "description": "Moderator removes spam, abusive content, duplicates, and invalid entries. Raw data is preserved separately; only cleaned data is shown publicly."
+  },
+  {
+    "stepId": "spes-review",
+    "order": 8,
+    "name": "SPES review",
+    "actor": "SPES",
+    "description": "Socio-Environmental Planning Section reviews cleaned results and prepares the conclusion and response matrix."
+  },
+  {
+    "stepId": "decision-published",
+    "order": 9,
+    "name": "Decision published",
+    "actor": "SPES / Senior approver",
+    "description": "Final decision appears on the public portal. Charts, summary data, and cleaned datasets become visible."
+  },
+  {
+    "stepId": "archived",
+    "order": 10,
+    "name": "Archived",
+    "actor": "System",
+    "description": "The record remains searchable as a completed participation record."
+  }
+]

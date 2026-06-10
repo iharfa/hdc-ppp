@@ -1,0 +1,73 @@
+{
+  "permissions": [
+    { "key": "view-public", "label": "View public records" },
+    { "key": "respond", "label": "Submit survey responses" },
+    { "key": "create-record", "label": "Create participation records" },
+    { "key": "edit-record", "label": "Edit draft records" },
+    { "key": "link-gis", "label": "Link records to canonical places" },
+    { "key": "manage-aliases", "label": "Manage place aliases" },
+    { "key": "build-survey", "label": "Build and edit surveys" },
+    { "key": "review-internal", "label": "Internal department review" },
+    { "key": "approve-publish", "label": "Approve for publication" },
+    { "key": "moderate", "label": "Moderate responses" },
+    { "key": "review-results", "label": "Review cleaned results" },
+    { "key": "publish-decision", "label": "Publish conclusions" },
+    { "key": "manage-roles", "label": "Manage roles and system settings" }
+  ],
+  "roles": [
+    {
+      "roleId": "public-viewer",
+      "name": "Public viewer",
+      "description": "Anyone browsing the portal.",
+      "permissions": ["view-public"]
+    },
+    {
+      "roleId": "public-respondent",
+      "name": "Public respondent",
+      "description": "A member of the public submitting a response (anonymous or eFaas verified).",
+      "permissions": ["view-public", "respond"]
+    },
+    {
+      "roleId": "spes-officer",
+      "name": "SPES officer",
+      "description": "Socio-Environmental Planning Section officer who drafts records and prepares conclusions.",
+      "permissions": ["view-public", "create-record", "edit-record", "build-survey", "review-results", "publish-decision"]
+    },
+    {
+      "roleId": "participation-manager",
+      "name": "Participation manager",
+      "description": "Oversees the participation pipeline and schedules.",
+      "permissions": ["view-public", "create-record", "edit-record", "build-survey", "review-internal", "review-results"]
+    },
+    {
+      "roleId": "gis-steward",
+      "name": "GIS data steward",
+      "description": "Maintains canonical place IDs and resolves alias conflicts.",
+      "permissions": ["view-public", "link-gis", "manage-aliases"]
+    },
+    {
+      "roleId": "moderator",
+      "name": "Moderator",
+      "description": "Cleans response data: removes spam, abuse, duplicates, and invalid entries.",
+      "permissions": ["view-public", "moderate"]
+    },
+    {
+      "roleId": "dept-reviewer",
+      "name": "Department reviewer",
+      "description": "Reviews records on behalf of a related department during internal review.",
+      "permissions": ["view-public", "review-internal"]
+    },
+    {
+      "roleId": "senior-approver",
+      "name": "Senior approver",
+      "description": "Approves records for public release and final decisions.",
+      "permissions": ["view-public", "approve-publish", "publish-decision"]
+    },
+    {
+      "roleId": "system-admin",
+      "name": "System admin",
+      "description": "Full administrative access.",
+      "permissions": ["view-public", "respond", "create-record", "edit-record", "link-gis", "manage-aliases", "build-survey", "review-internal", "approve-publish", "moderate", "review-results", "publish-decision", "manage-roles"]
+    }
+  ]
+}

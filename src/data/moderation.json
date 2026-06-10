@@ -1,0 +1,89 @@
+[
+  {
+    "itemId": "MOD-0001",
+    "recordId": "HDC-PP-2025-001",
+    "responseId": "SAMPLE-R-001-0288",
+    "excerpt": "Visit my page for cheap phone accessories!!! (link removed)",
+    "flagReason": "spam",
+    "status": "removed",
+    "moderatorNote": "Commercial spam, no relation to the park.",
+    "flaggedAt": "2025-10-20"
+  },
+  {
+    "itemId": "MOD-0002",
+    "recordId": "HDC-PP-2025-001",
+    "responseId": "SAMPLE-R-001-0291",
+    "excerpt": "Same response submitted 4 times from the same session.",
+    "flagReason": "duplicate",
+    "status": "removed",
+    "moderatorNote": "Kept the first submission, removed 3 duplicates.",
+    "flaggedAt": "2025-10-21"
+  },
+  {
+    "itemId": "MOD-0003",
+    "recordId": "HDC-PP-2025-002",
+    "responseId": "SAMPLE-R-002-0177",
+    "excerpt": "(abusive language directed at staff - redacted)",
+    "flagReason": "abusive",
+    "status": "removed",
+    "moderatorNote": "Personal abuse; removed under moderation policy.",
+    "flaggedAt": "2025-08-15"
+  },
+  {
+    "itemId": "MOD-0004",
+    "recordId": "HDC-PP-2025-002",
+    "responseId": "SAMPLE-R-002-0240",
+    "excerpt": "Answer text was random characters: 'asdkjh qwe...'",
+    "flagReason": "invalid",
+    "status": "removed",
+    "moderatorNote": "Unintelligible entry.",
+    "flaggedAt": "2025-08-16"
+  },
+  {
+    "itemId": "MOD-0005",
+    "recordId": "HDC-PP-2025-003",
+    "responseId": "SAMPLE-R-003-0093",
+    "excerpt": "Comment about an unrelated housing application.",
+    "flagReason": "off-topic",
+    "status": "kept",
+    "moderatorNote": "Kept but excluded from theme coding; forwarded to housing team.",
+    "flaggedAt": "2025-06-30"
+  },
+  {
+    "itemId": "MOD-0006",
+    "recordId": "HDC-PP-2025-003",
+    "responseId": "SAMPLE-R-003-0150",
+    "excerpt": "Duplicate of response SAMPLE-R-003-0149.",
+    "flagReason": "duplicate",
+    "status": "removed",
+    "moderatorNote": "Identical text and demographics within 1 minute.",
+    "flaggedAt": "2025-07-01"
+  },
+  {
+    "itemId": "MOD-0007",
+    "recordId": "HDC-PP-2026-004",
+    "responseId": "SAMPLE-R-004-0051",
+    "excerpt": "Promotional message for a private construction firm.",
+    "flagReason": "spam",
+    "status": "pending",
+    "flaggedAt": "2026-06-05"
+  },
+  {
+    "itemId": "MOD-0008",
+    "recordId": "HDC-PP-2026-004",
+    "responseId": "SAMPLE-R-004-0102",
+    "excerpt": "Suspected duplicate submission pattern (same device fingerprint).",
+    "flagReason": "duplicate",
+    "status": "pending",
+    "flaggedAt": "2026-06-07"
+  },
+  {
+    "itemId": "MOD-0009",
+    "recordId": "HDC-PP-2026-005",
+    "responseId": "SAMPLE-R-005-0034",
+    "excerpt": "(abusive language - redacted)",
+    "flagReason": "abusive",
+    "status": "pending",
+    "flaggedAt": "2026-06-08"
+  }
+]

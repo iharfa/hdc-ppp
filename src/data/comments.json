@@ -1,0 +1,674 @@
+[
+  {
+    "commentId": "SAMPLE-C-001-001",
+    "recordId": "HDC-PP-2025-001",
+    "text": "Please keep the big trees near the east entrance, they give the best shade in the afternoon.",
+    "ward": "Ward 4",
+    "submittedAt": "2025-09-29",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-001-002",
+    "recordId": "HDC-PP-2025-001",
+    "text": "The play area needs a soft surface, the current one is too hard for small children.",
+    "ward": "Ward 1",
+    "submittedAt": "2025-10-14",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-001-003",
+    "recordId": "HDC-PP-2025-001",
+    "text": "More benches for elderly residents who walk in the mornings.",
+    "ward": "Ward 1",
+    "submittedAt": "2025-10-03",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-001-004",
+    "recordId": "HDC-PP-2025-001",
+    "text": "Lighting near the back path is very poor after 7pm.",
+    "ward": "Ward 4",
+    "submittedAt": "2025-09-04",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-001-005",
+    "recordId": "HDC-PP-2025-001",
+    "text": "A small kiosk for water and snacks would be welcome.",
+    "ward": "Ward 2",
+    "submittedAt": "2025-09-24",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-001-006",
+    "recordId": "HDC-PP-2025-001",
+    "text": "Please add a separate quiet garden away from the football area.",
+    "ward": "Ward 4",
+    "submittedAt": "2025-10-11",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-001-007",
+    "recordId": "HDC-PP-2025-001",
+    "text": "Bicycle parking at both entrances would help families.",
+    "ward": "Ward 1",
+    "submittedAt": "2025-09-14",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-001-008",
+    "recordId": "HDC-PP-2025-001",
+    "text": "Keep the open lawn for community events during Eid.",
+    "ward": "Ward 4",
+    "submittedAt": "2025-09-05",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-001-009",
+    "recordId": "HDC-PP-2025-001",
+    "text": "Drainage floods the south corner every rainy season, fix this first.",
+    "ward": "Ward 2",
+    "submittedAt": "2025-09-29",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-001-010",
+    "recordId": "HDC-PP-2025-001",
+    "text": "Wheelchair access from the west gate is currently impossible.",
+    "ward": "Ward 1",
+    "submittedAt": "2025-09-09",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-001-011",
+    "recordId": "HDC-PP-2025-001",
+    "text": "Shade structures should use natural materials, not metal sheets.",
+    "ward": "Ward 3",
+    "submittedAt": "2025-09-08",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-001-012",
+    "recordId": "HDC-PP-2025-001",
+    "text": "Outdoor exercise equipment for adults would be used a lot.",
+    "ward": "Ward 3",
+    "submittedAt": "2025-09-01",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-001-013",
+    "recordId": "HDC-PP-2025-001",
+    "text": "Please plan bins and regular cleaning, litter is a problem on weekends.",
+    "ward": "Ward 1",
+    "submittedAt": "2025-09-04",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-001-014",
+    "recordId": "HDC-PP-2025-001",
+    "text": "A drinking water fountain would reduce plastic waste.",
+    "ward": "Ward 3",
+    "submittedAt": "2025-10-02",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-001-015",
+    "recordId": "HDC-PP-2025-001",
+    "text": "The park should stay free of commercial events.",
+    "ward": "Ward 1",
+    "submittedAt": "2025-09-27",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-001-016",
+    "recordId": "HDC-PP-2025-001",
+    "text": "Add a toddler-only fenced play zone for safety.",
+    "ward": "Ward 3",
+    "submittedAt": "2025-10-03",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-001-017",
+    "recordId": "HDC-PP-2025-001",
+    "text": "Native plants would need less watering and look beautiful.",
+    "ward": "Ward 3",
+    "submittedAt": "2025-09-28",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-001-018",
+    "recordId": "HDC-PP-2025-001",
+    "text": "Evening walking track lighting should be warm, not harsh white.",
+    "ward": "Ward 3",
+    "submittedAt": "2025-09-02",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-001-019",
+    "recordId": "HDC-PP-2025-001",
+    "text": "Consider a small reading corner with shade near the library side.",
+    "ward": "Ward 4",
+    "submittedAt": "2025-09-21",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-001-020",
+    "recordId": "HDC-PP-2025-001",
+    "text": "Keep dogs out of the children's play area please.",
+    "ward": "Ward 2",
+    "submittedAt": "2025-09-22",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-001-021",
+    "recordId": "HDC-PP-2025-001",
+    "text": "More greenery, fewer paved surfaces overall.",
+    "ward": "Ward 2",
+    "submittedAt": "2025-09-12",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-001-022",
+    "recordId": "HDC-PP-2025-001",
+    "text": "A notice board for community announcements would be useful.",
+    "ward": "Ward 1",
+    "submittedAt": "2025-09-28",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-002-001",
+    "recordId": "HDC-PP-2025-002",
+    "text": "The crossing near the school is the most dangerous, cars never slow down.",
+    "ward": "Ward 3",
+    "submittedAt": "2025-07-20",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-002-002",
+    "recordId": "HDC-PP-2025-002",
+    "text": "Motorcycles use the pavement when traffic is heavy, very unsafe for kids.",
+    "ward": "Ward 3",
+    "submittedAt": "2025-07-15",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-002-003",
+    "recordId": "HDC-PP-2025-002",
+    "text": "Street lights between the mosque and ferry stop are broken.",
+    "ward": "Ward 4",
+    "submittedAt": "2025-07-24",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-002-004",
+    "recordId": "HDC-PP-2025-002",
+    "text": "A raised crossing near the pharmacy junction is badly needed.",
+    "ward": "Ward 2",
+    "submittedAt": "2025-07-06",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-002-005",
+    "recordId": "HDC-PP-2025-002",
+    "text": "Parked vans block the view at the corner by the market.",
+    "ward": "Not a Hulhumalé resident",
+    "submittedAt": "2025-07-15",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-002-006",
+    "recordId": "HDC-PP-2025-002",
+    "text": "Please add a pedestrian signal at the main junction.",
+    "ward": "Ward 4",
+    "submittedAt": "2025-07-24",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-002-007",
+    "recordId": "HDC-PP-2025-002",
+    "text": "Speed bumps would help but need reflective paint.",
+    "ward": "Not a Hulhumalé resident",
+    "submittedAt": "2025-07-20",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-002-008",
+    "recordId": "HDC-PP-2025-002",
+    "text": "The school zone needs flashing warning signs at start and end times.",
+    "ward": "Not a Hulhumalé resident",
+    "submittedAt": "2025-08-01",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-002-009",
+    "recordId": "HDC-PP-2025-002",
+    "text": "Elderly people cannot cross in time, the road is too wide here.",
+    "ward": "Ward 3",
+    "submittedAt": "2025-07-08",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-002-010",
+    "recordId": "HDC-PP-2025-002",
+    "text": "A cycle lane would reduce pavement conflicts.",
+    "ward": "Ward 2",
+    "submittedAt": "2025-07-20",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-002-011",
+    "recordId": "HDC-PP-2025-002",
+    "text": "Buses stop in the middle of the road and block crossings.",
+    "ward": "Ward 3",
+    "submittedAt": "2025-08-06",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-002-012",
+    "recordId": "HDC-PP-2025-002",
+    "text": "Zebra paint has completely faded near the park entrance.",
+    "ward": "Ward 3",
+    "submittedAt": "2025-07-02",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-002-013",
+    "recordId": "HDC-PP-2025-002",
+    "text": "Night-time speeding is the biggest issue, especially weekends.",
+    "ward": "Ward 2",
+    "submittedAt": "2025-07-23",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-002-014",
+    "recordId": "HDC-PP-2025-002",
+    "text": "Please widen the pavement near the corner shop, prams cannot pass.",
+    "ward": "Ward 2",
+    "submittedAt": "2025-07-05",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-002-015",
+    "recordId": "HDC-PP-2025-002",
+    "text": "Drainage covers are broken and dangerous for cyclists.",
+    "ward": "Not a Hulhumalé resident",
+    "submittedAt": "2025-07-06",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-002-016",
+    "recordId": "HDC-PP-2025-002",
+    "text": "Crossing guards during school hours would help short-term.",
+    "ward": "Not a Hulhumalé resident",
+    "submittedAt": "2025-07-22",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-002-017",
+    "recordId": "HDC-PP-2025-002",
+    "text": "Better lighting at the ferry stop crossing please.",
+    "ward": "Ward 2",
+    "submittedAt": "2025-07-09",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-002-018",
+    "recordId": "HDC-PP-2025-002",
+    "text": "Bollards needed to stop cars parking on the walkway.",
+    "ward": "Ward 3",
+    "submittedAt": "2025-07-06",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-002-019",
+    "recordId": "HDC-PP-2025-002",
+    "text": "Add tactile paving for visually impaired pedestrians.",
+    "ward": "Ward 2",
+    "submittedAt": "2025-07-30",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-002-020",
+    "recordId": "HDC-PP-2025-002",
+    "text": "Trucks should be restricted during school opening hours.",
+    "ward": "Ward 2",
+    "submittedAt": "2025-07-27",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-002-021",
+    "recordId": "HDC-PP-2025-002",
+    "text": "A 30 km/h zone for the whole corridor makes sense.",
+    "ward": "Ward 2",
+    "submittedAt": "2025-07-03",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-003-001",
+    "recordId": "HDC-PP-2025-003",
+    "text": "Keep the swimming steps away from the kiosk zone for hygiene.",
+    "ward": "Ward 1",
+    "submittedAt": "2025-05-20",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-003-002",
+    "recordId": "HDC-PP-2025-003",
+    "text": "We need showers and changing space near the swim access.",
+    "ward": "Ward 4",
+    "submittedAt": "2025-05-28",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-003-003",
+    "recordId": "HDC-PP-2025-003",
+    "text": "Shade is the number one need along the whole promenade.",
+    "ward": "Ward 2",
+    "submittedAt": "2025-05-14",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-003-004",
+    "recordId": "HDC-PP-2025-003",
+    "text": "Please protect the coral edge near segment B, it is recovering.",
+    "ward": "Ward 4",
+    "submittedAt": "2025-05-23",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-003-005",
+    "recordId": "HDC-PP-2025-003",
+    "text": "Food kiosks are fine if waste is managed strictly.",
+    "ward": "Ward 2",
+    "submittedAt": "2025-05-29",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-003-006",
+    "recordId": "HDC-PP-2025-003",
+    "text": "Evening seating fills up fast, double the benches.",
+    "ward": "Ward 4",
+    "submittedAt": "2025-05-15",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-003-007",
+    "recordId": "HDC-PP-2025-003",
+    "text": "A small stage area for community events would be nice.",
+    "ward": "Ward 3",
+    "submittedAt": "2025-06-09",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-003-008",
+    "recordId": "HDC-PP-2025-003",
+    "text": "Keep part of the waterfront natural without concrete.",
+    "ward": "Ward 1",
+    "submittedAt": "2025-06-11",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-003-009",
+    "recordId": "HDC-PP-2025-003",
+    "text": "Lifebuoy stations along the swim area please.",
+    "ward": "Not a Hulhumalé resident",
+    "submittedAt": "2025-05-05",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-003-010",
+    "recordId": "HDC-PP-2025-003",
+    "text": "Lighting should not spill into the sea, it affects marine life.",
+    "ward": "Ward 2",
+    "submittedAt": "2025-06-04",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-003-011",
+    "recordId": "HDC-PP-2025-003",
+    "text": "More bins, especially near the kiosk zones.",
+    "ward": "Ward 2",
+    "submittedAt": "2025-06-09",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-003-012",
+    "recordId": "HDC-PP-2025-003",
+    "text": "Accessible ramp into the water for elderly swimmers.",
+    "ward": "Ward 3",
+    "submittedAt": "2025-05-08",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-003-013",
+    "recordId": "HDC-PP-2025-003",
+    "text": "No loud music after 10pm please, residents live close by.",
+    "ward": "Ward 2",
+    "submittedAt": "2025-05-30",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-003-014",
+    "recordId": "HDC-PP-2025-003",
+    "text": "The promenade gets very hot, plant more trees not just umbrellas.",
+    "ward": "Ward 2",
+    "submittedAt": "2025-06-01",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-003-015",
+    "recordId": "HDC-PP-2025-003",
+    "text": "Fishing should still be allowed at the north end.",
+    "ward": "Ward 4",
+    "submittedAt": "2025-05-25",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-003-016",
+    "recordId": "HDC-PP-2025-003",
+    "text": "Bike racks at both ends of the promenade.",
+    "ward": "Ward 3",
+    "submittedAt": "2025-06-10",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-003-017",
+    "recordId": "HDC-PP-2025-003",
+    "text": "Public toilets are essential if kiosks are added.",
+    "ward": "Ward 4",
+    "submittedAt": "2025-05-10",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-003-018",
+    "recordId": "HDC-PP-2025-003",
+    "text": "Keep kiosk rents fair so local small businesses can apply.",
+    "ward": "Ward 1",
+    "submittedAt": "2025-05-25",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-003-019",
+    "recordId": "HDC-PP-2025-003",
+    "text": "A drinking water refill point would be great.",
+    "ward": "Ward 4",
+    "submittedAt": "2025-05-06",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-003-020",
+    "recordId": "HDC-PP-2025-003",
+    "text": "Storm protection should not become a high concrete wall.",
+    "ward": "Ward 2",
+    "submittedAt": "2025-05-16",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-003-021",
+    "recordId": "HDC-PP-2025-003",
+    "text": "Morning swimmers need somewhere safe to leave belongings.",
+    "ward": "Ward 4",
+    "submittedAt": "2025-06-06",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-004-001",
+    "recordId": "HDC-PP-2026-004",
+    "text": "Eight floors is too tall next to existing four-floor buildings.",
+    "ward": "Ward 3",
+    "submittedAt": "2026-06-14",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-004-002",
+    "recordId": "HDC-PP-2026-004",
+    "text": "Ground-floor retail should include a pharmacy and grocery.",
+    "ward": "Ward 4",
+    "submittedAt": "2026-06-23",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-004-003",
+    "recordId": "HDC-PP-2026-004",
+    "text": "Parking must be inside the building, street parking is already full.",
+    "ward": "Ward 4",
+    "submittedAt": "2026-05-24",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-004-004",
+    "recordId": "HDC-PP-2026-004",
+    "text": "Option C rooftop community space sounds great for residents.",
+    "ward": "Ward 2",
+    "submittedAt": "2026-05-30",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-004-005",
+    "recordId": "HDC-PP-2026-004",
+    "text": "Construction noise hours must be limited near the school.",
+    "ward": "Ward 4",
+    "submittedAt": "2026-06-13",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-004-006",
+    "recordId": "HDC-PP-2026-004",
+    "text": "Keep the corner open as a small plaza, it is a meeting point.",
+    "ward": "Ward 3",
+    "submittedAt": "2026-05-24",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-004-007",
+    "recordId": "HDC-PP-2026-004",
+    "text": "Affordable units should be part of the residential mix.",
+    "ward": "Ward 4",
+    "submittedAt": "2026-06-09",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-004-008",
+    "recordId": "HDC-PP-2026-004",
+    "text": "The courtyard in Option A keeps more light for neighbours.",
+    "ward": "Ward 1",
+    "submittedAt": "2026-05-28",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-004-009",
+    "recordId": "HDC-PP-2026-004",
+    "text": "Delivery vehicles need a proper bay, not the main road.",
+    "ward": "Ward 1",
+    "submittedAt": "2026-06-07",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-004-010",
+    "recordId": "HDC-PP-2026-004",
+    "text": "Please include bicycle storage for residents.",
+    "ward": "Ward 3",
+    "submittedAt": "2026-05-24",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-005-001",
+    "recordId": "HDC-PP-2026-005",
+    "text": "Continuous shade matters more than benches, the walk is long.",
+    "ward": "Ward 4",
+    "submittedAt": "2026-06-10",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-005-002",
+    "recordId": "HDC-PP-2026-005",
+    "text": "Drinking water points every 500 metres would be ideal.",
+    "ward": "Ward 4",
+    "submittedAt": "2026-06-21",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-005-003",
+    "recordId": "HDC-PP-2026-005",
+    "text": "Use native salt-tolerant trees, imported species keep dying.",
+    "ward": "Not a Hulhumalé resident",
+    "submittedAt": "2026-06-15",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-005-004",
+    "recordId": "HDC-PP-2026-005",
+    "text": "Keep the surface smooth for wheelchairs and prams.",
+    "ward": "Ward 4",
+    "submittedAt": "2026-07-16",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-005-005",
+    "recordId": "HDC-PP-2026-005",
+    "text": "Solar lighting along the whole corridor please.",
+    "ward": "Ward 1",
+    "submittedAt": "2026-07-04",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-005-006",
+    "recordId": "HDC-PP-2026-005",
+    "text": "Rest points should have shade and a bench together.",
+    "ward": "Ward 4",
+    "submittedAt": "2026-06-27",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-005-007",
+    "recordId": "HDC-PP-2026-005",
+    "text": "Separate the cycle path from the walking path where possible.",
+    "ward": "Ward 4",
+    "submittedAt": "2026-07-03",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-005-008",
+    "recordId": "HDC-PP-2026-005",
+    "text": "Plant fruit trees in some sections for community harvesting.",
+    "ward": "Ward 2",
+    "submittedAt": "2026-06-11",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-005-009",
+    "recordId": "HDC-PP-2026-005",
+    "text": "Avoid removing any existing mature trees during construction.",
+    "ward": "Ward 3",
+    "submittedAt": "2026-07-05",
+    "cleaned": true
+  },
+  {
+    "commentId": "SAMPLE-C-005-010",
+    "recordId": "HDC-PP-2026-005",
+    "text": "Add distance markers for runners.",
+    "ward": "Ward 4",
+    "submittedAt": "2026-06-11",
+    "cleaned": true
+  }
+]

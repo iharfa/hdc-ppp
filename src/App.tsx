@@ -1,0 +1,39 @@
+import { Suspense } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
+import { Loading } from "./components/Loading";
+import { MapPage } from "./pages/MapPage";
+import { RecordsPage } from "./pages/RecordsPage";
+import { RecordDetailPage } from "./pages/RecordDetailPage";
+import { SurveyPage } from "./pages/SurveyPage";
+import { ResultsPage } from "./pages/ResultsPage";
+import { ResultDetailPage } from "./pages/ResultDetailPage";
+import { AdminPage } from "./pages/AdminPage";
+import { AboutPage } from "./pages/AboutPage";
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <div className="app-shell">
+        <Header />
+        <main className="app-main">
+          <Suspense fallback={<Loading />}>
+            <Routes>
+              <Route path="/" element={<MapPage />} />
+              <Route path="/records" element={<RecordsPage />} />
+              <Route path="/records/:recordId" element={<RecordDetailPage />} />
+              <Route path="/records/:recordId/respond" element={<SurveyPage />} />
+              <Route path="/results" element={<ResultsPage />} />
+              <Route path="/results/:recordId" element={<ResultDetailPage />} />
+              <Route path="/admin" element={<AdminPage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="*" element={<div className="page"><div className="empty-state">Page not found.</div></div>} />
+            </Routes>
+          </Suspense>
+        </main>
+        <Footer />
+      </div>
+    </BrowserRouter>
+  );
+}
