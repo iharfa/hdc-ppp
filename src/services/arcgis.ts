@@ -14,7 +14,7 @@ export const APP_ITEM_2D = "21610169068e4dacaa51886ff9d4c300";
 export const APP_ITEM_3D = "ed90beef77b643a58570072cc9a14830";
 const PORTAL_SHARING = "https://hulhumale.maps.arcgis.com/sharing/rest";
 
-export const HULHUMALE_CENTER: [number, number] = [73.54, 4.2185];
+export const HULHUMALE_CENTER: [number, number] = [73.5425, 4.219];
 
 export interface DetectedSource {
   webmapId: string | null;
