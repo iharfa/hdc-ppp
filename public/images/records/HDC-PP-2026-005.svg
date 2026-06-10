@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Concept illustration of a shaded green corridor walkway">
+  <defs>
+    <linearGradient id="sky5" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#cdeec9"/><stop offset="1" stop-color="#f0fbee"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#sky5)"/>
+  <rect y="300" width="800" height="150" fill="#7cbf7c"/>
+  <path d="M340 450 L460 450 L420 300 L380 300 Z" fill="#e8d8b0"/>
+  <path d="M380 300 L420 300 L412 240 L388 240 Z" fill="#dcc89a"/>
+  <g><rect x="180" y="220" width="14" height="100" fill="#7a5230"/><circle cx="187" cy="190" r="58" fill="#2f8a4c"/><circle cx="150" cy="215" r="34" fill="#3f9b58"/></g>
+  <g><rect x="600" y="230" width="14" height="90" fill="#7a5230"/><circle cx="607" cy="200" r="52" fill="#3f9b58"/><circle cx="645" cy="222" r="30" fill="#2f8a4c"/></g>
+  <g><rect x="300" y="255" width="10" height="60" fill="#8a5a33"/><circle cx="305" cy="235" r="36" fill="#46a35f"/></g>
+  <g><rect x="490" y="258" width="10" height="58" fill="#8a5a33"/><circle cx="495" cy="240" r="34" fill="#2f8a4c"/></g>
+  <path d="M240 320 q 60 -25 120 0" stroke="#3f9b58" stroke-width="8" fill="none" opacity="0.5"/>
+  <g><rect x="520" y="338" width="70" height="9" rx="3" fill="#0e7c86"/><rect x="527" y="347" width="7" height="22" fill="#0b3a6f"/><rect x="576" y="347" width="7" height="22" fill="#0b3a6f"/></g>
+  <g><circle cx="400" cy="350" r="12" fill="#e76f51"/><rect x="396" y="362" width="8" height="26" fill="#264653"/></g>
+  <g><circle cx="260" cy="365" r="10" fill="#f4a261"/><rect x="257" y="375" width="6" height="20" fill="#264653"/></g>
+  <rect x="280" y="44" width="240" height="34" rx="17" fill="#ffffff" opacity="0.88"/>
+  <text x="400" y="67" font-family="Segoe UI, sans-serif" font-size="18" fill="#0b3a6f" text-anchor="middle">Shaded green corridor</text>
+</svg>

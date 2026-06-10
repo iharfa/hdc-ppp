@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Concept illustration of a mixed-use building">
+  <defs>
+    <linearGradient id="sky4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c5dff5"/><stop offset="1" stop-color="#ecf6fd"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#sky4)"/>
+  <rect y="360" width="800" height="90" fill="#9aa7b1"/>
+  <rect x="90" y="200" width="130" height="160" fill="#b6c9dd"/>
+  <rect x="580" y="220" width="120" height="140" fill="#c4d4e4"/>
+  <g>
+    <rect x="280" y="110" width="240" height="250" fill="#0b3a6f"/>
+    <rect x="280" y="300" width="240" height="60" fill="#0e7c86"/>
+    <g fill="#cfe6f5">
+      <rect x="300" y="130" width="42" height="30"/><rect x="360" y="130" width="42" height="30"/><rect x="420" y="130" width="42" height="30"/>
+      <rect x="300" y="175" width="42" height="30"/><rect x="360" y="175" width="42" height="30"/><rect x="420" y="175" width="42" height="30"/>
+      <rect x="300" y="220" width="42" height="30"/><rect x="360" y="220" width="42" height="30"/><rect x="420" y="220" width="42" height="30"/>
+    </g>
+    <g fill="#ffffff"><rect x="300" y="315" width="50" height="32"/><rect x="370" y="315" width="50" height="32"/><rect x="440" y="315" width="50" height="32"/></g>
+    <rect x="280" y="96" width="240" height="14" fill="#3f9b58"/>
+    <circle cx="320" cy="92" r="12" fill="#2f8a4c"/><circle cx="380" cy="90" r="14" fill="#3f9b58"/><circle cx="460" cy="92" r="12" fill="#2f8a4c"/>
+  </g>
+  <g><rect x="540" y="320" width="10" height="40" fill="#8a5a33"/><circle cx="545" cy="305" r="26" fill="#3f9b58"/></g>
+  <g><circle cx="240" cy="392" r="11" fill="#e76f51"/><rect x="236" y="403" width="8" height="24" fill="#264653"/></g>
+  <g><circle cx="560" cy="396" r="11" fill="#f4a261"/><rect x="556" y="407" width="8" height="24" fill="#264653"/></g>
+  <rect x="285" y="34" width="230" height="34" rx="17" fill="#ffffff" opacity="0.88"/>
+  <text x="400" y="57" font-family="Segoe UI, sans-serif" font-size="18" fill="#0b3a6f" text-anchor="middle">Mixed-use redevelopment</text>
+</svg>

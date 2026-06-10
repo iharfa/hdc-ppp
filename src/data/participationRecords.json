@@ -6,11 +6,19 @@
     "participationType": "Public space feedback",
     "canonicalPlaceId": "HDC-PL-0001",
     "locationName": "Central Park, Hulhumalé Phase 1",
-    "knownReferences": ["EST-P1-PARK-014", "PLN/PH1/OS-07", "GIS-OBJ-55310"],
+    "knownReferences": [
+      "EST-P1-PARK-014",
+      "PLN/PH1/OS-07",
+      "GIS-OBJ-55310"
+    ],
     "islandPhase": "Hulhumalé Phase 1",
     "department": "Urban Development",
     "responsibleSection": "Socio-Environmental Planning Section",
-    "relatedDepartments": ["Planning", "Estate", "Landscape Unit"],
+    "relatedDepartments": [
+      "Planning",
+      "Estate",
+      "Landscape Unit"
+    ],
     "anonymousAllowed": true,
     "efaasRequired": false,
     "verificationMode": "Anonymous or eFaas",
@@ -19,41 +27,163 @@
     "summary": "Sample consultation on a proposed redesign of Central Park including new shaded seating, a children's play zone, improved lighting, and stormwater-friendly landscaping.",
     "whyParticipation": "The park serves several residential neighborhoods. Public input was needed to prioritise amenities, balance quiet and active zones, and confirm accessibility needs before detailed design.",
     "documents": [
-      { "title": "Park Redesign Concept Brief (Sample)", "type": "PDF", "sizeLabel": "2.4 MB" },
-      { "title": "Existing Conditions Map (Sample)", "type": "PDF", "sizeLabel": "5.1 MB" },
-      { "title": "Survey Methodology Note (Sample)", "type": "PDF", "sizeLabel": "0.8 MB" }
+      {
+        "title": "Park Redesign Concept Brief (Sample)",
+        "type": "PDF",
+        "sizeLabel": "2.4 MB"
+      },
+      {
+        "title": "Existing Conditions Map (Sample)",
+        "type": "PDF",
+        "sizeLabel": "5.1 MB"
+      },
+      {
+        "title": "Survey Methodology Note (Sample)",
+        "type": "PDF",
+        "sizeLabel": "0.8 MB"
+      }
     ],
     "timeline": [
-      { "date": "2025-08-10", "label": "Record drafted", "description": "SPES officer drafted the participation record." },
-      { "date": "2025-08-18", "label": "GIS linked", "description": "Linked to canonical place HDC-PL-0001." },
-      { "date": "2025-08-25", "label": "Internal review completed" },
-      { "date": "2025-08-30", "label": "Approved for publication" },
-      { "date": "2025-09-01", "label": "Participation opened" },
-      { "date": "2025-10-15", "label": "Participation closed" },
-      { "date": "2025-11-05", "label": "Moderation and cleanup completed" },
-      { "date": "2025-11-20", "label": "Decision published" }
+      {
+        "date": "2025-08-10",
+        "label": "Record drafted",
+        "description": "SPES officer drafted the participation record."
+      },
+      {
+        "date": "2025-08-18",
+        "label": "GIS linked",
+        "description": "Linked to canonical place HDC-PL-0001."
+      },
+      {
+        "date": "2025-08-25",
+        "label": "Internal review completed"
+      },
+      {
+        "date": "2025-08-30",
+        "label": "Approved for publication"
+      },
+      {
+        "date": "2025-09-01",
+        "label": "Participation opened"
+      },
+      {
+        "date": "2025-10-15",
+        "label": "Participation closed"
+      },
+      {
+        "date": "2025-11-05",
+        "label": "Moderation and cleanup completed"
+      },
+      {
+        "date": "2025-11-20",
+        "label": "Decision published"
+      }
     ],
     "surveyQuestions": [
-      { "id": "q-age", "type": "demographic", "label": "Your age group", "required": true, "options": ["Under 18", "18-29", "30-44", "45-59", "60+"] },
-      { "id": "q-gender", "type": "demographic", "label": "Gender", "required": false, "options": ["Female", "Male", "Prefer not to say"] },
-      { "id": "q-ward", "type": "demographic", "label": "Which ward do you live in?", "required": true, "options": ["Ward 1", "Ward 2", "Ward 3", "Ward 4", "Not a Hulhumalé resident"] },
-      { "id": "q-resident", "type": "demographic", "label": "Resident type", "required": true, "options": ["Resident owner", "Resident tenant", "Worker in area", "Visitor"] },
-      { "id": "q-support", "type": "yesno", "label": "Do you support the overall park redesign concept?", "required": true },
-      { "id": "q-priority", "type": "multiplechoice", "label": "Which improvement matters most to you?", "required": true, "options": ["Shaded seating", "Children's play zone", "Better lighting", "Green landscaping", "Sports facilities"] },
-      { "id": "q-comment", "type": "opentext", "label": "Any other comments about the park redesign?", "required": false },
-      { "id": "q-pin", "type": "mappin", "label": "Optionally drop a pin where you see an issue or opportunity", "required": false },
-      { "id": "q-consent", "type": "consent", "label": "I consent to my response being used in anonymised public reporting.", "required": true }
+      {
+        "id": "q-age",
+        "type": "demographic",
+        "label": "Your age group",
+        "required": true,
+        "options": [
+          "Under 18",
+          "18-29",
+          "30-44",
+          "45-59",
+          "60+"
+        ]
+      },
+      {
+        "id": "q-gender",
+        "type": "demographic",
+        "label": "Gender",
+        "required": false,
+        "options": [
+          "Female",
+          "Male",
+          "Prefer not to say"
+        ]
+      },
+      {
+        "id": "q-ward",
+        "type": "demographic",
+        "label": "Which ward do you live in?",
+        "required": true,
+        "options": [
+          "Ward 1",
+          "Ward 2",
+          "Ward 3",
+          "Ward 4",
+          "Not a Hulhumalé resident"
+        ]
+      },
+      {
+        "id": "q-resident",
+        "type": "demographic",
+        "label": "Resident type",
+        "required": true,
+        "options": [
+          "Resident owner",
+          "Resident tenant",
+          "Worker in area",
+          "Visitor"
+        ]
+      },
+      {
+        "id": "q-support",
+        "type": "yesno",
+        "label": "Do you support the overall park redesign concept?",
+        "required": true
+      },
+      {
+        "id": "q-priority",
+        "type": "multiplechoice",
+        "label": "Which improvement matters most to you?",
+        "required": true,
+        "options": [
+          "Shaded seating",
+          "Children's play zone",
+          "Better lighting",
+          "Green landscaping",
+          "Sports facilities"
+        ]
+      },
+      {
+        "id": "q-comment",
+        "type": "opentext",
+        "label": "Any other comments about the park redesign?",
+        "required": false
+      },
+      {
+        "id": "q-pin",
+        "type": "mappin",
+        "label": "Optionally drop a pin where you see an issue or opportunity",
+        "required": false
+      },
+      {
+        "id": "q-consent",
+        "type": "consent",
+        "label": "I consent to my response being used in anonymised public reporting.",
+        "required": true
+      }
     ],
     "decision": {
       "decisionStatus": "Approved with amendments",
       "conclusion": "SAMPLE DECISION (POC): Based on cleaned survey results, the redesign proceeds with shaded seating and improved lighting as first-phase priorities. The play zone is retained with an adjusted layout away from the quiet garden area. This is sample text and not a real HDC decision.",
       "decidedOn": "2025-11-20",
-      "commonThemes": ["More shade and seating", "Safer evening lighting", "Keep mature trees", "Separate quiet and active zones", "Accessible paths for wheelchairs and strollers"],
+      "commonThemes": [
+        "More shade and seating",
+        "Safer evening lighting",
+        "Keep mature trees",
+        "Separate quiet and active zones",
+        "Accessible paths for wheelchairs and strollers"
+      ],
       "moderationSummary": "312 raw responses received; 9 removed as duplicates or spam during moderation. Cleaned dataset contains valid responses only.",
       "dataQualitySummary": "High completion rate (94%). Ward distribution broadly matches resident population. Open-text answers manually theme-coded by SPES."
     },
     "workflowStage": "archived",
-    "sampleData": true
+    "sampleData": true,
+    "image": "/images/records/HDC-PP-2025-001.svg"
   },
   {
     "recordId": "HDC-PP-2025-002",
@@ -62,11 +192,18 @@
     "participationType": "Road and mobility feedback",
     "canonicalPlaceId": "HDC-PL-0002",
     "locationName": "Nirolhu Magu Corridor, Phase 1",
-    "knownReferences": ["RD-NIR-021", "PLN/PH1/RD-21A"],
+    "knownReferences": [
+      "RD-NIR-021",
+      "PLN/PH1/RD-21A"
+    ],
     "islandPhase": "Hulhumalé Phase 1",
     "department": "Infrastructure",
     "responsibleSection": "Socio-Environmental Planning Section",
-    "relatedDepartments": ["Infrastructure", "Traffic Unit", "Planning"],
+    "relatedDepartments": [
+      "Infrastructure",
+      "Traffic Unit",
+      "Planning"
+    ],
     "anonymousAllowed": true,
     "efaasRequired": false,
     "verificationMode": "Anonymous or eFaas",
@@ -75,40 +212,156 @@
     "summary": "Sample survey on pedestrian crossing locations, speed-calming measures, and school-zone safety along Nirolhu Magu.",
     "whyParticipation": "Residents and the nearby school community raised safety concerns. Input was needed to locate raised crossings and confirm acceptable traffic-calming measures.",
     "documents": [
-      { "title": "Road Safety Assessment (Sample)", "type": "PDF", "sizeLabel": "3.2 MB" },
-      { "title": "Proposed Crossing Locations Map (Sample)", "type": "PDF", "sizeLabel": "4.0 MB" }
+      {
+        "title": "Road Safety Assessment (Sample)",
+        "type": "PDF",
+        "sizeLabel": "3.2 MB"
+      },
+      {
+        "title": "Proposed Crossing Locations Map (Sample)",
+        "type": "PDF",
+        "sizeLabel": "4.0 MB"
+      }
     ],
     "timeline": [
-      { "date": "2025-06-05", "label": "Record drafted" },
-      { "date": "2025-06-12", "label": "GIS linked" },
-      { "date": "2025-06-20", "label": "Internal review completed" },
-      { "date": "2025-06-27", "label": "Approved for publication" },
-      { "date": "2025-07-01", "label": "Participation opened" },
-      { "date": "2025-08-10", "label": "Participation closed" },
-      { "date": "2025-09-01", "label": "Moderation and cleanup completed" },
-      { "date": "2025-09-18", "label": "Decision published" }
+      {
+        "date": "2025-06-05",
+        "label": "Record drafted"
+      },
+      {
+        "date": "2025-06-12",
+        "label": "GIS linked"
+      },
+      {
+        "date": "2025-06-20",
+        "label": "Internal review completed"
+      },
+      {
+        "date": "2025-06-27",
+        "label": "Approved for publication"
+      },
+      {
+        "date": "2025-07-01",
+        "label": "Participation opened"
+      },
+      {
+        "date": "2025-08-10",
+        "label": "Participation closed"
+      },
+      {
+        "date": "2025-09-01",
+        "label": "Moderation and cleanup completed"
+      },
+      {
+        "date": "2025-09-18",
+        "label": "Decision published"
+      }
     ],
     "surveyQuestions": [
-      { "id": "q-age", "type": "demographic", "label": "Your age group", "required": true, "options": ["Under 18", "18-29", "30-44", "45-59", "60+"] },
-      { "id": "q-gender", "type": "demographic", "label": "Gender", "required": false, "options": ["Female", "Male", "Prefer not to say"] },
-      { "id": "q-ward", "type": "demographic", "label": "Which ward do you live in?", "required": true, "options": ["Ward 1", "Ward 2", "Ward 3", "Ward 4", "Not a Hulhumalé resident"] },
-      { "id": "q-resident", "type": "demographic", "label": "Resident type", "required": true, "options": ["Resident owner", "Resident tenant", "Worker in area", "Visitor"] },
-      { "id": "q-support", "type": "yesno", "label": "Do you support adding raised pedestrian crossings on Nirolhu Magu?", "required": true },
-      { "id": "q-priority", "type": "multiplechoice", "label": "Which safety measure should come first?", "required": true, "options": ["Raised crossings", "Speed bumps", "Better street lighting", "School zone signage", "Dedicated cycle lane"] },
-      { "id": "q-comment", "type": "opentext", "label": "Describe any specific danger spots you know.", "required": false },
-      { "id": "q-pin", "type": "mappin", "label": "Optionally drop a pin at a danger spot", "required": false },
-      { "id": "q-consent", "type": "consent", "label": "I consent to my response being used in anonymised public reporting.", "required": true }
+      {
+        "id": "q-age",
+        "type": "demographic",
+        "label": "Your age group",
+        "required": true,
+        "options": [
+          "Under 18",
+          "18-29",
+          "30-44",
+          "45-59",
+          "60+"
+        ]
+      },
+      {
+        "id": "q-gender",
+        "type": "demographic",
+        "label": "Gender",
+        "required": false,
+        "options": [
+          "Female",
+          "Male",
+          "Prefer not to say"
+        ]
+      },
+      {
+        "id": "q-ward",
+        "type": "demographic",
+        "label": "Which ward do you live in?",
+        "required": true,
+        "options": [
+          "Ward 1",
+          "Ward 2",
+          "Ward 3",
+          "Ward 4",
+          "Not a Hulhumalé resident"
+        ]
+      },
+      {
+        "id": "q-resident",
+        "type": "demographic",
+        "label": "Resident type",
+        "required": true,
+        "options": [
+          "Resident owner",
+          "Resident tenant",
+          "Worker in area",
+          "Visitor"
+        ]
+      },
+      {
+        "id": "q-support",
+        "type": "yesno",
+        "label": "Do you support adding raised pedestrian crossings on Nirolhu Magu?",
+        "required": true
+      },
+      {
+        "id": "q-priority",
+        "type": "multiplechoice",
+        "label": "Which safety measure should come first?",
+        "required": true,
+        "options": [
+          "Raised crossings",
+          "Speed bumps",
+          "Better street lighting",
+          "School zone signage",
+          "Dedicated cycle lane"
+        ]
+      },
+      {
+        "id": "q-comment",
+        "type": "opentext",
+        "label": "Describe any specific danger spots you know.",
+        "required": false
+      },
+      {
+        "id": "q-pin",
+        "type": "mappin",
+        "label": "Optionally drop a pin at a danger spot",
+        "required": false
+      },
+      {
+        "id": "q-consent",
+        "type": "consent",
+        "label": "I consent to my response being used in anonymised public reporting.",
+        "required": true
+      }
     ],
     "decision": {
       "decisionStatus": "Approved",
       "conclusion": "SAMPLE DECISION (POC): Three raised crossings will be installed near the school and ferry stop, with improved lighting along the full corridor. Speed bumps deferred pending drainage works. This is sample text and not a real HDC decision.",
       "decidedOn": "2025-09-18",
-      "commonThemes": ["School zone safety", "Speeding motorcycles", "Dark stretches at night", "Crossing near ferry terminal", "Parking blocking sightlines"],
+      "commonThemes": [
+        "School zone safety",
+        "Speeding motorcycles",
+        "Dark stretches at night",
+        "Crossing near ferry terminal",
+        "Parking blocking sightlines"
+      ],
       "moderationSummary": "305 raw responses received; 7 removed as spam, duplicates, or abusive content during moderation.",
       "dataQualitySummary": "Good geographic spread across wards. 12% of responses included map pins, concentrated near the school junction."
     },
     "workflowStage": "archived",
-    "sampleData": true
+    "sampleData": true,
+    "image": "/images/records/HDC-PP-2025-002.svg"
   },
   {
     "recordId": "HDC-PP-2025-003",
@@ -117,11 +370,18 @@
     "participationType": "Public consultation",
     "canonicalPlaceId": "HDC-PL-0003",
     "locationName": "East Waterfront Promenade Segment B",
-    "knownReferences": ["PS-WF-EB-02", "GIS-OBJ-60914"],
+    "knownReferences": [
+      "PS-WF-EB-02",
+      "GIS-OBJ-60914"
+    ],
     "islandPhase": "Hulhumalé Phase 1",
     "department": "Urban Development",
     "responsibleSection": "Socio-Environmental Planning Section",
-    "relatedDepartments": ["Planning", "Estate", "Environment Unit"],
+    "relatedDepartments": [
+      "Planning",
+      "Estate",
+      "Environment Unit"
+    ],
     "anonymousAllowed": false,
     "efaasRequired": true,
     "verificationMode": "eFaas verified",
@@ -130,39 +390,150 @@
     "summary": "Sample consultation on upgrading the east waterfront promenade with seating, food kiosk zones, swimming access steps, and storm-resilient edge treatment.",
     "whyParticipation": "The waterfront is one of the most used public spaces in Hulhumalé. Verified resident input was required because the proposal includes commercial kiosk zoning decisions.",
     "documents": [
-      { "title": "Waterfront Concept Plan (Sample)", "type": "PDF", "sizeLabel": "6.8 MB" },
-      { "title": "Environmental Screening Note (Sample)", "type": "PDF", "sizeLabel": "1.9 MB" }
+      {
+        "title": "Waterfront Concept Plan (Sample)",
+        "type": "PDF",
+        "sizeLabel": "6.8 MB"
+      },
+      {
+        "title": "Environmental Screening Note (Sample)",
+        "type": "PDF",
+        "sizeLabel": "1.9 MB"
+      }
     ],
     "timeline": [
-      { "date": "2025-03-20", "label": "Record drafted" },
-      { "date": "2025-04-02", "label": "GIS linked" },
-      { "date": "2025-04-15", "label": "Internal review completed" },
-      { "date": "2025-04-25", "label": "Approved for publication" },
-      { "date": "2025-05-01", "label": "Participation opened" },
-      { "date": "2025-06-15", "label": "Participation closed" },
-      { "date": "2025-07-10", "label": "Moderation and cleanup completed" },
-      { "date": "2025-08-01", "label": "Decision published" }
+      {
+        "date": "2025-03-20",
+        "label": "Record drafted"
+      },
+      {
+        "date": "2025-04-02",
+        "label": "GIS linked"
+      },
+      {
+        "date": "2025-04-15",
+        "label": "Internal review completed"
+      },
+      {
+        "date": "2025-04-25",
+        "label": "Approved for publication"
+      },
+      {
+        "date": "2025-05-01",
+        "label": "Participation opened"
+      },
+      {
+        "date": "2025-06-15",
+        "label": "Participation closed"
+      },
+      {
+        "date": "2025-07-10",
+        "label": "Moderation and cleanup completed"
+      },
+      {
+        "date": "2025-08-01",
+        "label": "Decision published"
+      }
     ],
     "surveyQuestions": [
-      { "id": "q-age", "type": "demographic", "label": "Your age group", "required": true, "options": ["Under 18", "18-29", "30-44", "45-59", "60+"] },
-      { "id": "q-gender", "type": "demographic", "label": "Gender", "required": false, "options": ["Female", "Male", "Prefer not to say"] },
-      { "id": "q-ward", "type": "demographic", "label": "Which ward do you live in?", "required": true, "options": ["Ward 1", "Ward 2", "Ward 3", "Ward 4", "Not a Hulhumalé resident"] },
-      { "id": "q-resident", "type": "demographic", "label": "Resident type", "required": true, "options": ["Resident owner", "Resident tenant", "Worker in area", "Visitor"] },
-      { "id": "q-support", "type": "yesno", "label": "Do you support allowing food kiosks on the promenade?", "required": true },
-      { "id": "q-priority", "type": "multiplechoice", "label": "What should the promenade prioritise?", "required": true, "options": ["Swimming access", "Seating and shade", "Food kiosks", "Event space", "Quiet natural edge"] },
-      { "id": "q-comment", "type": "opentext", "label": "Comments on the waterfront proposal?", "required": false },
-      { "id": "q-consent", "type": "consent", "label": "I consent to my response being used in anonymised public reporting.", "required": true }
+      {
+        "id": "q-age",
+        "type": "demographic",
+        "label": "Your age group",
+        "required": true,
+        "options": [
+          "Under 18",
+          "18-29",
+          "30-44",
+          "45-59",
+          "60+"
+        ]
+      },
+      {
+        "id": "q-gender",
+        "type": "demographic",
+        "label": "Gender",
+        "required": false,
+        "options": [
+          "Female",
+          "Male",
+          "Prefer not to say"
+        ]
+      },
+      {
+        "id": "q-ward",
+        "type": "demographic",
+        "label": "Which ward do you live in?",
+        "required": true,
+        "options": [
+          "Ward 1",
+          "Ward 2",
+          "Ward 3",
+          "Ward 4",
+          "Not a Hulhumalé resident"
+        ]
+      },
+      {
+        "id": "q-resident",
+        "type": "demographic",
+        "label": "Resident type",
+        "required": true,
+        "options": [
+          "Resident owner",
+          "Resident tenant",
+          "Worker in area",
+          "Visitor"
+        ]
+      },
+      {
+        "id": "q-support",
+        "type": "yesno",
+        "label": "Do you support allowing food kiosks on the promenade?",
+        "required": true
+      },
+      {
+        "id": "q-priority",
+        "type": "multiplechoice",
+        "label": "What should the promenade prioritise?",
+        "required": true,
+        "options": [
+          "Swimming access",
+          "Seating and shade",
+          "Food kiosks",
+          "Event space",
+          "Quiet natural edge"
+        ]
+      },
+      {
+        "id": "q-comment",
+        "type": "opentext",
+        "label": "Comments on the waterfront proposal?",
+        "required": false
+      },
+      {
+        "id": "q-consent",
+        "type": "consent",
+        "label": "I consent to my response being used in anonymised public reporting.",
+        "required": true
+      }
     ],
     "decision": {
       "decisionStatus": "Partially approved",
       "conclusion": "SAMPLE DECISION (POC): Kiosks limited to two designated zones away from swimming access. Seating, shade structures, and swim steps approved for first phase. This is sample text and not a real HDC decision.",
       "decidedOn": "2025-08-01",
-      "commonThemes": ["Keep swimming areas kiosk-free", "More shade", "Evening family use", "Waste bins and cleaning", "Protect coral edge"],
+      "commonThemes": [
+        "Keep swimming areas kiosk-free",
+        "More shade",
+        "Evening family use",
+        "Waste bins and cleaning",
+        "Protect coral edge"
+      ],
       "moderationSummary": "298 raw verified responses; 5 removed as duplicates. All published comments cleaned of personal data.",
       "dataQualitySummary": "All responses eFaas-verified (POC simulation). Strong representation from Wards 2 and 3."
     },
     "workflowStage": "archived",
-    "sampleData": true
+    "sampleData": true,
+    "image": "/images/records/HDC-PP-2025-003.svg"
   },
   {
     "recordId": "HDC-PP-2026-004",
@@ -171,11 +542,19 @@
     "participationType": "Design feedback",
     "canonicalPlaceId": "HDC-PL-0004",
     "locationName": "Plot 10078, Phase 1 Mixed-Use",
-    "knownReferences": ["10078", "PLN/PH1/MU-78", "MU-C2"],
+    "knownReferences": [
+      "10078",
+      "PLN/PH1/MU-78",
+      "MU-C2"
+    ],
     "islandPhase": "Hulhumalé Phase 1",
     "department": "Urban Development",
     "responsibleSection": "Socio-Environmental Planning Section",
-    "relatedDepartments": ["Planning", "Estate", "Business Development"],
+    "relatedDepartments": [
+      "Planning",
+      "Estate",
+      "Business Development"
+    ],
     "anonymousAllowed": true,
     "efaasRequired": false,
     "verificationMode": "Anonymous or eFaas",
@@ -184,30 +563,133 @@
     "summary": "Sample design feedback process for redeveloping plot 10078 into a mixed-use building with ground-floor retail, community space, and residential units above.",
     "whyParticipation": "Neighbouring residents are directly affected by massing, parking, and ground-floor uses. Feedback shapes the design brief before tendering.",
     "documents": [
-      { "title": "Design Options A-C (Sample)", "type": "PDF", "sizeLabel": "8.2 MB" },
-      { "title": "Shadow and Massing Study (Sample)", "type": "PDF", "sizeLabel": "3.5 MB" }
+      {
+        "title": "Design Options A-C (Sample)",
+        "type": "PDF",
+        "sizeLabel": "8.2 MB"
+      },
+      {
+        "title": "Shadow and Massing Study (Sample)",
+        "type": "PDF",
+        "sizeLabel": "3.5 MB"
+      }
     ],
     "timeline": [
-      { "date": "2026-04-10", "label": "Record drafted" },
-      { "date": "2026-04-22", "label": "GIS linked" },
-      { "date": "2026-05-05", "label": "Internal review completed" },
-      { "date": "2026-05-15", "label": "Approved for publication" },
-      { "date": "2026-05-20", "label": "Participation opened" },
-      { "date": "2026-07-05", "label": "Participation closes (planned)" }
+      {
+        "date": "2026-04-10",
+        "label": "Record drafted"
+      },
+      {
+        "date": "2026-04-22",
+        "label": "GIS linked"
+      },
+      {
+        "date": "2026-05-05",
+        "label": "Internal review completed"
+      },
+      {
+        "date": "2026-05-15",
+        "label": "Approved for publication"
+      },
+      {
+        "date": "2026-05-20",
+        "label": "Participation opened"
+      },
+      {
+        "date": "2026-07-05",
+        "label": "Participation closes (planned)"
+      }
     ],
     "surveyQuestions": [
-      { "id": "q-age", "type": "demographic", "label": "Your age group", "required": true, "options": ["Under 18", "18-29", "30-44", "45-59", "60+"] },
-      { "id": "q-gender", "type": "demographic", "label": "Gender", "required": false, "options": ["Female", "Male", "Prefer not to say"] },
-      { "id": "q-ward", "type": "demographic", "label": "Which ward do you live in?", "required": true, "options": ["Ward 1", "Ward 2", "Ward 3", "Ward 4", "Not a Hulhumalé resident"] },
-      { "id": "q-resident", "type": "demographic", "label": "Resident type", "required": true, "options": ["Resident owner", "Resident tenant", "Worker in area", "Visitor"] },
-      { "id": "q-support", "type": "yesno", "label": "Do you support mixed-use redevelopment of plot 10078?", "required": true },
-      { "id": "q-priority", "type": "multiplechoice", "label": "Which design option do you prefer?", "required": true, "options": ["Option A: 6 floors, larger courtyard", "Option B: 8 floors, public plaza", "Option C: 6 floors, rooftop community space", "No preference"] },
-      { "id": "q-comment", "type": "opentext", "label": "What concerns or ideas do you have about this redevelopment?", "required": false },
-      { "id": "q-pin", "type": "mappin", "label": "Optionally drop a pin on a spot the design should respect", "required": false },
-      { "id": "q-consent", "type": "consent", "label": "I consent to my response being used in anonymised public reporting.", "required": true }
+      {
+        "id": "q-age",
+        "type": "demographic",
+        "label": "Your age group",
+        "required": true,
+        "options": [
+          "Under 18",
+          "18-29",
+          "30-44",
+          "45-59",
+          "60+"
+        ]
+      },
+      {
+        "id": "q-gender",
+        "type": "demographic",
+        "label": "Gender",
+        "required": false,
+        "options": [
+          "Female",
+          "Male",
+          "Prefer not to say"
+        ]
+      },
+      {
+        "id": "q-ward",
+        "type": "demographic",
+        "label": "Which ward do you live in?",
+        "required": true,
+        "options": [
+          "Ward 1",
+          "Ward 2",
+          "Ward 3",
+          "Ward 4",
+          "Not a Hulhumalé resident"
+        ]
+      },
+      {
+        "id": "q-resident",
+        "type": "demographic",
+        "label": "Resident type",
+        "required": true,
+        "options": [
+          "Resident owner",
+          "Resident tenant",
+          "Worker in area",
+          "Visitor"
+        ]
+      },
+      {
+        "id": "q-support",
+        "type": "yesno",
+        "label": "Do you support mixed-use redevelopment of plot 10078?",
+        "required": true
+      },
+      {
+        "id": "q-priority",
+        "type": "multiplechoice",
+        "label": "Which design option do you prefer?",
+        "required": true,
+        "options": [
+          "Option A: 6 floors, larger courtyard",
+          "Option B: 8 floors, public plaza",
+          "Option C: 6 floors, rooftop community space",
+          "No preference"
+        ]
+      },
+      {
+        "id": "q-comment",
+        "type": "opentext",
+        "label": "What concerns or ideas do you have about this redevelopment?",
+        "required": false
+      },
+      {
+        "id": "q-pin",
+        "type": "mappin",
+        "label": "Optionally drop a pin on a spot the design should respect",
+        "required": false
+      },
+      {
+        "id": "q-consent",
+        "type": "consent",
+        "label": "I consent to my response being used in anonymised public reporting.",
+        "required": true
+      }
     ],
     "workflowStage": "active",
-    "sampleData": true
+    "sampleData": true,
+    "image": "/images/records/HDC-PP-2026-004.svg"
   },
   {
     "recordId": "HDC-PP-2026-005",
@@ -216,11 +698,17 @@
     "participationType": "Environmental and social feedback",
     "canonicalPlaceId": "HDC-PL-0007",
     "locationName": "Green Corridor, Phase 1-2 Link",
-    "knownReferences": ["PS-GC-01"],
+    "knownReferences": [
+      "PS-GC-01"
+    ],
     "islandPhase": "Hulhumalé Phase 1-2 Link",
     "department": "Urban Development",
     "responsibleSection": "Socio-Environmental Planning Section",
-    "relatedDepartments": ["Environment Unit", "Landscape Unit", "Infrastructure"],
+    "relatedDepartments": [
+      "Environment Unit",
+      "Landscape Unit",
+      "Infrastructure"
+    ],
     "anonymousAllowed": true,
     "efaasRequired": false,
     "verificationMode": "Anonymous or eFaas",
@@ -229,28 +717,123 @@
     "summary": "Sample survey on a proposed continuous shaded walkway and green corridor linking Phase 1 and Phase 2, with native planting and rest points.",
     "whyParticipation": "The corridor crosses several neighbourhoods and daily walking routes. Input is needed on shade priorities, rest point locations, and planting preferences.",
     "documents": [
-      { "title": "Green Corridor Concept (Sample)", "type": "PDF", "sizeLabel": "4.4 MB" }
+      {
+        "title": "Green Corridor Concept (Sample)",
+        "type": "PDF",
+        "sizeLabel": "4.4 MB"
+      }
     ],
     "timeline": [
-      { "date": "2026-04-28", "label": "Record drafted" },
-      { "date": "2026-05-08", "label": "GIS linked" },
-      { "date": "2026-05-18", "label": "Internal review completed" },
-      { "date": "2026-05-26", "label": "Approved for publication" },
-      { "date": "2026-06-01", "label": "Participation opened" },
-      { "date": "2026-07-20", "label": "Participation closes (planned)" }
+      {
+        "date": "2026-04-28",
+        "label": "Record drafted"
+      },
+      {
+        "date": "2026-05-08",
+        "label": "GIS linked"
+      },
+      {
+        "date": "2026-05-18",
+        "label": "Internal review completed"
+      },
+      {
+        "date": "2026-05-26",
+        "label": "Approved for publication"
+      },
+      {
+        "date": "2026-06-01",
+        "label": "Participation opened"
+      },
+      {
+        "date": "2026-07-20",
+        "label": "Participation closes (planned)"
+      }
     ],
     "surveyQuestions": [
-      { "id": "q-age", "type": "demographic", "label": "Your age group", "required": true, "options": ["Under 18", "18-29", "30-44", "45-59", "60+"] },
-      { "id": "q-gender", "type": "demographic", "label": "Gender", "required": false, "options": ["Female", "Male", "Prefer not to say"] },
-      { "id": "q-ward", "type": "demographic", "label": "Which ward do you live in?", "required": true, "options": ["Ward 1", "Ward 2", "Ward 3", "Ward 4", "Not a Hulhumalé resident"] },
-      { "id": "q-resident", "type": "demographic", "label": "Resident type", "required": true, "options": ["Resident owner", "Resident tenant", "Worker in area", "Visitor"] },
-      { "id": "q-support", "type": "yesno", "label": "Do you support the shaded green corridor proposal?", "required": true },
-      { "id": "q-priority", "type": "multiplechoice", "label": "What matters most along the corridor?", "required": true, "options": ["Continuous shade", "Rest benches", "Drinking water points", "Native planting", "Cycle-friendly surface"] },
-      { "id": "q-comment", "type": "opentext", "label": "Other suggestions for the corridor?", "required": false },
-      { "id": "q-consent", "type": "consent", "label": "I consent to my response being used in anonymised public reporting.", "required": true }
+      {
+        "id": "q-age",
+        "type": "demographic",
+        "label": "Your age group",
+        "required": true,
+        "options": [
+          "Under 18",
+          "18-29",
+          "30-44",
+          "45-59",
+          "60+"
+        ]
+      },
+      {
+        "id": "q-gender",
+        "type": "demographic",
+        "label": "Gender",
+        "required": false,
+        "options": [
+          "Female",
+          "Male",
+          "Prefer not to say"
+        ]
+      },
+      {
+        "id": "q-ward",
+        "type": "demographic",
+        "label": "Which ward do you live in?",
+        "required": true,
+        "options": [
+          "Ward 1",
+          "Ward 2",
+          "Ward 3",
+          "Ward 4",
+          "Not a Hulhumalé resident"
+        ]
+      },
+      {
+        "id": "q-resident",
+        "type": "demographic",
+        "label": "Resident type",
+        "required": true,
+        "options": [
+          "Resident owner",
+          "Resident tenant",
+          "Worker in area",
+          "Visitor"
+        ]
+      },
+      {
+        "id": "q-support",
+        "type": "yesno",
+        "label": "Do you support the shaded green corridor proposal?",
+        "required": true
+      },
+      {
+        "id": "q-priority",
+        "type": "multiplechoice",
+        "label": "What matters most along the corridor?",
+        "required": true,
+        "options": [
+          "Continuous shade",
+          "Rest benches",
+          "Drinking water points",
+          "Native planting",
+          "Cycle-friendly surface"
+        ]
+      },
+      {
+        "id": "q-comment",
+        "type": "opentext",
+        "label": "Other suggestions for the corridor?",
+        "required": false
+      },
+      {
+        "id": "q-consent",
+        "type": "consent",
+        "label": "I consent to my response being used in anonymised public reporting.",
+        "required": true
+      }
     ],
     "workflowStage": "active",
-    "sampleData": true
+    "sampleData": true,
+    "image": "/images/records/HDC-PP-2026-005.svg"
   },
   {
     "recordId": "HDC-PP-2026-006",
@@ -259,11 +842,18 @@
     "participationType": "Development notice",
     "canonicalPlaceId": "HDC-PL-0005",
     "locationName": "Phase 2 Community Facility Site CF-03",
-    "knownReferences": ["PRJ-2026-CF03", "PLN/PH2/CF-03"],
+    "knownReferences": [
+      "PRJ-2026-CF03",
+      "PLN/PH2/CF-03"
+    ],
     "islandPhase": "Hulhumalé Phase 2",
     "department": "Projects",
     "responsibleSection": "Socio-Environmental Planning Section",
-    "relatedDepartments": ["Projects", "Planning", "Community Development"],
+    "relatedDepartments": [
+      "Projects",
+      "Planning",
+      "Community Development"
+    ],
     "anonymousAllowed": true,
     "efaasRequired": false,
     "verificationMode": "Anonymous or eFaas",
@@ -272,15 +862,26 @@
     "summary": "Sample planned development notice for a community facility (multi-purpose hall, library corner, youth space) at site CF-03. Public participation will open later in 2026.",
     "whyParticipation": "Facility programming should reflect what Phase 2 residents need most. A survey will run when the concept brief is ready.",
     "documents": [
-      { "title": "Site Notice CF-03 (Sample)", "type": "PDF", "sizeLabel": "0.6 MB" }
+      {
+        "title": "Site Notice CF-03 (Sample)",
+        "type": "PDF",
+        "sizeLabel": "0.6 MB"
+      }
     ],
     "timeline": [
-      { "date": "2026-05-30", "label": "Development notice published" },
-      { "date": "2026-08-01", "label": "Participation expected to open" }
+      {
+        "date": "2026-05-30",
+        "label": "Development notice published"
+      },
+      {
+        "date": "2026-08-01",
+        "label": "Participation expected to open"
+      }
     ],
     "surveyQuestions": [],
     "workflowStage": "internal-review",
-    "sampleData": true
+    "sampleData": true,
+    "image": "/images/records/HDC-PP-2026-006.svg"
   },
   {
     "recordId": "HDC-PP-2026-007",
@@ -289,11 +890,16 @@
     "participationType": "Planning disclosure",
     "canonicalPlaceId": "HDC-PL-0006",
     "locationName": "Planned Public Parking Area P2-PK-09",
-    "knownReferences": ["PRJ-2026-PK09"],
+    "knownReferences": [
+      "PRJ-2026-PK09"
+    ],
     "islandPhase": "Hulhumalé Phase 2",
     "department": "Infrastructure",
     "responsibleSection": "Socio-Environmental Planning Section",
-    "relatedDepartments": ["Infrastructure", "Traffic Unit"],
+    "relatedDepartments": [
+      "Infrastructure",
+      "Traffic Unit"
+    ],
     "anonymousAllowed": true,
     "efaasRequired": false,
     "verificationMode": "Anonymous or eFaas",
@@ -302,14 +908,25 @@
     "summary": "Sample planning disclosure for a surface public parking area serving the Phase 2 commercial frontage. Survey on layout and landscaping planned for later in 2026.",
     "whyParticipation": "Parking demand and pedestrian safety trade-offs affect nearby residents and businesses; input will refine the layout.",
     "documents": [
-      { "title": "Parking Area Disclosure Note (Sample)", "type": "PDF", "sizeLabel": "0.5 MB" }
+      {
+        "title": "Parking Area Disclosure Note (Sample)",
+        "type": "PDF",
+        "sizeLabel": "0.5 MB"
+      }
     ],
     "timeline": [
-      { "date": "2026-06-05", "label": "Planning disclosure published" },
-      { "date": "2026-09-01", "label": "Participation expected to open" }
+      {
+        "date": "2026-06-05",
+        "label": "Planning disclosure published"
+      },
+      {
+        "date": "2026-09-01",
+        "label": "Participation expected to open"
+      }
     ],
     "surveyQuestions": [],
     "workflowStage": "gis-linking",
-    "sampleData": true
+    "sampleData": true,
+    "image": "/images/records/HDC-PP-2026-007.svg"
   }
 ]

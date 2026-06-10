@@ -29,7 +29,7 @@ export function MapFallback({ message, records, selectedId, onSelect }: Props) {
           const place = getPlace(r.canonicalPlaceId);
           if (!place) return null;
           const sel = r.recordId === selectedId;
-          const color = r.status === "Ongoing" ? "#0d6efd" : r.status === "Planned" ? "#198754" : "#6c757d";
+          const color = r.status === "Ongoing" ? "#e6b000" : r.status === "Planned" ? "#0d6efd" : r.status === "Completed" ? "#167c42" : "#6c757d";
           const [x, y] = project(centroidOf(place.geometry));
           const pinScale = sel ? 1.6 : r.status === "Ongoing" ? 1.3 : 1;
           return (

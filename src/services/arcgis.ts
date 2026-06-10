@@ -83,10 +83,11 @@ export interface MapCallbacks {
   onHover?(info: { recordId: string; title: string; status: string; x: number; y: number } | null): void;
 }
 
+// Matches the status label colours: Ongoing yellow, Completed green, Planned blue.
 const STATUS_COLORS: Record<ParticipationStatus, [number, number, number]> = {
-  Ongoing: [13, 110, 253],
-  Completed: [108, 117, 125],
-  Planned: [25, 135, 84],
+  Ongoing: [230, 176, 0],
+  Completed: [22, 124, 66],
+  Planned: [13, 110, 253],
   "Internal Review": [255, 153, 0],
   Closed: [73, 80, 87],
 };

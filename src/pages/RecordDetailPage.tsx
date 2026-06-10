@@ -28,6 +28,21 @@ export function RecordDetailPage() {
 
       <div className="grid-2">
         <div className="card" style={{ marginTop: 0 }}>
+          {record.image && (
+            <>
+              <img
+                src={record.image}
+                alt={`Concept illustration for ${record.title}`}
+                style={{ width: "100%", borderRadius: 6, display: "block" }}
+                onError={(e) => {
+                  (e.currentTarget as HTMLImageElement).style.display = "none";
+                }}
+              />
+              <p className="muted" style={{ fontSize: "0.7rem", margin: "0.2rem 0 0.6rem" }}>
+                AI concept illustration — sample, not an approved design
+              </p>
+            </>
+          )}
           <h2 style={{ marginTop: 0 }}>Project summary</h2>
           <p>{record.summary}</p>
           <h2>Why public participation is needed</h2>

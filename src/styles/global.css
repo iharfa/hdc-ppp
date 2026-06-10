@@ -109,9 +109,9 @@ button { font-family: inherit; }
   white-space: nowrap;
 }
 .status-badge::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
-.status-Ongoing { background: #e7f0ff; color: #0a58ca; border-color: #b6d0f5; }
-.status-Completed { background: #eef0f2; color: #495057; border-color: #ced4da; }
-.status-Planned { background: #e8f5ee; color: #14693d; border-color: #b9e0c9; }
+.status-Ongoing { background: #fff4c2; color: #7a5b00; border-color: #e6c84a; }
+.status-Completed { background: #e2f3e8; color: #146c3c; border-color: #9fd6b4; }
+.status-Planned { background: #e3edff; color: #0a4fb5; border-color: #aac8f5; }
 .status-InternalReview { background: #fff4e0; color: #9a5b00; border-color: #f1d6a3; }
 .status-Closed { background: #e9ecef; color: #343a40; border-color: #ced4da; }
 
@@ -348,6 +348,25 @@ button { font-family: inherit; }
   padding: 1.3rem; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
 .modal h3 { margin-top: 0; color: var(--hdc-blue); }
+
+/* ---------- Record cards ---------- */
+.record-card { display: flex; flex-direction: column; overflow: hidden; padding: 0; }
+.record-card .rc-image { width: 100%; aspect-ratio: 16 / 7; object-fit: cover; display: block; background: var(--grey-100); }
+.record-card .rc-image-caption { font-size: 0.68rem; color: var(--grey-500); padding: 0.15rem 1rem 0; }
+.record-card .rc-body { padding: 0.7rem 1rem 1rem; flex: 1; display: flex; flex-direction: column; }
+.record-card .rc-body .panel-actions { margin-top: auto; padding-top: 0.6rem; }
+.record-card.completed { background: #f0f8f3; border-color: #bfe0cc; }
+.record-card.completed .rc-image { filter: saturate(0.7); }
+.rc-result {
+  background: var(--white);
+  border: 1px solid #bfe0cc;
+  border-left: 4px solid var(--ok);
+  border-radius: 6px;
+  padding: 0.45rem 0.6rem;
+  font-size: 0.8rem;
+  margin: 0.5rem 0;
+}
+.rc-result .rc-result-status { font-weight: 700; color: var(--ok); }
 
 /* ---------- Decision status card ---------- */
 .decision-card { position: relative; padding-right: 1rem; }

@@ -18,33 +18,60 @@ export function RecordsPage() {
       ) : (
         <div className="grid-2">
           {filtered.map((r) => (
-            <div className="card" key={r.recordId} style={{ marginTop: 0 }}>
-              <StatusBadge status={r.status} />
-              <h2 style={{ marginTop: "0.4rem", fontSize: "1.05rem" }}>
-                <Link to={`/records/${r.recordId}`} style={{ color: "var(--hdc-blue)" }}>
-                  {r.title}
-                </Link>
-              </h2>
-              <p className="muted">
-                {r.participationType} · {r.locationName} · {r.periodStart} to {r.periodEnd}
-              </p>
-              <p style={{ fontSize: "0.88rem" }}>{r.summary}</p>
-              <div className="panel-actions">
-                <Link className="btn btn-sm" to={`/records/${r.recordId}`}>
-                  Details
-                </Link>
-                {r.status === "Ongoing" && (
-                  <Link className="btn btn-sm btn-primary" to={`/records/${r.recordId}/respond`}>
-                    Respond
+            <article className={`card record-card ${r.status === "Completed" ? "completed" : ""}`} key={r.recordId} style={{ marginTop: 0 }}>
+              {r.image && (
+                <>
+                  <img
+                    className="rc-image"
+                    src={r.image}
+                    alt={`Concept illustration for ${r.title}`}
+                    loading="lazy"
+                    onError={(e) => {
+                      (e.currentTarget as HTMLImageElement).style.display = "none";
+                    }}
+                  />
+                  <p className="rc-image-caption">AI concept illustration — sample, not an approved design</p>
+                </>
+              )}
+              <div className="rc-body">
+                <span>
+                  <StatusBadge status={r.status} />
+                </span>
+                <h2 style={{ margin: "0.4rem 0 0.2rem", fontSize: "1.05rem" }}>
+                  <Link to={`/records/${r.recordId}`} style={{ color: "var(--hdc-blue)" }}>
+                    {r.title}
                   </Link>
+                </h2>
+                <p className="muted" style={{ margin: "0.2rem 0" }}>
+                  {r.participationType} · {r.locationName} · {r.periodStart} to {r.periodEnd}
+                </p>
+                <p style={{ fontSize: "0.88rem", margin: "0.4rem 0" }}>{r.summary}</p>
+                {r.status === "Completed" && r.decision && (
+                  <div className="rc-result">
+                    <span className="rc-result-status">Result: {r.decision.decisionStatus}</span>{" "}
+                    <span className="muted">({r.decision.decidedOn})</span>
+                    <br />
+                    {r.decision.conclusion.replace("SAMPLE DECISION (POC): ", "").split(". ").slice(0, 2).join(". ")}.
+                    <span className="muted"> Sample decision.</span>
+                  </div>
                 )}
-                {r.status === "Completed" && (
-                  <Link className="btn btn-sm btn-blue" to={`/results/${r.recordId}`}>
-                    View results
+                <div className="panel-actions">
+                  <Link className="btn btn-sm" to={`/records/${r.recordId}`}>
+                    Details
                   </Link>
-                )}
+                  {r.status === "Ongoing" && (
+                    <Link className="btn btn-sm btn-primary" to={`/records/${r.recordId}/respond`}>
+                      Respond
+                    </Link>
+                  )}
+                  {r.status === "Completed" && (
+                    <Link className="btn btn-sm btn-blue" to={`/results/${r.recordId}`}>
+                      View full results
+                    </Link>
+                  )}
+                </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       )}

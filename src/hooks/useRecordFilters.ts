@@ -1,5 +1,20 @@
 import { useMemo, useState } from "react";
-import type { ParticipationRecord, RecordFilters } from "../types";
+import type { ParticipationRecord, ParticipationStatus, RecordFilters } from "../types";
+
+// Ongoing first (public input needed now), then planned/upcoming, completed last.
+const STATUS_ORDER: Record<ParticipationStatus, number> = {
+  Ongoing: 0,
+  Planned: 1,
+  "Internal Review": 2,
+  Closed: 3,
+  Completed: 4,
+};
+
+export function sortRecords(records: ParticipationRecord[]): ParticipationRecord[] {
+  return records
+    .slice()
+    .sort((a, b) => STATUS_ORDER[a.status] - STATUS_ORDER[b.status] || b.periodStart.localeCompare(a.periodStart));
+}
 
 export const emptyFilters: RecordFilters = {
   statuses: [],
@@ -28,6 +43,6 @@ export function applyFilters(records: ParticipationRecord[], f: RecordFilters): 
 
 export function useRecordFilters(records: ParticipationRecord[]) {
   const [filters, setFilters] = useState<RecordFilters>(emptyFilters);
-  const filtered = useMemo(() => applyFilters(records, filters), [records, filters]);
+  const filtered = useMemo(() => sortRecords(applyFilters(records, filters)), [records, filters]);
   return { filters, setFilters, filtered };
 }
