@@ -288,7 +288,13 @@ export function AdminPage() {
                   <tr key={r.recordId}>
                     <td>{r.title}</td>
                     <td>
-                      {r.decision ? <span className="ok-text">Published</span> : r.status === "Ongoing" ? <span className="warn-text">Awaiting close + SPES review</span> : <span className="muted">Not started</span>}
+                      {r.decision ? (
+                        <span className="ok-text">Published — {r.decision.decisionStatus}</span>
+                      ) : r.status === "Ongoing" ? (
+                        <span className="warn-text">Awaiting close + SPES review</span>
+                      ) : (
+                        <span className="muted">Not started</span>
+                      )}
                     </td>
                     <td>{r.decision?.decidedOn ?? "—"}</td>
                   </tr>

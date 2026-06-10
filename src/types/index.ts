@@ -122,7 +122,15 @@ export interface DocumentRef {
   sizeLabel: string;
 }
 
+export type DecisionStatus =
+  | "Approved"
+  | "Approved with amendments"
+  | "Partially approved"
+  | "Rejected"
+  | "Deferred";
+
 export interface DecisionSummary {
+  decisionStatus: DecisionStatus;
   conclusion: string;
   decidedOn: string;
   commonThemes: string[];

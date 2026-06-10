@@ -45,6 +45,7 @@
       { "id": "q-consent", "type": "consent", "label": "I consent to my response being used in anonymised public reporting.", "required": true }
     ],
     "decision": {
+      "decisionStatus": "Approved with amendments",
       "conclusion": "SAMPLE DECISION (POC): Based on cleaned survey results, the redesign proceeds with shaded seating and improved lighting as first-phase priorities. The play zone is retained with an adjusted layout away from the quiet garden area. This is sample text and not a real HDC decision.",
       "decidedOn": "2025-11-20",
       "commonThemes": ["More shade and seating", "Safer evening lighting", "Keep mature trees", "Separate quiet and active zones", "Accessible paths for wheelchairs and strollers"],
@@ -99,6 +100,7 @@
       { "id": "q-consent", "type": "consent", "label": "I consent to my response being used in anonymised public reporting.", "required": true }
     ],
     "decision": {
+      "decisionStatus": "Approved",
       "conclusion": "SAMPLE DECISION (POC): Three raised crossings will be installed near the school and ferry stop, with improved lighting along the full corridor. Speed bumps deferred pending drainage works. This is sample text and not a real HDC decision.",
       "decidedOn": "2025-09-18",
       "commonThemes": ["School zone safety", "Speeding motorcycles", "Dark stretches at night", "Crossing near ferry terminal", "Parking blocking sightlines"],
@@ -152,6 +154,7 @@
       { "id": "q-consent", "type": "consent", "label": "I consent to my response being used in anonymised public reporting.", "required": true }
     ],
     "decision": {
+      "decisionStatus": "Partially approved",
       "conclusion": "SAMPLE DECISION (POC): Kiosks limited to two designated zones away from swimming access. Seating, shade structures, and swim steps approved for first phase. This is sample text and not a real HDC decision.",
       "decidedOn": "2025-08-01",
       "commonThemes": ["Keep swimming areas kiosk-free", "More shade", "Evening family use", "Waste bins and cleaning", "Protect coral edge"],

@@ -91,47 +91,33 @@ const STATUS_COLORS: Record<ParticipationStatus, [number, number, number]> = {
   Closed: [73, 80, 87],
 };
 
-function toArcgisGeometry(geom: Geometry) {
-  if (geom.type === "point") {
-    return { type: "point" as const, longitude: geom.coordinates[0], latitude: geom.coordinates[1] };
-  }
-  if (geom.type === "line") {
-    return { type: "polyline" as const, paths: [geom.coordinates] };
-  }
-  return { type: "polygon" as const, rings: geom.coordinates };
+/** Representative pin location (centroid) for any place geometry. */
+export function centroidOf(geom: Geometry): [number, number] {
+  if (geom.type === "point") return geom.coordinates;
+  const pts = geom.type === "line" ? geom.coordinates : geom.coordinates[0];
+  const sum = pts.reduce<[number, number]>((acc, [x, y]) => [acc[0] + x, acc[1] + y], [0, 0]);
+  return [sum[0] / pts.length, sum[1] / pts.length];
 }
 
-function symbolFor(record: ParticipationRecord, geom: Geometry, selected: boolean) {
+// Classic teardrop map-pin path (24x24 viewbox), rendered as an SVG marker.
+const PIN_PATH =
+  "M12 0C7 0 3 4 3 9c0 6.2 8.1 14.3 8.4 14.7.3.3.9.3 1.2 0C12.9 23.3 21 15.2 21 9c0-5-4-9-9-9zm0 12.5A3.5 3.5 0 1 1 12 5.5a3.5 3.5 0 0 1 0 7z";
+
+/** Pin symbol for a participation record. Ongoing pins stand out; completed are muted; planned use an outlined style. */
+function pinSymbol(record: ParticipationRecord, selected: boolean) {
   const rgb = STATUS_COLORS[record.status];
   const ongoing = record.status === "Ongoing";
   const planned = record.status === "Planned";
-  const alpha = ongoing ? 0.45 : planned ? 0.15 : 0.25;
-  const outlineWidth = selected ? 4 : ongoing ? 2.5 : 1.5;
-  if (geom.type === "point") {
-    return {
-      type: "simple-marker" as const,
-      color: [...rgb, ongoing ? 0.9 : 0.6],
-      size: selected ? 16 : ongoing ? 14 : 10,
-      outline: { color: [255, 255, 255, 1], width: 2 },
-    };
-  }
-  if (geom.type === "line") {
-    return {
-      type: "simple-line" as const,
-      color: [...rgb, ongoing ? 1 : 0.7],
-      width: outlineWidth + 1,
-      style: planned ? ("short-dash" as const) : ("solid" as const),
-    };
-  }
   return {
-    type: "simple-fill" as const,
-    color: [...rgb, alpha],
-    style: planned ? ("backward-diagonal" as const) : ("solid" as const),
+    type: "simple-marker" as const,
+    path: PIN_PATH,
+    color: planned ? [255, 255, 255, 0.9] : [...rgb, ongoing ? 1 : 0.75],
+    size: selected ? 34 : ongoing ? 28 : 22,
     outline: {
-      color: [...rgb, 1],
-      width: outlineWidth,
-      style: planned ? ("dash" as const) : ("solid" as const),
+      color: selected ? [255, 196, 0, 1] : planned ? [...rgb, 1] : [255, 255, 255, 1],
+      width: selected ? 3 : planned ? 2.5 : 1.5,
     },
+    yoffset: selected ? 17 : ongoing ? 14 : 11, // anchor the pin tip on the location
   };
 }
 
@@ -191,9 +177,10 @@ export async function createMapView(
   for (const rec of participationRecords) {
     const place = getPlace(rec.canonicalPlaceId);
     if (!place) continue;
+    const [lon, lat] = centroidOf(place.geometry);
     const graphic = new Graphic({
-      geometry: toArcgisGeometry(place.geometry) as unknown as __esri.GeometryUnion,
-      symbol: symbolFor(rec, place.geometry, false) as unknown as __esri.SymbolUnion,
+      geometry: { type: "point", longitude: lon, latitude: lat } as unknown as __esri.GeometryUnion,
+      symbol: pinSymbol(rec, false) as unknown as __esri.SymbolUnion,
       attributes: { recordId: rec.recordId, title: rec.title, status: rec.status },
     });
     overlay.add(graphic);
@@ -219,8 +206,7 @@ export async function createMapView(
   function applySymbols() {
     for (const rec of participationRecords) {
       const g = graphicsByRecord.get(rec.recordId);
-      const place = getPlace(rec.canonicalPlaceId);
-      if (g && place) g.symbol = symbolFor(rec, place.geometry, rec.recordId === selectedId) as unknown as __esri.SymbolUnion;
+      if (g) g.symbol = pinSymbol(rec, rec.recordId === selectedId) as unknown as __esri.SymbolUnion;
     }
   }
 

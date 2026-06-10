@@ -10,6 +10,7 @@ import {
 import { Chart, barOption, pieOption } from "../components/Chart";
 import { StatusBadge } from "../components/StatusBadge";
 import { DownloadPlaceholder } from "../components/DownloadPlaceholder";
+import { DecisionStatusCard } from "../components/DecisionStatusCard";
 
 export function ResultDetailPage() {
   const { recordId } = useParams();
@@ -56,7 +57,8 @@ export function ResultDetailPage() {
       <StatusBadge status={record.status} /> <span className="muted">Sample POC data — not a real HDC decision</span>
       <h1>Results: {record.title}</h1>
 
-      <div className="card" style={{ borderLeft: "4px solid var(--hdc-blue)" }}>
+      <div className="card decision-card" style={{ borderLeft: "4px solid var(--hdc-blue)" }}>
+        <DecisionStatusCard status={record.decision.decisionStatus} decidedOn={record.decision.decidedOn} />
         <h2 style={{ marginTop: 0 }}>Official decision / conclusion</h2>
         <p>{record.decision.conclusion}</p>
         <p className="muted">Decision published: {record.decision.decidedOn} · Responsible: {record.responsibleSection}</p>

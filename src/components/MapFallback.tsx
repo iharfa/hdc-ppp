@@ -1,6 +1,6 @@
 import type { ParticipationRecord } from "../types";
 import { getPlace } from "../services/dataService";
-import { HULHUMALE_CENTER } from "../services/arcgis";
+import { HULHUMALE_CENTER, centroidOf } from "../services/arcgis";
 import { StatusBadge } from "./StatusBadge";
 
 interface Props {
@@ -30,23 +30,25 @@ export function MapFallback({ message, records, selectedId, onSelect }: Props) {
           if (!place) return null;
           const sel = r.recordId === selectedId;
           const color = r.status === "Ongoing" ? "#0d6efd" : r.status === "Planned" ? "#198754" : "#6c757d";
-          const common = {
-            stroke: color,
-            strokeWidth: sel ? 4 : 2,
-            cursor: "pointer" as const,
-            onClick: () => onSelect(r.recordId),
-          };
-          const g = place.geometry;
-          if (g.type === "point") {
-            const [x, y] = project(g.coordinates);
-            return <circle key={r.recordId} cx={x} cy={y} r={sel ? 10 : 7} fill={color} {...common} />;
-          }
-          if (g.type === "line") {
-            const pts = g.coordinates.map(project).map((p) => p.join(",")).join(" ");
-            return <polyline key={r.recordId} points={pts} fill="none" {...common} />;
-          }
-          const pts = g.coordinates[0].map(project).map((p) => p.join(",")).join(" ");
-          return <polygon key={r.recordId} points={pts} fill={color} fillOpacity={0.25} {...common} strokeDasharray={r.status === "Planned" ? "6 4" : undefined} />;
+          const [x, y] = project(centroidOf(place.geometry));
+          const pinScale = sel ? 1.6 : r.status === "Ongoing" ? 1.3 : 1;
+          return (
+            <g
+              key={r.recordId}
+              transform={`translate(${x - 12 * pinScale}, ${y - 24 * pinScale}) scale(${pinScale})`}
+              cursor="pointer"
+              onClick={() => onSelect(r.recordId)}
+            >
+              <title>{`${r.title} — ${r.status}`}</title>
+              <path
+                d="M12 0C7 0 3 4 3 9c0 6.2 8.1 14.3 8.4 14.7.3.3.9.3 1.2 0C12.9 23.3 21 15.2 21 9c0-5-4-9-9-9z"
+                fill={r.status === "Planned" ? "#ffffff" : color}
+                stroke={sel ? "#ffc400" : r.status === "Planned" ? color : "#ffffff"}
+                strokeWidth={sel ? 2.5 : 1.5}
+              />
+              <circle cx={12} cy={9} r={3.5} fill={r.status === "Planned" ? color : "#ffffff"} />
+            </g>
+          );
         })}
       </svg>
       <ul style={{ listStyle: "none", margin: 0, padding: "0.5rem 0.75rem", display: "flex", gap: "0.75rem", flexWrap: "wrap", fontSize: "0.78rem" }}>

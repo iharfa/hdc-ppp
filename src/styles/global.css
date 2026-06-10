@@ -349,6 +349,39 @@ button { font-family: inherit; }
 }
 .modal h3 { margin-top: 0; color: var(--hdc-blue); }
 
+/* ---------- Decision status card ---------- */
+.decision-card { position: relative; padding-right: 1rem; }
+.decision-status-card {
+  float: right;
+  margin: 0 0 0.6rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+  border-radius: var(--radius);
+  border: 2px solid;
+  padding: 0.55rem 1rem;
+  min-width: 150px;
+  text-align: center;
+  background: var(--white);
+}
+.decision-status-card .dsc-label { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--grey-500); }
+.decision-status-card .dsc-status { font-weight: 700; font-size: 0.98rem; }
+.decision-status-card .dsc-date { font-size: 0.75rem; color: var(--grey-700); }
+.decision-approved { border-color: var(--ok); }
+.decision-approved .dsc-status { color: var(--ok); }
+.decision-amended { border-color: var(--hdc-teal); }
+.decision-amended .dsc-status { color: var(--hdc-teal); }
+.decision-partial { border-color: var(--warn); }
+.decision-partial .dsc-status { color: var(--warn); }
+.decision-rejected { border-color: var(--danger); }
+.decision-rejected .dsc-status { color: var(--danger); }
+.decision-deferred { border-color: var(--grey-500); }
+.decision-deferred .dsc-status { color: var(--grey-700); }
+@media (max-width: 560px) {
+  .decision-status-card { float: none; margin: 0 0 0.8rem; width: 100%; }
+}
+
 /* ---------- Charts / misc ---------- */
 .chart-box { width: 100%; height: 300px; }
 .loading-screen {
