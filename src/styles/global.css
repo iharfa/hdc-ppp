@@ -34,6 +34,15 @@ button { font-family: inherit; }
 .app-shell { display: flex; flex-direction: column; min-height: 100%; }
 .app-main { flex: 1; display: flex; flex-direction: column; }
 
+/* Map homepage: lock the layout to the viewport. Map + footer always visible,
+   no page scrolling; only the sidebar's record list scrolls. */
+.app-shell.shell-fixed { height: 100vh; height: 100dvh; overflow: hidden; }
+.shell-fixed .app-main { min-height: 0; overflow: hidden; }
+.shell-fixed .site-footer { padding: 0.45rem 1rem; font-size: 0.72rem; }
+.shell-fixed .site-footer .hdc-logo img,
+.shell-fixed .site-footer .hdc-logo .logo-fallback { height: 26px; }
+.shell-fixed .site-footer .footer-inner { gap: 0.6rem; align-items: center; }
+
 /* ---------- Header ---------- */
 .site-header {
   background: var(--hdc-blue);
@@ -117,8 +126,8 @@ button { font-family: inherit; }
 
 /* ---------- Map page layout ---------- */
 .map-page { display: flex; flex: 1; min-height: 0; flex-direction: column; }
-.map-layout { display: flex; flex: 1; min-height: 480px; position: relative; }
-.map-container { flex: 1; min-height: 480px; position: relative; }
+.map-layout { display: flex; flex: 1; min-height: 0; position: relative; }
+.map-container { flex: 1; min-height: 0; position: relative; }
 .map-container .esri-view { height: 100%; width: 100%; }
 .map-side {
   width: 380px;
@@ -127,8 +136,11 @@ button { font-family: inherit; }
   display: flex;
   flex-direction: column;
   background: var(--white);
-  overflow-y: auto;
+  min-height: 0;
+  overflow: hidden; /* sidebar itself is fixed; .side-scroll scrolls */
 }
+.map-side .filters { flex-shrink: 0; }
+.side-scroll { flex: 1; min-height: 0; overflow-y: auto; }
 .map-status-note {
   position: absolute;
   bottom: 0.75rem;
@@ -429,6 +441,14 @@ button { font-family: inherit; }
 
 @media (max-width: 860px) {
   .map-layout { flex-direction: column; }
-  .map-container { min-height: 360px; }
-  .map-side { width: 100%; border-left: none; border-top: 1px solid var(--grey-300); max-height: 50vh; }
+  .map-container { flex: 0 0 45%; min-height: 240px; }
+  .map-side { width: 100%; flex: 1; min-height: 0; border-left: none; border-top: 1px solid var(--grey-300); }
+  .shell-fixed .site-footer .footer-inner { flex-wrap: nowrap; }
+  .shell-fixed .site-footer { font-size: 0.62rem; }
+  .site-header .brand-title { font-size: 0.95rem; }
+  .site-nav { margin-left: 0; }
+  .site-nav a { padding: 0.35rem 0.55rem; font-size: 0.82rem; }
+  .map-status-note { display: none; } /* keep the small map clear on phones */
+  .shell-fixed .footer-blurb { display: none; } /* compact footer on the map view */
+  .detail-panel dl { grid-template-columns: 1fr; }
 }

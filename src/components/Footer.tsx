@@ -10,9 +10,11 @@ export function Footer() {
           <br />
           Public Participation Portal
           <br />
-          A proof of concept for map-based public participation, survey response collection, consultation result
-          disclosure, and data harmonization across HDC-managed areas.
-          <br />
+          <span className="footer-blurb">
+            A proof of concept for map-based public participation, survey response collection, consultation result
+            disclosure, and data harmonization across HDC-managed areas.
+            <br />
+          </span>
           <span className="muted">Proof of Concept. Sample participation data only.</span>
         </div>
       </div>

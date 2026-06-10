@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { Loading } from "./components/Loading";
@@ -12,10 +12,12 @@ import { ResultDetailPage } from "./pages/ResultDetailPage";
 import { AdminPage } from "./pages/AdminPage";
 import { AboutPage } from "./pages/AboutPage";
 
-export default function App() {
+function Shell() {
+  // The map homepage uses a fixed viewport layout: map fills the screen,
+  // footer stays visible, and only the sidebar list scrolls.
+  const isMapPage = useLocation().pathname === "/";
   return (
-    <BrowserRouter>
-      <div className="app-shell">
+    <div className={`app-shell ${isMapPage ? "shell-fixed" : ""}`}>
         <Header />
         <main className="app-main">
           <Suspense fallback={<Loading />}>
@@ -33,7 +35,14 @@ export default function App() {
           </Suspense>
         </main>
         <Footer />
-      </div>
+    </div>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Shell />
     </BrowserRouter>
   );
 }

@@ -29,7 +29,7 @@ export function FiltersSidebar({ filters, onChange, resultCount }: Props) {
   }
 
   return (
-    <details className="filters" open>
+    <details className="filters">
       <summary>
         Filters <span className="muted">({resultCount} shown)</span>
       </summary>

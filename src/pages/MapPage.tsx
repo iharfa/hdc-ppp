@@ -16,9 +16,11 @@ export function MapPage() {
       <div className="map-layout">
         <MapView records={filtered} selectedId={selectedId} onSelect={setSelectedId} />
         <aside className="map-side" aria-label="Participation records list and filters">
-          {selected && <DetailPanel record={selected} onClose={() => setSelectedId(null)} />}
           <FiltersSidebar filters={filters} onChange={setFilters} resultCount={filtered.length} />
-          <ParticipationList records={filtered} selectedId={selectedId} onSelect={setSelectedId} />
+          <div className="side-scroll">
+            {selected && <DetailPanel record={selected} onClose={() => setSelectedId(null)} />}
+            <ParticipationList records={filtered} selectedId={selectedId} onSelect={setSelectedId} />
+          </div>
         </aside>
       </div>
     </div>
