@@ -359,7 +359,7 @@ export async function createSceneView(
   });
   // Show attribute popups (parcel no, lot, land use, development, height,
   // area) even if a layer lacks an authored popup template.
-  view.popup.defaultPopupTemplateEnabled = true;
+  if (view.popup) view.popup.defaultPopupTemplateEnabled = true;
   await view.when().catch(() => {});
   if (sceneLoaded) {
     // Fly to Hulhumalé so the relevant lots are in view regardless of the
