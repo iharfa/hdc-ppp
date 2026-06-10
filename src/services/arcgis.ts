@@ -12,7 +12,15 @@ import { getPlace } from "./dataService";
 
 export const APP_ITEM_2D = "21610169068e4dacaa51886ff9d4c300";
 export const APP_ITEM_3D = "ed90beef77b643a58570072cc9a14830";
-const PORTAL_SHARING = "https://hulhumale.maps.arcgis.com/sharing/rest";
+// Public AGOL items are reachable through www.arcgis.com regardless of the
+// owning org's subdomain — and some networks block org subdomains.
+const PORTAL_SHARING = "https://www.arcgis.com/sharing/rest";
+
+// Public map/scene item IDs behind the two HDC apps, verified via the sharing
+// REST API. Live detection (detectHdcSources) refreshes these at runtime; if
+// that fetch fails (offline, CORS, transient), we still load by these IDs.
+const KNOWN_WEBMAP_ID = "46865dadd00d48f0b23f87e9b49085b1";
+const KNOWN_WEBSCENE_ID = "404e2256a01c44669287ac440ca258cd"; // "Land Use Plan Scene"
 
 export const HULHUMALE_CENTER: [number, number] = [73.5425, 4.219];
 
@@ -63,6 +71,16 @@ export async function detectHdcSources(): Promise<DetectedSource> {
     notes.push(result.websceneId ? `Detected public web scene ${result.websceneId}.` : "3D app config did not expose a web scene ID.");
   } catch (e) {
     notes.push(`Could not read 3D app config (${(e as Error).message}).`);
+  }
+  // Detection failed (transient network/CORS)? Fall back to the verified IDs
+  // so the public HDC maps still load via the SDK's own request stack.
+  if (!result.webmapId) {
+    result.webmapId = KNOWN_WEBMAP_ID;
+    notes.push("Using known public web map ID.");
+  }
+  if (!result.websceneId) {
+    result.websceneId = KNOWN_WEBSCENE_ID;
+    notes.push("Using known public web scene ID.");
   }
   result.message = notes.join(" ");
   return result;
@@ -145,16 +163,16 @@ export async function createMapView(
   let statusMessage = "";
   let map: InstanceType<typeof Map>;
 
-  let detected: DetectedSource = { webmapId: null, websceneId: null, message: "" };
+  let detected: DetectedSource = { webmapId: KNOWN_WEBMAP_ID, websceneId: KNOWN_WEBSCENE_ID, message: "" };
   try {
     detected = await detectHdcSources();
   } catch {
-    /* network failure - fall through to fallback */
+    /* detection failed - keep known public item IDs */
   }
 
   if (detected.webmapId) {
     try {
-      const webmap = new WebMap({ portalItem: { id: detected.webmapId, portal: { url: "https://hulhumale.maps.arcgis.com" } } });
+      const webmap = new WebMap({ portalItem: { id: detected.webmapId } });
       await webmap.load();
       map = webmap;
       statusMessage = `Loaded public HDC web map (${detected.webmapId}).`;
@@ -285,14 +303,20 @@ export async function createSceneView(
 
   let message = "";
   let mapOrScene: InstanceType<typeof Map>;
-  const detected = await detectHdcSources().catch(() => ({ webmapId: null, websceneId: null, message: "detection failed" }));
+  let sceneLoaded = false;
+  const detected = await detectHdcSources().catch(() => ({
+    webmapId: KNOWN_WEBMAP_ID,
+    websceneId: KNOWN_WEBSCENE_ID,
+    message: "detection failed; using known public item IDs",
+  }));
 
   if (detected.websceneId) {
     try {
-      const scene = new WebScene({ portalItem: { id: detected.websceneId, portal: { url: "https://hulhumale.maps.arcgis.com" } } });
+      const scene = new WebScene({ portalItem: { id: detected.websceneId } });
       await scene.load();
       mapOrScene = scene;
-      message = `Loaded public HDC web scene (${detected.websceneId}).`;
+      sceneLoaded = true;
+      message = `Loaded public HDC web scene (${detected.websceneId}). Click a lot for parcel details.`;
     } catch (e) {
       mapOrScene = new Map({ basemap: "satellite", ground: "world-elevation" });
       message = `HDC web scene could not be loaded publicly (${(e as Error).message}). Showing fallback 3D satellite view.`;
@@ -318,14 +342,34 @@ export async function createSceneView(
   }
   mapOrScene.add(overlay);
 
+  // When the HDC scene loads, keep its saved viewpoint so extruded lot
+  // buildings and styling appear exactly as in the published 3D app.
+  // Only the fallback satellite view needs an explicit camera.
   const view = new SceneView({
     container,
     map: mapOrScene,
-    camera: {
-      position: { longitude: HULHUMALE_CENTER[0], latitude: HULHUMALE_CENTER[1] - 0.02, z: 2500 },
-      tilt: 60,
-    },
+    ...(sceneLoaded
+      ? {}
+      : {
+          camera: {
+            position: { longitude: HULHUMALE_CENTER[0], latitude: HULHUMALE_CENTER[1] - 0.02, z: 2500 },
+            tilt: 60,
+          },
+        }),
   });
+  // Show attribute popups (parcel no, lot, land use, development, height,
+  // area) even if a layer lacks an authored popup template.
+  view.popup.defaultPopupTemplateEnabled = true;
   await view.when().catch(() => {});
+  if (sceneLoaded) {
+    // Fly to Hulhumalé so the relevant lots are in view regardless of the
+    // scene's saved island-wide viewpoint.
+    view
+      .goTo(
+        { center: HULHUMALE_CENTER, zoom: 16, tilt: 55 },
+        { duration: 1200 },
+      )
+      .catch(() => {});
+  }
   return { destroy: () => view.destroy(), message };
 }
