@@ -270,12 +270,18 @@ export async function createMapView(
 }
 
 /** Create a 3D scene view from the detected web scene, with fallback. */
-export async function createSceneView(container: HTMLDivElement): Promise<{ destroy(): void; message: string }> {
-  const [{ default: SceneView }, { default: WebScene }, { default: Map }] = await Promise.all([
-    import("@arcgis/core/views/SceneView"),
-    import("@arcgis/core/WebScene"),
-    import("@arcgis/core/Map"),
-  ]);
+export async function createSceneView(
+  container: HTMLDivElement,
+  participationRecords: ParticipationRecord[] = [],
+): Promise<{ destroy(): void; message: string }> {
+  const [{ default: SceneView }, { default: WebScene }, { default: Map }, { default: GraphicsLayer }, { default: Graphic }] =
+    await Promise.all([
+      import("@arcgis/core/views/SceneView"),
+      import("@arcgis/core/WebScene"),
+      import("@arcgis/core/Map"),
+      import("@arcgis/core/layers/GraphicsLayer"),
+      import("@arcgis/core/Graphic"),
+    ]);
 
   let message = "";
   let mapOrScene: InstanceType<typeof Map>;
@@ -295,6 +301,22 @@ export async function createSceneView(container: HTMLDivElement): Promise<{ dest
     mapOrScene = new Map({ basemap: "satellite", ground: "world-elevation" });
     message = "No public web scene detected. Showing fallback 3D satellite view of Hulhumalé.";
   }
+
+  // Same participation pins as the 2D map, draped onto the scene.
+  const overlay = new GraphicsLayer({ title: "Sample participation areas (POC)", elevationInfo: { mode: "relative-to-ground", offset: 5 } });
+  for (const rec of participationRecords) {
+    const place = getPlace(rec.canonicalPlaceId);
+    if (!place) continue;
+    const [lon, lat] = centroidOf(place.geometry);
+    overlay.add(
+      new Graphic({
+        geometry: { type: "point", longitude: lon, latitude: lat } as unknown as __esri.GeometryUnion,
+        symbol: pinSymbol(rec, false) as unknown as __esri.SymbolUnion,
+        attributes: { recordId: rec.recordId, title: rec.title, status: rec.status },
+      }),
+    );
+  }
+  mapOrScene.add(overlay);
 
   const view = new SceneView({
     container,

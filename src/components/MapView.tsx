@@ -66,7 +66,7 @@ export function MapView({ records, selectedId, onSelect }: Props) {
           }
         });
     } else {
-      createSceneView(div)
+      createSceneView(div, records)
         .then((scene) => {
           if (cancelled) {
             scene.destroy();
