@@ -1,0 +1,38 @@
+name: GIS data backup
+
+# Redundancy crawler: snapshots the public HDC ArcGIS items, map/scene
+# definitions, and feature data into backup/gis/ so the repo holds a
+# restorable copy if access to the live services is ever lost.
+
+on:
+  schedule:
+    - cron: "0 2 * * 0" # every Sunday 02:00 UTC (07:00 MVT)
+  workflow_dispatch: {} # allow manual runs from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run GIS backup crawler
+        run: node scripts/gisBackup.mjs
+
+      - name: Commit backup if changed
+        run: |
+          git config user.name "hdc-gis-backup[bot]"
+          git config user.email "actions@github.com"
+          git add backup/gis
+          if git diff --cached --quiet; then
+            echo "No changes in GIS data since last backup."
+          else
+            git commit -m "GIS backup: $(date -u +%Y-%m-%d)"
+            git push
+          fi

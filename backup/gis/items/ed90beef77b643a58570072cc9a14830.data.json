@@ -1,0 +1,356 @@
+{
+ "theme": {
+  "name": "LaunchpadTheme",
+  "styles": [
+   "style3",
+   "default",
+   "style2"
+  ],
+  "version": "2.17",
+  "sharedTheme": {
+   "useHeader": false,
+   "useLogo": true,
+   "isPortalSupport": true
+  },
+  "customStyles": {
+   "mainBackgroundColor": "#008b8b"
+  }
+ },
+ "portalUrl": "https://hulhumale.maps.arcgis.com",
+ "appId": "",
+ "authorizedCrossOriginDomains": [],
+ "title": "Land Use Plan",
+ "subtitle": "",
+ "keepAppState": false,
+ "logo": "images/app-logo.png",
+ "httpProxy": {
+  "useProxy": true,
+  "url": "https://hulhumale.maps.arcgis.com/sharing/proxy"
+ },
+ "geometryService": "https://utility.arcgisonline.com/arcgis/rest/services/Geometry/GeometryServer",
+ "links": [],
+ "widgetOnScreen": {
+  "widgets": [
+   {
+    "uri": "themes/LaunchpadTheme/widgets/AnchorBarController/Widget",
+    "position": {
+     "bottom": 24,
+     "height": 40,
+     "relativeTo": "map",
+     "zIndex": 0
+    },
+    "version": "2.29",
+    "id": "themes_LaunchpadTheme_widgets_AnchorBarController_Widget_18",
+    "url": "/apps/webappbuilder/stemapp3d/themes/LaunchpadTheme/widgets/AnchorBarController/",
+    "icon": "themes/LaunchpadTheme/widgets/AnchorBarController/images/icon.png",
+    "name": "AnchorBarController"
+   },
+   {
+    "uri": "themes/LaunchpadTheme/widgets/Header/Widget",
+    "position": {
+     "left": 9,
+     "top": 10,
+     "width": 670,
+     "height": 46,
+     "relativeTo": "map"
+    },
+    "version": "2.29",
+    "id": "themes_LaunchpadTheme_widgets_Header_Widget_19",
+    "url": "/apps/webappbuilder/stemapp3d/themes/LaunchpadTheme/widgets/Header/",
+    "icon": "themes/LaunchpadTheme/widgets/Header/images/icon.png",
+    "hasSearchOverlayed": true,
+    "name": "Header"
+   },
+   {
+    "uri": "widgets/Search/Widget",
+    "position": {
+     "left": 344,
+     "top": 16,
+     "zIndex": 1,
+     "relativeTo": "map"
+    },
+    "version": "2.29",
+    "id": "widgets_Search_Widget_20",
+    "url": "/apps/webappbuilder/stemapp3d/widgets/Search/",
+    "icon": "widgets/Search/images/icon.png",
+    "name": "Search",
+    "config": {
+     "allPlaceholder": "",
+     "showInfoWindowOnSelect": false,
+     "sources": [
+      {
+       "layerId": "18a63eafba5-layer-145",
+       "url": "https://services7.arcgis.com/TGjun5cqf5Jwp2Ad/arcgis/rest/services/LUP_public_view/FeatureServer/2",
+       "name": "Land Use Plan",
+       "placeholder": "",
+       "searchFields": [
+        "PARCEL_NO"
+       ],
+       "displayField": "PARCEL_NO",
+       "exactMatch": false,
+       "searchInCurrentMapExtent": false,
+       "zoomScale": 50000,
+       "maxSuggestions": 6,
+       "maxResults": 6,
+       "type": "query"
+      }
+     ]
+    }
+   },
+   {
+    "uri": "widgets/ZoomSlider/Widget",
+    "position": {
+     "left": 17,
+     "top": 78,
+     "relativeTo": "map"
+    },
+    "version": "2.29",
+    "id": "widgets_ZoomSlider_Widget_21",
+    "url": "/apps/webappbuilder/stemapp3d/widgets/ZoomSlider/",
+    "icon": "widgets/ZoomSlider/images/icon.png",
+    "name": "ZoomSlider"
+   },
+   {
+    "uri": "widgets/Home/Widget",
+    "position": {
+     "left": 17,
+     "top": 153,
+     "relativeTo": "map"
+    },
+    "version": "2.29",
+    "id": "widgets_Home_Widget_22",
+    "url": "/apps/webappbuilder/stemapp3d/widgets/Home/",
+    "icon": "widgets/Home/images/icon.png",
+    "name": "Home"
+   },
+   {
+    "uri": "widgets/MyLocation/Widget",
+    "position": {
+     "left": 17,
+     "top": 191,
+     "relativeTo": "map"
+    },
+    "version": "2.29",
+    "id": "widgets_MyLocation_Widget_23",
+    "url": "/apps/webappbuilder/stemapp3d/widgets/MyLocation/",
+    "icon": "widgets/MyLocation/images/icon.png",
+    "name": "MyLocation"
+   },
+   {
+    "uri": "widgets/Navigate/Widget",
+    "position": {
+     "left": 17,
+     "top": 229,
+     "relativeTo": "map"
+    },
+    "version": "2.29",
+    "id": "widgets_Navigate_Widget_24",
+    "url": "/apps/webappbuilder/stemapp3d/widgets/Navigate/",
+    "icon": "widgets/Navigate/images/icon.png",
+    "name": "Navigate"
+   },
+   {
+    "uri": "widgets/Coordinate/Widget",
+    "position": {
+     "left": 10,
+     "bottom": 24,
+     "relativeTo": "map"
+    },
+    "version": "2.29",
+    "id": "widgets_Coordinate_Widget_25",
+    "url": "/apps/webappbuilder/stemapp3d/widgets/Coordinate/",
+    "icon": "widgets/Coordinate/images/icon.png",
+    "name": "Coordinate"
+   },
+   {
+    "uri": "widgets/Compass/Widget",
+    "position": {
+     "right": 20,
+     "top": 69,
+     "relativeTo": "map"
+    },
+    "version": "2.29",
+    "id": "widgets_Compass_Widget_26",
+    "url": "/apps/webappbuilder/stemapp3d/widgets/Compass/",
+    "icon": "widgets/Compass/images/icon.png",
+    "name": "Compass"
+   },
+   {
+    "uri": "widgets/FullScreen/Widget",
+    "position": {
+     "right": 20,
+     "top": 111,
+     "relativeTo": "map"
+    },
+    "version": "2.29",
+    "id": "widgets_FullScreen_Widget_27",
+    "url": "/apps/webappbuilder/stemapp3d/widgets/FullScreen/",
+    "icon": "widgets/FullScreen/images/icon.png",
+    "name": "FullScreen"
+   },
+   {
+    "uri": "widgets/Splash/Widget",
+    "visible": false,
+    "position": {
+     "relativeTo": "browser"
+    },
+    "version": "2.29",
+    "id": "widgets_Splash_Widget_28",
+    "url": "/apps/webappbuilder/stemapp3d/widgets/Splash/",
+    "icon": "widgets/Splash/images/icon.png",
+    "name": "Splash"
+   },
+   {
+    "position": {
+     "right": 20,
+     "top": 17,
+     "relativeTo": "map"
+    },
+    "placeholderIndex": 1,
+    "id": "_29"
+   },
+   {
+    "position": {
+     "right": 62,
+     "top": 17,
+     "relativeTo": "map"
+    },
+    "placeholderIndex": 2,
+    "id": "_30"
+   },
+   {
+    "position": {
+     "right": 104,
+     "top": 17,
+     "relativeTo": "map"
+    },
+    "placeholderIndex": 3,
+    "id": "_31"
+   }
+  ],
+  "panel": {
+   "uri": "jimu/OnScreenWidgetPanel",
+   "position": {
+    "relativeTo": "map"
+   }
+  }
+ },
+ "map": {
+  "3D": true,
+  "2D": false,
+  "position": {
+   "left": 0,
+   "top": 0,
+   "right": 0,
+   "bottom": 0
+  },
+  "itemId": "404e2256a01c44669287ac440ca258cd",
+  "mapOptions": {
+   "initialState": {
+    "viewpoint": {
+     "rotation": 358.1718048257608,
+     "scale": 51366.71978969051,
+     "targetGeometry": {
+      "spatialReference": {
+       "latestWkid": 3857,
+       "wkid": 102100
+      },
+      "x": 8181465.202058034,
+      "y": 469191.07364034874,
+      "z": 0.00010056421160697937
+     },
+     "camera": {
+      "position": {
+       "spatialReference": {
+        "latestWkid": 3857,
+        "wkid": 102100
+       },
+       "x": 8181458.960135772,
+       "y": 468995.5179232082,
+       "z": 22437.610880556516
+      },
+      "heading": 1.8281951742392,
+      "tilt": 0.49825667420069586
+     }
+    }
+   }
+  },
+  "id": "map",
+  "portalUrl": "https://hulhumale.maps.arcgis.com"
+ },
+ "widgetPool": {
+  "panel": {
+   "uri": "themes/LaunchpadTheme/panels/LaunchpadPanel/Panel",
+   "position": {
+    "relativeTo": "map"
+   }
+  },
+  "widgets": [
+   {
+    "uri": "widgets/Daylight/Widget",
+    "version": "2.29",
+    "id": "widgets_Daylight_Widget_11",
+    "name": "Daylight",
+    "url": "/apps/webappbuilder/stemapp3d/widgets/Daylight/",
+    "index": 2,
+    "icon": "widgets/Daylight/images/icon.png"
+   },
+   {
+    "name": "LayerList",
+    "version": "2.29",
+    "uri": "widgets/LayerList/Widget",
+    "index": 3,
+    "id": "widgets_LayerList_Widget_14",
+    "url": "/apps/webappbuilder/stemapp3d/widgets/LayerList/",
+    "icon": "widgets/LayerList/images/icon.png"
+   },
+   {
+    "name": "Legend",
+    "version": "2.29",
+    "uri": "widgets/Legend/Widget",
+    "index": 4,
+    "id": "widgets_Legend_Widget_15",
+    "url": "/apps/webappbuilder/stemapp3d/widgets/Legend/",
+    "icon": "widgets/Legend/images/icon.png"
+   },
+   {
+    "name": "Measurement3D",
+    "version": "2.29",
+    "uri": "widgets/Measurement3D/Widget",
+    "index": 5,
+    "id": "widgets_Measurement3D_Widget_16",
+    "url": "/apps/webappbuilder/stemapp3d/widgets/Measurement3D/",
+    "icon": "widgets/Measurement3D/images/icon.png"
+   },
+   {
+    "name": "Share",
+    "version": "2.29",
+    "uri": "widgets/Share/Widget",
+    "index": 6,
+    "id": "widgets_Share_Widget_17",
+    "url": "/apps/webappbuilder/stemapp3d/widgets/Share/",
+    "icon": "widgets/Share/images/icon.png"
+   }
+  ],
+  "groups": []
+ },
+ "loadingPage": {
+  "backgroundColor": "#508dca",
+  "backgroundImage": {
+   "visible": false
+  },
+  "loadingGif": {
+   "visible": true,
+   "uri": "configs/loading/images/predefined_loading_1.gif",
+   "width": 58,
+   "height": 29
+  }
+ },
+ "wabVersion": "2.29",
+ "_buildInfo": {
+  "widgetManifestsMerged": true
+ },
+ "isWebTier": false,
+ "configWabVersion": "2.29",
+ "appItemId": "ed90beef77b643a58570072cc9a14830"
+}

@@ -1,0 +1,385 @@
+{
+ "generatedAt": "2026-06-10T10:00:31.302Z",
+ "source": "Public HDC ArcGIS Online items and services. Backup for redundancy.",
+ "items": [
+  {
+   "itemId": "21610169068e4dacaa51886ff9d4c300",
+   "label": "2D Web App",
+   "title": "DRONE IMAGERY PUBLIC",
+   "type": "Web Mapping Application",
+   "access": "public"
+  },
+  {
+   "itemId": "46865dadd00d48f0b23f87e9b49085b1",
+   "label": "2D Web App -> map/scene",
+   "title": "DRONE IMAGERY",
+   "type": "Web Map",
+   "access": "public"
+  },
+  {
+   "itemId": "ed90beef77b643a58570072cc9a14830",
+   "label": "3D Web App (LUP)",
+   "title": "LUP  Web App-  Website",
+   "type": "Web Mapping Application",
+   "access": "public"
+  },
+  {
+   "itemId": "404e2256a01c44669287ac440ca258cd",
+   "label": "3D Web App (LUP) -> map/scene",
+   "title": "Land Use Plan Scene",
+   "type": "Web Scene",
+   "access": "public"
+  }
+ ],
+ "services": [
+  {
+   "title": "KUDAGIRI IMAGERY - 8th August 2022",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/KUDAGIRI_NEW/MapServer",
+   "type": "tile/map service (metadata only)",
+   "file": "services/KUDAGIRI_IMAGERY_-_8th_August_2022.service.json"
+  },
+  {
+   "title": "KUDAGIRI IMAGERY - 16th August 2022",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/KUDAGIRI_IMAGERY_16082022/MapServer",
+   "type": "tile/map service (metadata only)",
+   "file": "services/KUDAGIRI_IMAGERY_-_16th_August_2022.service.json"
+  },
+  {
+   "title": "KUDAGIRI IMAGERY - 28th August 2022",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/KUDAGIRI_IMAGERY_28082022/MapServer",
+   "type": "tile/map service (metadata only)",
+   "file": "services/KUDAGIRI_IMAGERY_-_28th_August_2022.service.json"
+  },
+  {
+   "title": "KUDAGIRI IMAGERY -9th November 2022",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/KUDAGIRI_9TH_NOVEMBER_2022/MapServer",
+   "type": "tile/map service (metadata only)",
+   "file": "services/KUDAGIRI_IMAGERY_-9th_November_2022.service.json"
+  },
+  {
+   "title": "KUDAGIRI IMAGERY 13th December 2022",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/kudagriri_12132022or_6_tif/MapServer",
+   "type": "tile/map service (metadata only)",
+   "file": "services/KUDAGIRI_IMAGERY_13th_December_2022.service.json"
+  },
+  {
+   "title": "KUDAGIRI IMAGERY - 8th JANUARY 2024",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/KUDAGIRI_IMAGERY_8TH_JANUARY_2024/MapServer",
+   "type": "tile/map service (metadata only)",
+   "file": "services/KUDAGIRI_IMAGERY_-_8th_JANUARY_2024.service.json"
+  },
+  {
+   "title": "KUDAGIR IMAGERY - 31st March 2024",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/KUDAGIRIMARCH2024/MapServer",
+   "type": "tile/map service (metadata only)",
+   "file": "services/KUDAGIR_IMAGERY_-_31st_March_2024.service.json"
+  },
+  {
+   "title": "KUDAGIRI IMAGERY - 21 JANUARY 2025",
+   "url": "https://gis.hdc.mv/server/rest/services/Hosted/KUDAGIRI_IMAGERY___21_JANUARY_2025/MapServer",
+   "type": "tile/map service (metadata only)",
+   "file": "services/KUDAGIRI_IMAGERY_-_21_JANUARY_2025.service.json"
+  },
+  {
+   "title": "GULHIFALHU IMAGERY 18th DECEMBER 2022",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/GULHIFALHU_IMAGERY_18th_DECEMBER_2022/MapServer",
+   "type": "tile/map service (metadata only)",
+   "file": "services/GULHIFALHU_IMAGERY_18th_DECEMBER_2022.service.json"
+  },
+  {
+   "title": "GULHIFALHU IMAGERY 31 January 2023",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/GULHIFALHU_IMAGERY_31_January_2023/MapServer",
+   "type": "tile/map service (metadata only)",
+   "file": "services/GULHIFALHU_IMAGERY_31_January_2023.service.json"
+  },
+  {
+   "title": "GULHIFALHU IMAGERY - 31st March 2024",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/GULHIFALHU2024/MapServer",
+   "type": "tile/map service (metadata only)",
+   "file": "services/GULHIFALHU_IMAGERY_-_31st_March_2024.service.json"
+  },
+  {
+   "title": "GULHIFALHU IMAGERY - 24th June 2024",
+   "url": "https://gis.hdc.mv/server/rest/services/IMAGERY_GFLJUN2024/MapServer",
+   "type": "tile/map service (metadata only)",
+   "file": "services/GULHIFALHU_IMAGERY_-_24th_June_2024.service.json"
+  },
+  {
+   "title": "THILAFUSHI IMAGERY -  28th January 2021",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/THILAFUSHI_IMAGERY_28012021/MapServer",
+   "type": "tile/map service (metadata only)",
+   "file": "services/THILAFUSHI_IMAGERY_-_28th_January_2021.service.json"
+  },
+  {
+   "title": "THILAFUSHI IMAGERY - 14th June 2022",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/THILAFUSHI_IMAGERY/MapServer",
+   "type": "tile/map service (metadata only)",
+   "file": "services/THILAFUSHI_IMAGERY_-_14th_June_2022.service.json"
+  },
+  {
+   "title": "THILAFUSHI IMAGERY - 15th February 2023",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/THILAFUSHI_IMAGERY_15022023/MapServer",
+   "type": "tile/map service (metadata only)",
+   "file": "services/THILAFUSHI_IMAGERY_-_15th_February_2023.service.json"
+  },
+  {
+   "title": "THILAFUSHI IMAGERY - 19th January 2024",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/THILAFUSHIIMAGERY/MapServer",
+   "type": "tile/map service (metadata only)",
+   "file": "services/THILAFUSHI_IMAGERY_-_19th_January_2024.service.json"
+  },
+  {
+   "title": "THILAFUSHI IMAGERY - 14th June 2024",
+   "url": "https://gis.hdc.mv/server/rest/services/IMAGERY_TFS_JUN2024/MapServer",
+   "type": "tile/map service (metadata only)",
+   "file": "services/THILAFUSHI_IMAGERY_-_14th_June_2024.service.json"
+  },
+  {
+   "title": "HULHUMALE IMAGERY - 24th July 2022",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/HM_IMAGERY/MapServer",
+   "type": "tile/map service (metadata only)",
+   "file": "services/HULHUMALE_IMAGERY_-_24th_July_2022.service.json"
+  },
+  {
+   "title": "HULHUMALE IMAGERY - 4th June 2024",
+   "url": "https://gis.hdc.mv/server/rest/services/IMAGERY_HMLJUN2024/MapServer",
+   "type": "tile/map service (metadata only)",
+   "file": "services/HULHUMALE_IMAGERY_-_4th_June_2024.service.json"
+  },
+  {
+   "title": "HULHUMALÉ PHASE 2 IMAGERY - 16th October 2024",
+   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_HMLOCT2024/MapServer",
+   "type": "tile/map service (metadata only)",
+   "file": "services/HULHUMAL_PHASE_2_IMAGERY_-_16th_October_2024.service.json"
+  },
+  {
+   "title": "HULHUMALE PHASE 1 IMAGERY - 04th November 2024",
+   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_HMLP1OCT2024/MapServer",
+   "type": "tile/map service (metadata only)",
+   "file": "services/HULHUMALE_PHASE_1_IMAGERY_-_04th_November_2024.service.json"
+  },
+  {
+   "title": "RASMALE IMAGERY - 7TH January 2024",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/RASMALE_IMAGERY_7TH_JANUARY_2024/MapServer",
+   "type": "tile/map service (metadata only)",
+   "file": "services/RASMALE_IMAGERY_-_7TH_January_2024.service.json"
+  },
+  {
+   "title": "RASMALE IMAGERY 13 March 2025",
+   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_RASMALE_13_March_2025/MapServer",
+   "type": "tile/map service (metadata only)",
+   "file": "services/RASMALE_IMAGERY_13_March_2025.service.json"
+  },
+  {
+   "title": "Survey Day2025 orthomosaic",
+   "url": "https://gis.hdc.mv/server/rest/services/Hosted/Survey_Day2025_orthomosaic/MapServer",
+   "type": "tile/map service (metadata only)",
+   "file": "services/Survey_Day2025_orthomosaic.service.json"
+  },
+  {
+   "title": "GULHIFALHU IMAGERY",
+   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_GFLJAN2026/MapServer",
+   "type": "tile/map service (metadata only)",
+   "file": "services/GULHIFALHU_IMAGERY.service.json"
+  },
+  {
+   "title": "THILAFUSHI IMAGERY",
+   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_TFSJAN26/MapServer",
+   "type": "tile/map service (metadata only)",
+   "file": "services/THILAFUSHI_IMAGERY.service.json"
+  },
+  {
+   "title": "KUDAGIRI IMAGERY",
+   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_KDGMAY2026/MapServer",
+   "type": "tile/map service (metadata only)",
+   "file": "services/KUDAGIRI_IMAGERY.service.json"
+  },
+  {
+   "title": "HULHUMALÉ IMAGEY",
+   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_HMLJAN26_CORS/MapServer",
+   "type": "tile/map service (metadata only)",
+   "file": "services/HULHUMAL_IMAGEY.service.json"
+  }
+ ],
+ "featureLayers": [
+  {
+   "title": "THILA MALE' BRIDGE",
+   "url": "https://services7.arcgis.com/TGjun5cqf5Jwp2Ad/arcgis/rest/services/GREATER_MALE__INTERCONNECTING_BRIDGE/FeatureServer/1",
+   "featureCount": 1507,
+   "file": "features/THILA_MALE_BRIDGE.geojson"
+  },
+  {
+   "title": "THILAFUSHI PHASE II RECLAMATION",
+   "url": "https://services7.arcgis.com/TGjun5cqf5Jwp2Ad/arcgis/rest/services/Thilfaushi_Phase_II_Reclamation/FeatureServer/0",
+   "featureCount": 5,
+   "file": "features/THILAFUSHI_PHASE_II_RECLAMATION.geojson"
+  },
+  {
+   "title": "ROADS",
+   "url": "https://services7.arcgis.com/TGjun5cqf5Jwp2Ad/arcgis/rest/services/CMP_ROAD_CENTERLINES/FeatureServer/0",
+   "featureCount": 199,
+   "file": "features/ROADS.geojson"
+  },
+  {
+   "title": "BUILDING LABELS",
+   "url": "https://gis.hdc.mv/server/rest/services/Hosted/Land_Labels_W_Outline/FeatureServer/1",
+   "featureCount": 716,
+   "file": "features/BUILDING_LABELS.geojson"
+  },
+  {
+   "title": "LOT LABELS",
+   "url": "https://gis.hdc.mv/server/rest/services/Hosted/Land_Labels_W_Outline/FeatureServer/0",
+   "featureCount": 4116,
+   "file": "features/LOT_LABELS.geojson"
+  },
+  {
+   "title": "Lot Layer",
+   "url": "https://services7.arcgis.com/TGjun5cqf5Jwp2Ad/arcgis/rest/services/Lot_Layer/FeatureServer/0",
+   "featureCount": 5293,
+   "file": "features/Lot_Layer.geojson"
+  }
+ ],
+ "skipped": [
+  {
+   "title": "KUDAGIRI IMAGERY - 8th August 2022",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/KUDAGIRI_NEW/MapServer",
+   "reason": "Tile cache too large for git backup; metadata stored for re-publishing."
+  },
+  {
+   "title": "KUDAGIRI IMAGERY - 16th August 2022",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/KUDAGIRI_IMAGERY_16082022/MapServer",
+   "reason": "Tile cache too large for git backup; metadata stored for re-publishing."
+  },
+  {
+   "title": "KUDAGIRI IMAGERY - 28th August 2022",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/KUDAGIRI_IMAGERY_28082022/MapServer",
+   "reason": "Tile cache too large for git backup; metadata stored for re-publishing."
+  },
+  {
+   "title": "KUDAGIRI IMAGERY -9th November 2022",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/KUDAGIRI_9TH_NOVEMBER_2022/MapServer",
+   "reason": "Tile cache too large for git backup; metadata stored for re-publishing."
+  },
+  {
+   "title": "KUDAGIRI IMAGERY 13th December 2022",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/kudagriri_12132022or_6_tif/MapServer",
+   "reason": "Tile cache too large for git backup; metadata stored for re-publishing."
+  },
+  {
+   "title": "KUDAGIRI IMAGERY - 8th JANUARY 2024",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/KUDAGIRI_IMAGERY_8TH_JANUARY_2024/MapServer",
+   "reason": "Tile cache too large for git backup; metadata stored for re-publishing."
+  },
+  {
+   "title": "KUDAGIR IMAGERY - 31st March 2024",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/KUDAGIRIMARCH2024/MapServer",
+   "reason": "Tile cache too large for git backup; metadata stored for re-publishing."
+  },
+  {
+   "title": "KUDAGIRI IMAGERY - 21 JANUARY 2025",
+   "url": "https://gis.hdc.mv/server/rest/services/Hosted/KUDAGIRI_IMAGERY___21_JANUARY_2025/MapServer",
+   "reason": "Tile cache too large for git backup; metadata stored for re-publishing."
+  },
+  {
+   "title": "GULHIFALHU IMAGERY 18th DECEMBER 2022",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/GULHIFALHU_IMAGERY_18th_DECEMBER_2022/MapServer",
+   "reason": "Tile cache too large for git backup; metadata stored for re-publishing."
+  },
+  {
+   "title": "GULHIFALHU IMAGERY 31 January 2023",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/GULHIFALHU_IMAGERY_31_January_2023/MapServer",
+   "reason": "Tile cache too large for git backup; metadata stored for re-publishing."
+  },
+  {
+   "title": "GULHIFALHU IMAGERY - 31st March 2024",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/GULHIFALHU2024/MapServer",
+   "reason": "Tile cache too large for git backup; metadata stored for re-publishing."
+  },
+  {
+   "title": "GULHIFALHU IMAGERY - 24th June 2024",
+   "url": "https://gis.hdc.mv/server/rest/services/IMAGERY_GFLJUN2024/MapServer",
+   "reason": "Tile cache too large for git backup; metadata stored for re-publishing."
+  },
+  {
+   "title": "THILAFUSHI IMAGERY -  28th January 2021",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/THILAFUSHI_IMAGERY_28012021/MapServer",
+   "reason": "Tile cache too large for git backup; metadata stored for re-publishing."
+  },
+  {
+   "title": "THILAFUSHI IMAGERY - 14th June 2022",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/THILAFUSHI_IMAGERY/MapServer",
+   "reason": "Tile cache too large for git backup; metadata stored for re-publishing."
+  },
+  {
+   "title": "THILAFUSHI IMAGERY - 15th February 2023",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/THILAFUSHI_IMAGERY_15022023/MapServer",
+   "reason": "Tile cache too large for git backup; metadata stored for re-publishing."
+  },
+  {
+   "title": "THILAFUSHI IMAGERY - 19th January 2024",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/THILAFUSHIIMAGERY/MapServer",
+   "reason": "Tile cache too large for git backup; metadata stored for re-publishing."
+  },
+  {
+   "title": "THILAFUSHI IMAGERY - 14th June 2024",
+   "url": "https://gis.hdc.mv/server/rest/services/IMAGERY_TFS_JUN2024/MapServer",
+   "reason": "Tile cache too large for git backup; metadata stored for re-publishing."
+  },
+  {
+   "title": "HULHUMALE IMAGERY - 24th July 2022",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/HM_IMAGERY/MapServer",
+   "reason": "Tile cache too large for git backup; metadata stored for re-publishing."
+  },
+  {
+   "title": "HULHUMALE IMAGERY - 4th June 2024",
+   "url": "https://gis.hdc.mv/server/rest/services/IMAGERY_HMLJUN2024/MapServer",
+   "reason": "Tile cache too large for git backup; metadata stored for re-publishing."
+  },
+  {
+   "title": "HULHUMALÉ PHASE 2 IMAGERY - 16th October 2024",
+   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_HMLOCT2024/MapServer",
+   "reason": "Tile cache too large for git backup; metadata stored for re-publishing."
+  },
+  {
+   "title": "HULHUMALE PHASE 1 IMAGERY - 04th November 2024",
+   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_HMLP1OCT2024/MapServer",
+   "reason": "Tile cache too large for git backup; metadata stored for re-publishing."
+  },
+  {
+   "title": "RASMALE IMAGERY - 7TH January 2024",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/RASMALE_IMAGERY_7TH_JANUARY_2024/MapServer",
+   "reason": "Tile cache too large for git backup; metadata stored for re-publishing."
+  },
+  {
+   "title": "RASMALE IMAGERY 13 March 2025",
+   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_RASMALE_13_March_2025/MapServer",
+   "reason": "Tile cache too large for git backup; metadata stored for re-publishing."
+  },
+  {
+   "title": "Survey Day2025 orthomosaic",
+   "url": "https://gis.hdc.mv/server/rest/services/Hosted/Survey_Day2025_orthomosaic/MapServer",
+   "reason": "Tile cache too large for git backup; metadata stored for re-publishing."
+  },
+  {
+   "title": "GULHIFALHU IMAGERY",
+   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_GFLJAN2026/MapServer",
+   "reason": "Tile cache too large for git backup; metadata stored for re-publishing."
+  },
+  {
+   "title": "THILAFUSHI IMAGERY",
+   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_TFSJAN26/MapServer",
+   "reason": "Tile cache too large for git backup; metadata stored for re-publishing."
+  },
+  {
+   "title": "KUDAGIRI IMAGERY",
+   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_KDGMAY2026/MapServer",
+   "reason": "Tile cache too large for git backup; metadata stored for re-publishing."
+  },
+  {
+   "title": "HULHUMALÉ IMAGEY",
+   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_HMLJAN26_CORS/MapServer",
+   "reason": "Tile cache too large for git backup; metadata stored for re-publishing."
+  }
+ ],
+ "errors": []
+}

@@ -1,0 +1,358 @@
+{
+ "isCoGoEnabled": false,
+ "extent": {
+  "ymin": 468020.747299999,
+  "xmin": 8185567.938900001,
+  "ymax": 472564.41050000116,
+  "xmax": 8187754.198600002,
+  "spatialReference": {
+   "falseM": -100000,
+   "xyTolerance": 0.001,
+   "mUnits": 10000,
+   "zUnits": 10000,
+   "latestWkid": 3857,
+   "zTolerance": 0.001,
+   "wkid": 102100,
+   "xyUnits": 10000,
+   "mTolerance": 0.001,
+   "falseX": -20037700,
+   "falseY": -30241100,
+   "falseZ": -100000
+  }
+ },
+ "isDataBranchVersioned": false,
+ "supportsApplyEditsWithGlobalIds": false,
+ "maxRecordCount": 2000,
+ "infoInEstimates": [
+  "extent",
+  "count"
+ ],
+ "datesInUnknownTimezone": false,
+ "type": "Feature Layer",
+ "onlyAllowTrueCurveUpdatesByTrueCurveClients": true,
+ "supportsAttachmentsByUploadId": true,
+ "relationships": [],
+ "supportsAttachmentsResizing": true,
+ "cimVersion": "3.3.0",
+ "isDataArchived": false,
+ "id": 0,
+ "supportsStatistics": true,
+ "supportedExportFormats": "sqlite,filegdb,shapefile,csv,geojson",
+ "standardMaxRecordCount": 2000,
+ "isDataVersioned": false,
+ "templates": [
+  {
+   "name": "LOT_LABELS",
+   "description": "",
+   "drawingTool": "esriFeatureEditToolPolygon",
+   "prototype": {
+    "attributes": {
+     "lot_no": null,
+     "parcel_no": null
+    }
+   }
+  }
+ ],
+ "hasGeometryProperties": true,
+ "supportsAdvancedQueries": true,
+ "parentLayer": null,
+ "currentVersion": 11.3,
+ "canScaleSymbols": false,
+ "hasZ": false,
+ "advancedEditingCapabilities": {
+  "supportsAsyncApplyEdits": true,
+  "supportsApplyEditsbyUploadID": true,
+  "supportsReturnEditResults": true,
+  "supportedSqlFormatsInCalculate": [
+   "standard"
+  ],
+  "supportedApplyEditsUploadIDFormats": "JSON"
+ },
+ "objectIdField": "objectid",
+ "supportsQuantizationEditMode": true,
+ "name": "LOT_LABELS",
+ "allowTrueCurvesUpdates": false,
+ "displayField": "parcel_no",
+ "supportsCalculate": true,
+ "fields": [
+  {
+   "nullable": false,
+   "defaultValue": null,
+   "editable": false,
+   "length": 4,
+   "type": "esriFieldTypeOID",
+   "modelName": "fid",
+   "domain": null,
+   "name": "objectid",
+   "alias": "fid"
+  },
+  {
+   "modelName": "parcel_no",
+   "nullable": true,
+   "editable": true,
+   "defaultValue": null,
+   "domain": null,
+   "name": "parcel_no",
+   "length": 50,
+   "alias": "PARCEL_NO",
+   "type": "esriFieldTypeString"
+  },
+  {
+   "modelName": "lot_no",
+   "nullable": true,
+   "editable": true,
+   "defaultValue": null,
+   "domain": null,
+   "name": "lot_no",
+   "length": 10,
+   "alias": "LOT_NO",
+   "type": "esriFieldTypeString"
+  },
+  {
+   "virtual": true,
+   "nullable": true,
+   "editable": false,
+   "defaultValue": null,
+   "domain": null,
+   "name": "SHAPE__Length",
+   "alias": "SHAPE__Length",
+   "type": "esriFieldTypeDouble"
+  },
+  {
+   "virtual": true,
+   "nullable": true,
+   "editable": false,
+   "defaultValue": null,
+   "domain": null,
+   "name": "SHAPE__Area",
+   "alias": "SHAPE__Area",
+   "type": "esriFieldTypeDouble"
+  }
+ ],
+ "maxRecordCountFactor": 1,
+ "dateFieldsTimeReference": {
+  "respectsDaylightSaving": false,
+  "timeZone": "UTC"
+ },
+ "supportsFieldDescriptionProperty": true,
+ "hasM": false,
+ "allowGeometryUpdates": true,
+ "useStandardizedQueries": true,
+ "globalIdField": null,
+ "description": "",
+ "syncCanReturnChanges": true,
+ "supportsAsyncDelete": true,
+ "supportedSpatialRelationships": [
+  "esriSpatialRelIntersects",
+  "esriSpatialRelContains",
+  "esriSpatialRelCrosses",
+  "esriSpatialRelEnvelopeIntersects",
+  "esriSpatialRelOverlaps",
+  "esriSpatialRelTouches",
+  "esriSpatialRelWithin"
+ ],
+ "geometryProperties": {
+  "shapeAreaFieldName": "SHAPE__Area",
+  "shapeLengthFieldName": "SHAPE__Length",
+  "units": "esriMeters"
+ },
+ "supportsRollbackOnFailureParameter": true,
+ "isDataReplicaTracked": false,
+ "standardMaxRecordCountNoGeometry": 16000,
+ "supportsTruncate": true,
+ "indexes": [
+  {
+   "name": "a318_ix1",
+   "isUnique": false,
+   "description": "",
+   "fields": "shape",
+   "isAscending": true
+  },
+  {
+   "name": "r375_sde_rowid_uk",
+   "isUnique": true,
+   "description": "",
+   "fields": "objectid",
+   "isAscending": true
+  }
+ ],
+ "supportedAppendSourceFilterFormats": "featureService",
+ "editFieldsInfo": null,
+ "htmlPopupType": "esriServerHTMLPopupTypeAsHTMLText",
+ "GUIDFormat": "O",
+ "minScale": 0,
+ "hasAttachments": false,
+ "queryBinsCapabilities": {
+  "supportedStatisticTypes": [
+   "count",
+   "sum",
+   "min",
+   "max",
+   "avg",
+   "stddev",
+   "var",
+   "percentile_cont",
+   "percentile_disc"
+  ],
+  "supportsFixedIntervalBin": true,
+  "supportsAutoIntervalBin": true,
+  "supportsFixedBoundariesBin": true,
+  "supportsDateBin": true
+ },
+ "advancedQueryCapabilities": {
+  "supportsSqlExpression": true,
+  "supportsQueryWithResultType": true,
+  "supportsQueryRelatedPagination": true,
+  "supportsQueryWithCacheHint": false,
+  "supportsQueryWithDatumTransformation": true,
+  "supportsCurrentUserQueries": true,
+  "supportsQueryAttachmentsWithReturnUrl": true,
+  "supportsDefaultSR": true,
+  "supportsQueryDateBins": false,
+  "supportsQueryWithLodSR": true,
+  "supportsPaginationOnAggregatedQueries": true,
+  "supportsPagination": true,
+  "supportsMaxRecordCountFactor": true,
+  "supportsStatistics": true,
+  "supportsOrderBy": true,
+  "supportsReturningGeometryProperties": true,
+  "supportsFullTextSearch": false,
+  "supportsQueryWithDistance": true,
+  "supportsLod": true,
+  "supportsCountDistinct": true,
+  "supportsAdvancedQueryRelated": true,
+  "supportsQueryAttachments": true,
+  "supportsReturningQueryExtent": true,
+  "supportsQueryAttachmentsCountOnly": true,
+  "supportsOrderByOnlyOnLayerFields": false,
+  "supportsOutFieldSqlExpression": true,
+  "supportsTopFeaturesQuery": true,
+  "supportsReturningGeometryEnvelope": true,
+  "supportsDistinct": true,
+  "supportsReturningGeometryCentroid": true,
+  "supportsQueryAnalytic": true,
+  "supportsPercentileStatistics": true,
+  "supportsHavingClause": true
+ },
+ "subtypeField": "",
+ "supportsValidateSQL": true,
+ "enableZDefaults": true,
+ "serviceItemId": "5bdd2d99439b4c5d96da7f27b2765a10",
+ "allowUpdateWithoutMValues": true,
+ "supportsCoordinatesQuantization": true,
+ "types": [],
+ "capabilities": "Query",
+ "maxScale": 0,
+ "supportsAppend": true,
+ "supportsExceedsLimitStatistics": true,
+ "defaultVisibility": true,
+ "advancedQueryAnalyticCapabilities": {
+  "supportsAsync": true,
+  "supportsLinearRegression": true,
+  "supportsPercentileAnalytic": false
+ },
+ "hasMetadata": true,
+ "supportedAppendFormats": "shapefile,geojson,csv,featureCollection,excel,jsonl,featureService",
+ "tileMaxRecordCount": 2000,
+ "typeIdField": "",
+ "supportsASyncCalculate": true,
+ "supportedQueryFormats": "JSON, geoJSON, PBF",
+ "sqlParserVersion": "PG_11.2.0",
+ "drawingInfo": {
+  "renderer": {
+   "symbol": {
+    "outline": {
+     "color": [
+      255,
+      255,
+      255,
+      255
+     ],
+     "width": 0.7,
+     "style": "esriSLSSolid",
+     "type": "esriSLS"
+    },
+    "color": [
+     255,
+     127,
+     120,
+     255
+    ],
+    "style": "esriSFSSolid",
+    "type": "esriSFS"
+   },
+   "type": "simple"
+  },
+  "scaleSymbols": true,
+  "transparency": 0,
+  "labelingInfo": [
+   {
+    "multiPart": "labelLargest",
+    "symbol": {
+     "backgroundColor": null,
+     "kerning": true,
+     "color": [
+      0,
+      0,
+      0,
+      255
+     ],
+     "yoffset": 0,
+     "xoffset": 0,
+     "haloColor": [
+      255,
+      255,
+      255,
+      255
+     ],
+     "type": "esriTS",
+     "borderLineColor": null,
+     "borderLineSize": null,
+     "horizontalAlignment": "left",
+     "haloSize": 2,
+     "angle": 0,
+     "rightToLeft": false,
+     "verticalAlignment": "bottom",
+     "font": {
+      "size": 8,
+      "weight": "normal",
+      "style": "normal",
+      "family": "Arial",
+      "decoration": "none"
+     }
+    },
+    "stackLabel": true,
+    "stackRowLength": 24,
+    "maxScale": 0,
+    "allowOverrun": true,
+    "useClippedGeometry": true,
+    "labelExpressionInfo": {
+     "expression": "// Label expression for LOT_NO and PARCEL_NO\nvar lot = $feature.lot_no;\nvar parcel = $feature.parcel_no;\n\nreturn lot + TextFormatting.NewLine + parcel;\n",
+     "title": "Custom"
+    },
+    "deconflictionStrategy": "dynamic",
+    "priority": -1,
+    "labelPlacement": "esriServerPolygonPlacementAlwaysHorizontal",
+    "removeDuplicates": "none",
+    "name": "Class 1",
+    "repeatLabel": false,
+    "minScale": 587.028105953273,
+    "stackAlignment": "dynamic",
+    "useCodedValues": true
+   }
+  ]
+ },
+ "geometryField": {
+  "sqlType": "sqlTypeOther",
+  "nullable": true,
+  "editable": true,
+  "name": "shape",
+  "typeName": "st_geometry",
+  "length": 2147483647,
+  "type": "esriFieldTypeGeometry"
+ },
+ "copyrightText": "",
+ "zDefault": 0,
+ "geometryType": "esriGeometryPolygon",
+ "supportsLayerOverrides": true
+}

@@ -1,0 +1,1293 @@
+{
+ "operationalLayers": [
+  {
+   "id": "19ea63e7dbb-layer-56",
+   "showLegend": false,
+   "listMode": "hide",
+   "title": "GULHIFALHU IMAGERY",
+   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_GFLJAN2026/MapServer",
+   "visibility": true,
+   "refreshInterval": 0,
+   "layerType": "ArcGISTiledMapServiceLayer"
+  },
+  {
+   "id": "19ea6401753-layer-58",
+   "showLegend": false,
+   "listMode": "hide",
+   "title": "THILAFUSHI IMAGERY",
+   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_TFSJAN26/MapServer",
+   "visibility": true,
+   "refreshInterval": 0,
+   "layerType": "ArcGISTiledMapServiceLayer"
+  },
+  {
+   "id": "19ea63ef347-layer-57",
+   "showLegend": false,
+   "listMode": "hide",
+   "title": "KUDAGIRI IMAGERY",
+   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_KDGMAY2026/MapServer",
+   "visibility": true,
+   "refreshInterval": 0,
+   "layerType": "ArcGISTiledMapServiceLayer"
+  },
+  {
+   "id": "19ea63dbfe2-layer-55",
+   "showLegend": false,
+   "listMode": "hide",
+   "title": "HULHUMALÉ IMAGEY",
+   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_HMLJAN26_CORS/MapServer",
+   "refreshInterval": 0,
+   "layerType": "ArcGISTiledMapServiceLayer"
+  },
+  {
+   "id": "19ea5c95afd-layer-112",
+   "title": "Lot Layer",
+   "url": "https://services7.arcgis.com/TGjun5cqf5Jwp2Ad/arcgis/rest/services/Lot_Layer/FeatureServer/0",
+   "visibility": true,
+   "itemId": "d2b631422ac74f5e9b780119f879657d",
+   "layerType": "ArcGISFeatureLayer",
+   "refreshInterval": 0,
+   "layerDefinition": {
+    "definitionExpression": null,
+    "fieldConfigurations": [
+     {
+      "name": "HEIGHT_M",
+      "fieldFormat": {
+       "type": "number",
+       "maximumFractionDigits": 1,
+       "minimumFractionDigits": 1,
+       "useGrouping": "never"
+      }
+     },
+     {
+      "alias": "AREA (SQM)",
+      "name": "Shape__Area",
+      "fieldFormat": {
+       "type": "number",
+       "minimumFractionDigits": 2,
+       "useGrouping": "never"
+      }
+     }
+    ],
+    "drawingInfo": {
+     "renderer": {
+      "authoringInfo": {
+       "lengthUnit": "meters"
+      },
+      "type": "uniqueValue",
+      "visualVariables": [
+       {
+        "type": "sizeInfo",
+        "field": "HEIGHT_M",
+        "valueUnit": "meters"
+       }
+      ],
+      "field1": "LANDUSE",
+      "defaultLabel": "Other",
+      "defaultSymbol": {
+       "type": "PolygonSymbol3D",
+       "symbolLayers": [
+        {
+         "type": "Extrude",
+         "size": 1,
+         "material": {
+          "color": [
+           170,
+           170,
+           170
+          ]
+         },
+         "edges": {
+          "type": "solid",
+          "color": [
+           0,
+           0,
+           0
+          ],
+          "transparency": 35,
+          "size": 0.3
+         }
+        }
+       ]
+      },
+      "uniqueValueGroups": [
+       {
+        "classes": [
+         {
+          "label": "Residential",
+          "symbol": {
+           "type": "PolygonSymbol3D",
+           "symbolLayers": [
+            {
+             "type": "Extrude",
+             "size": 51,
+             "material": {
+              "color": [
+               255,
+               223,
+               174
+              ]
+             },
+             "edges": {
+              "type": "solid",
+              "color": [
+               0,
+               0,
+               0
+              ],
+              "transparency": 35,
+              "size": 0.3
+             }
+            }
+           ]
+          },
+          "values": [
+           [
+            "Residential"
+           ]
+          ]
+         },
+         {
+          "label": "Industrial",
+          "symbol": {
+           "type": "PolygonSymbol3D",
+           "symbolLayers": [
+            {
+             "type": "Extrude",
+             "size": 128,
+             "material": {
+              "color": [
+               191,
+               168,
+               215
+              ]
+             },
+             "edges": {
+              "type": "solid",
+              "color": [
+               0,
+               0,
+               0
+              ],
+              "transparency": 35,
+              "size": 0.3
+             }
+            }
+           ]
+          },
+          "values": [
+           [
+            "Industrial"
+           ]
+          ]
+         },
+         {
+          "label": "Open/Green Space",
+          "symbol": {
+           "type": "PolygonSymbol3D",
+           "symbolLayers": [
+            {
+             "type": "Extrude",
+             "size": 128,
+             "material": {
+              "color": [
+               158,
+               215,
+               174
+              ]
+             },
+             "edges": {
+              "type": "solid",
+              "color": [
+               0,
+               0,
+               0
+              ],
+              "transparency": 35,
+              "size": 0.3
+             }
+            }
+           ]
+          },
+          "values": [
+           [
+            "Open/Green Space"
+           ]
+          ]
+         },
+         {
+          "label": "Municipal/Utilities",
+          "symbol": {
+           "type": "PolygonSymbol3D",
+           "symbolLayers": [
+            {
+             "type": "Extrude",
+             "size": 128,
+             "material": {
+              "color": [
+               178,
+               178,
+               178
+              ]
+             },
+             "edges": {
+              "type": "solid",
+              "color": [
+               0,
+               0,
+               0
+              ],
+              "transparency": 35,
+              "size": 0.3
+             }
+            }
+           ]
+          },
+          "values": [
+           [
+            "Municipal/Utilities"
+           ]
+          ]
+         },
+         {
+          "label": "Commercial",
+          "symbol": {
+           "type": "PolygonSymbol3D",
+           "symbolLayers": [
+            {
+             "type": "Extrude",
+             "size": 128,
+             "material": {
+              "color": [
+               255,
+               127,
+               120
+              ]
+             },
+             "edges": {
+              "type": "solid",
+              "color": [
+               0,
+               0,
+               0
+              ],
+              "transparency": 35,
+              "size": 0.3
+             }
+            }
+           ]
+          },
+          "values": [
+           [
+            "Commercial"
+           ]
+          ]
+         },
+         {
+          "label": "Transport Facilities",
+          "symbol": {
+           "type": "PolygonSymbol3D",
+           "symbolLayers": [
+            {
+             "type": "Extrude",
+             "size": 128,
+             "material": {
+              "color": [
+               225,
+               225,
+               225
+              ]
+             },
+             "edges": {
+              "type": "solid",
+              "color": [
+               0,
+               0,
+               0
+              ],
+              "transparency": 35,
+              "size": 0.3
+             }
+            }
+           ]
+          },
+          "values": [
+           [
+            "Transport Facilities"
+           ]
+          ]
+         },
+         {
+          "label": "Office",
+          "symbol": {
+           "type": "PolygonSymbol3D",
+           "symbolLayers": [
+            {
+             "type": "Extrude",
+             "size": 128,
+             "material": {
+              "color": [
+               175,
+               221,
+               237
+              ]
+             },
+             "edges": {
+              "type": "solid",
+              "color": [
+               0,
+               0,
+               0
+              ],
+              "transparency": 35,
+              "size": 0.3
+             }
+            }
+           ]
+          },
+          "values": [
+           [
+            "Office"
+           ]
+          ]
+         },
+         {
+          "label": "Civic & Community Institution",
+          "symbol": {
+           "type": "PolygonSymbol3D",
+           "symbolLayers": [
+            {
+             "type": "Extrude",
+             "size": 128,
+             "material": {
+              "color": [
+               255,
+               166,
+               166
+              ]
+             },
+             "edges": {
+              "type": "solid",
+              "color": [
+               0,
+               0,
+               0
+              ],
+              "transparency": 35,
+              "size": 0.3
+             }
+            }
+           ]
+          },
+          "values": [
+           [
+            "Civic & Community Institution"
+           ]
+          ]
+         },
+         {
+          "label": "Religious",
+          "symbol": {
+           "type": "PolygonSymbol3D",
+           "symbolLayers": [
+            {
+             "type": "Extrude",
+             "size": 128,
+             "material": {
+              "color": [
+               252,
+               218,
+               218
+              ]
+             },
+             "edges": {
+              "type": "solid",
+              "color": [
+               0,
+               0,
+               0
+              ],
+              "transparency": 35,
+              "size": 0.3
+             }
+            }
+           ]
+          },
+          "values": [
+           [
+            "Religious"
+           ]
+          ]
+         },
+         {
+          "label": "Educational",
+          "symbol": {
+           "type": "PolygonSymbol3D",
+           "symbolLayers": [
+            {
+             "type": "Extrude",
+             "size": 128,
+             "material": {
+              "color": [
+               246,
+               165,
+               108
+              ]
+             },
+             "edges": {
+              "type": "solid",
+              "color": [
+               0,
+               0,
+               0
+              ],
+              "transparency": 35,
+              "size": 0.3
+             }
+            }
+           ]
+          },
+          "values": [
+           [
+            "Educational"
+           ]
+          ]
+         },
+         {
+          "label": "Port",
+          "symbol": {
+           "type": "PolygonSymbol3D",
+           "symbolLayers": [
+            {
+             "type": "Extrude",
+             "size": 128,
+             "material": {
+              "color": [
+               255,
+               255,
+               175
+              ]
+             },
+             "edges": {
+              "type": "solid",
+              "color": [
+               0,
+               0,
+               0
+              ],
+              "transparency": 35,
+              "size": 0.3
+             }
+            }
+           ]
+          },
+          "values": [
+           [
+            "Port"
+           ]
+          ]
+         },
+         {
+          "label": "Knowledge Park",
+          "symbol": {
+           "type": "PolygonSymbol3D",
+           "symbolLayers": [
+            {
+             "type": "Extrude",
+             "size": 128,
+             "material": {
+              "color": [
+               111,
+               170,
+               181
+              ]
+             },
+             "edges": {
+              "type": "solid",
+              "color": [
+               0,
+               0,
+               0
+              ],
+              "transparency": 35,
+              "size": 0.3
+             }
+            }
+           ]
+          },
+          "values": [
+           [
+            "Knowledge Park"
+           ]
+          ]
+         },
+         {
+          "label": "Hotel",
+          "symbol": {
+           "type": "PolygonSymbol3D",
+           "symbolLayers": [
+            {
+             "type": "Extrude",
+             "size": 128,
+             "material": {
+              "color": [
+               83,
+               114,
+               139
+              ]
+             },
+             "edges": {
+              "type": "solid",
+              "color": [
+               0,
+               0,
+               0
+              ],
+              "transparency": 35,
+              "size": 0.3
+             }
+            }
+           ]
+          },
+          "values": [
+           [
+            "Hotel"
+           ]
+          ]
+         },
+         {
+          "label": "Mixed-Use",
+          "symbol": {
+           "type": "PolygonSymbol3D",
+           "symbolLayers": [
+            {
+             "type": "Extrude",
+             "size": 51,
+             "material": {
+              "color": [
+               229,
+               182,
+               209
+              ]
+             },
+             "edges": {
+              "type": "solid",
+              "color": [
+               0,
+               0,
+               0
+              ],
+              "transparency": 35,
+              "size": 0.3
+             }
+            }
+           ]
+          },
+          "values": [
+           [
+            "Mixed-Use"
+           ]
+          ]
+         },
+         {
+          "label": "Sports and Recreational",
+          "symbol": {
+           "type": "PolygonSymbol3D",
+           "symbolLayers": [
+            {
+             "type": "Extrude",
+             "size": 51,
+             "material": {
+              "color": [
+               227,
+               232,
+               193
+              ]
+             },
+             "edges": {
+              "type": "solid",
+              "color": [
+               0,
+               0,
+               0
+              ],
+              "transparency": 35,
+              "size": 0.3
+             }
+            }
+           ]
+          },
+          "values": [
+           [
+            "Sports and Recreational"
+           ]
+          ]
+         }
+        ]
+       }
+      ],
+      "uniqueValueInfos": [
+       {
+        "label": "Residential",
+        "symbol": {
+         "type": "PolygonSymbol3D",
+         "symbolLayers": [
+          {
+           "type": "Extrude",
+           "size": 51,
+           "material": {
+            "color": [
+             255,
+             223,
+             174
+            ]
+           },
+           "edges": {
+            "type": "solid",
+            "color": [
+             0,
+             0,
+             0
+            ],
+            "transparency": 35,
+            "size": 0.3
+           }
+          }
+         ]
+        },
+        "value": "Residential"
+       },
+       {
+        "label": "Industrial",
+        "symbol": {
+         "type": "PolygonSymbol3D",
+         "symbolLayers": [
+          {
+           "type": "Extrude",
+           "size": 128,
+           "material": {
+            "color": [
+             191,
+             168,
+             215
+            ]
+           },
+           "edges": {
+            "type": "solid",
+            "color": [
+             0,
+             0,
+             0
+            ],
+            "transparency": 35,
+            "size": 0.3
+           }
+          }
+         ]
+        },
+        "value": "Industrial"
+       },
+       {
+        "label": "Open/Green Space",
+        "symbol": {
+         "type": "PolygonSymbol3D",
+         "symbolLayers": [
+          {
+           "type": "Extrude",
+           "size": 128,
+           "material": {
+            "color": [
+             158,
+             215,
+             174
+            ]
+           },
+           "edges": {
+            "type": "solid",
+            "color": [
+             0,
+             0,
+             0
+            ],
+            "transparency": 35,
+            "size": 0.3
+           }
+          }
+         ]
+        },
+        "value": "Open/Green Space"
+       },
+       {
+        "label": "Municipal/Utilities",
+        "symbol": {
+         "type": "PolygonSymbol3D",
+         "symbolLayers": [
+          {
+           "type": "Extrude",
+           "size": 128,
+           "material": {
+            "color": [
+             178,
+             178,
+             178
+            ]
+           },
+           "edges": {
+            "type": "solid",
+            "color": [
+             0,
+             0,
+             0
+            ],
+            "transparency": 35,
+            "size": 0.3
+           }
+          }
+         ]
+        },
+        "value": "Municipal/Utilities"
+       },
+       {
+        "label": "Commercial",
+        "symbol": {
+         "type": "PolygonSymbol3D",
+         "symbolLayers": [
+          {
+           "type": "Extrude",
+           "size": 128,
+           "material": {
+            "color": [
+             255,
+             127,
+             120
+            ]
+           },
+           "edges": {
+            "type": "solid",
+            "color": [
+             0,
+             0,
+             0
+            ],
+            "transparency": 35,
+            "size": 0.3
+           }
+          }
+         ]
+        },
+        "value": "Commercial"
+       },
+       {
+        "label": "Transport Facilities",
+        "symbol": {
+         "type": "PolygonSymbol3D",
+         "symbolLayers": [
+          {
+           "type": "Extrude",
+           "size": 128,
+           "material": {
+            "color": [
+             225,
+             225,
+             225
+            ]
+           },
+           "edges": {
+            "type": "solid",
+            "color": [
+             0,
+             0,
+             0
+            ],
+            "transparency": 35,
+            "size": 0.3
+           }
+          }
+         ]
+        },
+        "value": "Transport Facilities"
+       },
+       {
+        "label": "Office",
+        "symbol": {
+         "type": "PolygonSymbol3D",
+         "symbolLayers": [
+          {
+           "type": "Extrude",
+           "size": 128,
+           "material": {
+            "color": [
+             175,
+             221,
+             237
+            ]
+           },
+           "edges": {
+            "type": "solid",
+            "color": [
+             0,
+             0,
+             0
+            ],
+            "transparency": 35,
+            "size": 0.3
+           }
+          }
+         ]
+        },
+        "value": "Office"
+       },
+       {
+        "label": "Civic & Community Institution",
+        "symbol": {
+         "type": "PolygonSymbol3D",
+         "symbolLayers": [
+          {
+           "type": "Extrude",
+           "size": 128,
+           "material": {
+            "color": [
+             255,
+             166,
+             166
+            ]
+           },
+           "edges": {
+            "type": "solid",
+            "color": [
+             0,
+             0,
+             0
+            ],
+            "transparency": 35,
+            "size": 0.3
+           }
+          }
+         ]
+        },
+        "value": "Civic & Community Institution"
+       },
+       {
+        "label": "Religious",
+        "symbol": {
+         "type": "PolygonSymbol3D",
+         "symbolLayers": [
+          {
+           "type": "Extrude",
+           "size": 128,
+           "material": {
+            "color": [
+             252,
+             218,
+             218
+            ]
+           },
+           "edges": {
+            "type": "solid",
+            "color": [
+             0,
+             0,
+             0
+            ],
+            "transparency": 35,
+            "size": 0.3
+           }
+          }
+         ]
+        },
+        "value": "Religious"
+       },
+       {
+        "label": "Educational",
+        "symbol": {
+         "type": "PolygonSymbol3D",
+         "symbolLayers": [
+          {
+           "type": "Extrude",
+           "size": 128,
+           "material": {
+            "color": [
+             246,
+             165,
+             108
+            ]
+           },
+           "edges": {
+            "type": "solid",
+            "color": [
+             0,
+             0,
+             0
+            ],
+            "transparency": 35,
+            "size": 0.3
+           }
+          }
+         ]
+        },
+        "value": "Educational"
+       },
+       {
+        "label": "Port",
+        "symbol": {
+         "type": "PolygonSymbol3D",
+         "symbolLayers": [
+          {
+           "type": "Extrude",
+           "size": 128,
+           "material": {
+            "color": [
+             255,
+             255,
+             175
+            ]
+           },
+           "edges": {
+            "type": "solid",
+            "color": [
+             0,
+             0,
+             0
+            ],
+            "transparency": 35,
+            "size": 0.3
+           }
+          }
+         ]
+        },
+        "value": "Port"
+       },
+       {
+        "label": "Knowledge Park",
+        "symbol": {
+         "type": "PolygonSymbol3D",
+         "symbolLayers": [
+          {
+           "type": "Extrude",
+           "size": 128,
+           "material": {
+            "color": [
+             111,
+             170,
+             181
+            ]
+           },
+           "edges": {
+            "type": "solid",
+            "color": [
+             0,
+             0,
+             0
+            ],
+            "transparency": 35,
+            "size": 0.3
+           }
+          }
+         ]
+        },
+        "value": "Knowledge Park"
+       },
+       {
+        "label": "Hotel",
+        "symbol": {
+         "type": "PolygonSymbol3D",
+         "symbolLayers": [
+          {
+           "type": "Extrude",
+           "size": 128,
+           "material": {
+            "color": [
+             83,
+             114,
+             139
+            ]
+           },
+           "edges": {
+            "type": "solid",
+            "color": [
+             0,
+             0,
+             0
+            ],
+            "transparency": 35,
+            "size": 0.3
+           }
+          }
+         ]
+        },
+        "value": "Hotel"
+       },
+       {
+        "label": "Mixed-Use",
+        "symbol": {
+         "type": "PolygonSymbol3D",
+         "symbolLayers": [
+          {
+           "type": "Extrude",
+           "size": 51,
+           "material": {
+            "color": [
+             229,
+             182,
+             209
+            ]
+           },
+           "edges": {
+            "type": "solid",
+            "color": [
+             0,
+             0,
+             0
+            ],
+            "transparency": 35,
+            "size": 0.3
+           }
+          }
+         ]
+        },
+        "value": "Mixed-Use"
+       },
+       {
+        "label": "Sports and Recreational",
+        "symbol": {
+         "type": "PolygonSymbol3D",
+         "symbolLayers": [
+          {
+           "type": "Extrude",
+           "size": 51,
+           "material": {
+            "color": [
+             227,
+             232,
+             193
+            ]
+           },
+           "edges": {
+            "type": "solid",
+            "color": [
+             0,
+             0,
+             0
+            ],
+            "transparency": 35,
+            "size": 0.3
+           }
+          }
+         ]
+        },
+        "value": "Sports and Recreational"
+       }
+      ]
+     }
+    }
+   },
+   "showLabels": false,
+   "popupInfo": {
+    "popupElements": [
+     {
+      "type": "fields",
+      "description": "",
+      "fieldInfos": [
+       {
+        "fieldName": "PARCEL_NO",
+        "isEditable": true,
+        "label": "PARCEL NO",
+        "visible": true
+       },
+       {
+        "fieldName": "LOT_NO",
+        "isEditable": true,
+        "label": "LOT",
+        "visible": true
+       },
+       {
+        "fieldName": "LANDUSE",
+        "isEditable": true,
+        "label": "LANDUSE",
+        "visible": true
+       },
+       {
+        "fieldName": "DEVELOPMENT",
+        "isEditable": true,
+        "label": "DEVELOPMENT",
+        "visible": true
+       },
+       {
+        "fieldFormat": {
+         "type": "number",
+         "maximumFractionDigits": 1,
+         "minimumFractionDigits": 1,
+         "useGrouping": "never"
+        },
+        "fieldName": "HEIGHT_M",
+        "format": {
+         "digitSeparator": false,
+         "places": 1
+        },
+        "isEditable": true,
+        "label": "HEIGHT (M)",
+        "visible": true
+       },
+       {
+        "fieldFormat": {
+         "type": "number",
+         "minimumFractionDigits": 2,
+         "useGrouping": "never"
+        },
+        "fieldName": "Shape__Area",
+        "format": {
+         "digitSeparator": false,
+         "places": 2
+        },
+        "isEditable": false,
+        "label": "AREA (SQM)",
+        "visible": true
+       }
+      ],
+      "title": ""
+     }
+    ],
+    "expressionInfos": [],
+    "fieldInfos": [
+     {
+      "fieldName": "PARCEL_NO",
+      "isEditable": true,
+      "label": "PARCEL NO",
+      "visible": true
+     },
+     {
+      "fieldName": "LOT_NO",
+      "isEditable": true,
+      "label": "LOT",
+      "visible": true
+     },
+     {
+      "fieldName": "LANDUSE",
+      "isEditable": true,
+      "label": "LANDUSE",
+      "visible": true
+     },
+     {
+      "fieldName": "DEVELOPMENT",
+      "isEditable": true,
+      "label": "DEVELOPMENT",
+      "visible": true
+     },
+     {
+      "fieldName": "PHASE_NO",
+      "isEditable": true,
+      "label": "PHASE NO",
+      "visible": false
+     },
+     {
+      "fieldName": "HEIGHT_M",
+      "format": {
+       "digitSeparator": false,
+       "places": 1
+      },
+      "isEditable": true,
+      "label": "HEIGHT (M)",
+      "visible": true
+     },
+     {
+      "fieldName": "Shape__Area",
+      "format": {
+       "digitSeparator": false,
+       "places": 2
+      },
+      "isEditable": false,
+      "label": "AREA (SQM)",
+      "visible": true
+     },
+     {
+      "fieldName": "OBJECTID",
+      "isEditable": true,
+      "label": "OBJECTID",
+      "visible": false
+     },
+     {
+      "fieldName": "Shape__Length",
+      "isEditable": true,
+      "label": "Shape__Length",
+      "visible": false
+     }
+    ],
+    "title": "{LOT_NO}"
+   },
+   "screenSizePerspective": false
+  }
+ ],
+ "baseMap": {
+  "baseMapLayers": [
+   {
+    "id": "World_Imagery_2017",
+    "opacity": 1,
+    "title": "World Imagery",
+    "url": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer",
+    "visibility": true,
+    "layerType": "ArcGISTiledMapServiceLayer"
+   }
+  ],
+  "id": "18ee00f45b5-basemap-15",
+  "title": "Imagery",
+  "elevationLayers": []
+ },
+ "ground": {
+  "layers": [],
+  "transparency": 0,
+  "navigationConstraint": {
+   "type": "stayAbove"
+  }
+ },
+ "applicationProperties": {
+  "viewing": {
+   "search": {
+    "hintText": "Place or Address",
+    "layers": []
+   }
+  }
+ },
+ "heightModelInfo": {
+  "heightModel": "gravity_related_height",
+  "heightUnit": "meter"
+ },
+ "version": "1.39",
+ "authoringApp": "WebSceneViewer",
+ "authoringAppVersion": "2026.1.0",
+ "initialState": {
+  "environment": {
+   "lighting": {
+    "type": "sun",
+    "datetime": 1678861799000,
+    "directShadows": true,
+    "displayUTCOffset": 5
+   },
+   "atmosphereEnabled": true,
+   "starsEnabled": true,
+   "weather": {
+    "type": "sunny",
+    "cloudCover": 0.5
+   }
+  },
+  "viewpoint": {
+   "camera": {
+    "position": {
+     "spatialReference": {
+      "latestWkid": 3857,
+      "wkid": 102100
+     },
+     "x": 8186447.752510232,
+     "y": 470738.21817315836,
+     "z": 7297.721983280033
+    },
+    "heading": 105.85123121994725,
+    "tilt": 0.49964471435811253
+   }
+  }
+ },
+ "spatialReference": {
+  "latestWkid": 3857,
+  "wkid": 102100
+ },
+ "viewingMode": "global"
+}

@@ -1,0 +1,972 @@
+{
+ "operationalLayers": [
+  {
+   "id": "18286df0520-layer-6",
+   "opacity": 1,
+   "title": "KUDAGIRI IMAGERY - 8th August 2022",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/KUDAGIRI_NEW/MapServer",
+   "visibility": false,
+   "itemId": "13cf34b54af14d24970780cadf94f28b",
+   "layerType": "ArcGISTiledMapServiceLayer"
+  },
+  {
+   "id": "182ba24a589-layer-16",
+   "opacity": 1,
+   "title": "KUDAGIRI IMAGERY - 16th August 2022",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/KUDAGIRI_IMAGERY_16082022/MapServer",
+   "visibility": false,
+   "itemId": "26d56cf2baa24fe2a0c2239ca10568da",
+   "layerType": "ArcGISTiledMapServiceLayer"
+  },
+  {
+   "id": "182e339ee51-layer-12",
+   "opacity": 1,
+   "title": "KUDAGIRI IMAGERY - 28th August 2022",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/KUDAGIRI_IMAGERY_28082022/MapServer",
+   "visibility": false,
+   "itemId": "9bb3df6aac4d4bcfbe90fa55b90a108b",
+   "layerType": "ArcGISTiledMapServiceLayer"
+  },
+  {
+   "id": "185577bb36a-layer-16",
+   "opacity": 1,
+   "title": "KUDAGIRI IMAGERY -9th November 2022",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/KUDAGIRI_9TH_NOVEMBER_2022/MapServer",
+   "visibility": false,
+   "itemId": "c92370128b494c08ab969ed3c00290b1",
+   "layerType": "ArcGISTiledMapServiceLayer"
+  },
+  {
+   "id": "1855821a6a4-layer-19",
+   "opacity": 1,
+   "title": "KUDAGIRI IMAGERY 13th December 2022",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/kudagriri_12132022or_6_tif/MapServer",
+   "visibility": false,
+   "itemId": "92c36eaf48a64128a33584d24524bc04",
+   "layerType": "ArcGISTiledMapServiceLayer"
+  },
+  {
+   "id": "18ddeed880c-layer-21",
+   "title": "KUDAGIRI IMAGERY - 8th JANUARY 2024",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/KUDAGIRI_IMAGERY_8TH_JANUARY_2024/MapServer",
+   "visibility": false,
+   "itemId": "08b05111fc8a470586fe642ce262b472",
+   "layerType": "ArcGISTiledMapServiceLayer"
+  },
+  {
+   "id": "18e9ddbab17-layer-24",
+   "title": "KUDAGIR IMAGERY - 31st March 2024",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/KUDAGIRIMARCH2024/MapServer",
+   "visibility": false,
+   "itemId": "eb5cf4fae80a4263bc1d72111686e7ec",
+   "layerType": "ArcGISTiledMapServiceLayer"
+  },
+  {
+   "id": "194b0caa45b-layer-27",
+   "title": "KUDAGIRI IMAGERY - 21 JANUARY 2025",
+   "url": "https://gis.hdc.mv/server/rest/services/Hosted/KUDAGIRI_IMAGERY___21_JANUARY_2025/MapServer",
+   "layerType": "ArcGISTiledMapServiceLayer"
+  },
+  {
+   "id": "1855333ca5b-layer-80",
+   "opacity": 1,
+   "title": "GULHIFALHU IMAGERY 18th DECEMBER 2022",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/GULHIFALHU_IMAGERY_18th_DECEMBER_2022/MapServer",
+   "visibility": false,
+   "refreshInterval": 5,
+   "itemId": "59ccc500a16f4b5e91cd2b64f1213995",
+   "layerType": "ArcGISTiledMapServiceLayer",
+   "minScale": 0,
+   "maxScale": 0
+  },
+  {
+   "id": "1869627ad10-layer-23",
+   "opacity": 1,
+   "title": "GULHIFALHU IMAGERY 31 January 2023",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/GULHIFALHU_IMAGERY_31_January_2023/MapServer",
+   "visibility": false,
+   "itemId": "7e7e11d3e22544b6a86131f7f3cfb238",
+   "layerType": "ArcGISTiledMapServiceLayer"
+  },
+  {
+   "id": "18e9dd09275-layer-23",
+   "title": "GULHIFALHU IMAGERY - 31st March 2024",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/GULHIFALHU2024/MapServer",
+   "visibility": false,
+   "itemId": "ffc83a8256fd46728a5d99747529be37",
+   "layerType": "ArcGISTiledMapServiceLayer"
+  },
+  {
+   "id": "1909beefd47-layer-25",
+   "title": "GULHIFALHU IMAGERY - 24th June 2024",
+   "url": "https://gis.hdc.mv/server/rest/services/IMAGERY_GFLJUN2024/MapServer",
+   "visibility": true,
+   "layerType": "ArcGISTiledMapServiceLayer",
+   "minScale": 78313.800582
+  },
+  {
+   "id": "182ba78d2eb-layer-12",
+   "opacity": 1,
+   "title": "THILAFUSHI IMAGERY -  28th January 2021",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/THILAFUSHI_IMAGERY_28012021/MapServer",
+   "visibility": false,
+   "itemId": "327212f116f94340abceb9ed475a40e7",
+   "layerType": "ArcGISTiledMapServiceLayer"
+  },
+  {
+   "id": "182ba1ab998-layer-13",
+   "opacity": 1,
+   "title": "THILAFUSHI IMAGERY - 14th June 2022",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/THILAFUSHI_IMAGERY/MapServer",
+   "visibility": false,
+   "itemId": "de2066135ab94a448cdac630197a1da7",
+   "layerType": "ArcGISTiledMapServiceLayer"
+  },
+  {
+   "id": "18654848d57-layer-20",
+   "opacity": 1,
+   "title": "THILAFUSHI IMAGERY - 15th February 2023",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/THILAFUSHI_IMAGERY_15022023/MapServer",
+   "visibility": false,
+   "itemId": "8faf98bdebc74bbb84b4a915329470a9",
+   "layerType": "ArcGISTiledMapServiceLayer"
+  },
+  {
+   "id": "18e5fff2339-layer-23",
+   "title": "THILAFUSHI IMAGERY - 19th January 2024",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/THILAFUSHIIMAGERY/MapServer",
+   "visibility": false,
+   "itemId": "a292ee04982b466bae55bff9b52e71e7",
+   "layerType": "ArcGISTiledMapServiceLayer"
+  },
+  {
+   "id": "1909bf30f96-layer-26",
+   "title": "THILAFUSHI IMAGERY - 14th June 2024",
+   "url": "https://gis.hdc.mv/server/rest/services/IMAGERY_TFS_JUN2024/MapServer",
+   "visibility": true,
+   "layerType": "ArcGISTiledMapServiceLayer"
+  },
+  {
+   "id": "182b9f4997c-layer-8",
+   "opacity": 1,
+   "title": "HULHUMALE IMAGERY - 24th July 2022",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/HM_IMAGERY/MapServer",
+   "visibility": false,
+   "itemId": "9438d58b8c684c1097832599d86c6cf7",
+   "layerType": "ArcGISTiledMapServiceLayer"
+  },
+  {
+   "id": "190b51df9c9-layer-27",
+   "title": "HULHUMALE IMAGERY - 4th June 2024",
+   "url": "https://gis.hdc.mv/server/rest/services/IMAGERY_HMLJUN2024/MapServer",
+   "visibility": false,
+   "layerType": "ArcGISTiledMapServiceLayer",
+   "minScale": 81983.499057
+  },
+  {
+   "id": "192cd17bf92-layer-25",
+   "title": "HULHUMALÉ PHASE 2 IMAGERY - 16th October 2024",
+   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_HMLOCT2024/MapServer",
+   "layerType": "ArcGISTiledMapServiceLayer"
+  },
+  {
+   "id": "19300357db0-layer-26",
+   "title": "HULHUMALE PHASE 1 IMAGERY - 04th November 2024",
+   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_HMLP1OCT2024/MapServer",
+   "layerType": "ArcGISTiledMapServiceLayer"
+  },
+  {
+   "id": "18dcab752b1-layer-20",
+   "opacity": 1,
+   "title": "RASMALE IMAGERY - 7TH January 2024",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/RASMALE_IMAGERY_7TH_JANUARY_2024/MapServer",
+   "itemId": "84281f1e60d14c6b99c4ccb12b11e9ed",
+   "layerType": "ArcGISTiledMapServiceLayer"
+  },
+  {
+   "id": "197a6ae6787-layer-29",
+   "title": "RASMALE IMAGERY 13 March 2025",
+   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_RASMALE_13_March_2025/MapServer",
+   "layerType": "ArcGISTiledMapServiceLayer"
+  },
+  {
+   "id": "19874736ee0-layer-30",
+   "showLegend": false,
+   "title": "Survey Day2025 orthomosaic",
+   "url": "https://gis.hdc.mv/server/rest/services/Hosted/Survey_Day2025_orthomosaic/MapServer",
+   "layerType": "ArcGISTiledMapServiceLayer"
+  },
+  {
+   "id": "186919ada25-layer-20",
+   "opacity": 1,
+   "disablePopup": true,
+   "title": "THILA MALE' BRIDGE",
+   "url": "https://services7.arcgis.com/TGjun5cqf5Jwp2Ad/arcgis/rest/services/GREATER_MALE__INTERCONNECTING_BRIDGE/FeatureServer/1",
+   "visibility": true,
+   "itemId": "2b241586ad0a4f89956355d29bd0592f",
+   "layerType": "ArcGISFeatureLayer",
+   "layerDefinition": {
+    "minScale": 9754.569832,
+    "maxScale": 0,
+    "fieldConfigurations": [
+     {
+      "name": "FID_",
+      "fieldFormat": {
+       "type": "number",
+       "maximumFractionDigits": 0,
+       "useGrouping": "always"
+      }
+     },
+     {
+      "name": "Color",
+      "fieldFormat": {
+       "type": "number",
+       "maximumFractionDigits": 0,
+       "useGrouping": "always"
+      }
+     },
+     {
+      "name": "Elevation",
+      "fieldFormat": {
+       "type": "number",
+       "useGrouping": "always"
+      }
+     },
+     {
+      "name": "LineWt",
+      "fieldFormat": {
+       "type": "number",
+       "maximumFractionDigits": 0,
+       "useGrouping": "always"
+      }
+     },
+     {
+      "name": "Shape__Length",
+      "fieldFormat": {
+       "type": "number",
+       "useGrouping": "always"
+      }
+     }
+    ],
+    "drawingInfo": {
+     "renderer": {
+      "type": "simple",
+      "symbol": {
+       "type": "esriSLS",
+       "color": [
+        255,
+        255,
+        255,
+        255
+       ],
+       "width": 0.07,
+       "style": "esriSLSSolid"
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "18691a3d85d-layer-21",
+   "opacity": 1,
+   "disablePopup": true,
+   "title": "THILAFUSHI PHASE II RECLAMATION",
+   "url": "https://services7.arcgis.com/TGjun5cqf5Jwp2Ad/arcgis/rest/services/Thilfaushi_Phase_II_Reclamation/FeatureServer/0",
+   "visibility": true,
+   "itemId": "2d86b9bd3bfd423ab9ab512f3e78ef1d",
+   "layerType": "ArcGISFeatureLayer",
+   "layerDefinition": {
+    "minScale": 14333.993497,
+    "maxScale": 0,
+    "fieldConfigurations": [
+     {
+      "name": "Id",
+      "fieldFormat": {
+       "type": "number",
+       "useGrouping": "never"
+      }
+     },
+     {
+      "name": "Area_SQM",
+      "fieldFormat": {
+       "type": "number",
+       "maximumFractionDigits": 6,
+       "minimumFractionDigits": 6,
+       "useGrouping": "never"
+      }
+     },
+     {
+      "name": "Shape__Area",
+      "fieldFormat": {
+       "type": "number",
+       "maximumFractionDigits": 6,
+       "minimumFractionDigits": 6,
+       "useGrouping": "never"
+      }
+     },
+     {
+      "name": "Shape__Length",
+      "fieldFormat": {
+       "type": "number",
+       "maximumFractionDigits": 6,
+       "minimumFractionDigits": 6,
+       "useGrouping": "never"
+      }
+     }
+    ],
+    "drawingInfo": {
+     "renderer": {
+      "type": "simple",
+      "symbol": {
+       "type": "esriSFS",
+       "color": [
+        0,
+        0,
+        0,
+        0
+       ],
+       "outline": {
+        "type": "esriSLS",
+        "color": [
+         255,
+         255,
+         255,
+         255
+        ],
+        "width": 0.45,
+        "style": "esriSLSLongDash"
+       },
+       "style": "esriSFSSolid"
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "188be4153c2-layer-20",
+   "disablePopup": true,
+   "title": "ROADS",
+   "url": "https://services7.arcgis.com/TGjun5cqf5Jwp2Ad/arcgis/rest/services/CMP_ROAD_CENTERLINES/FeatureServer/0",
+   "visibility": true,
+   "itemId": "265507e34d1c4a4fb7e36489a0102439",
+   "layerType": "ArcGISFeatureLayer",
+   "layerDefinition": {
+    "minScale": 13875.334705,
+    "definitionExpression": "FID NOT IN (119,153,154,162,178,179,183,184,185,190)",
+    "fieldConfigurations": [
+     {
+      "name": "OBJECTID_1",
+      "fieldFormat": {
+       "type": "number",
+       "useGrouping": "never"
+      }
+     },
+     {
+      "name": "UPDEC",
+      "fieldFormat": {
+       "type": "number",
+       "useGrouping": "never"
+      }
+     },
+     {
+      "name": "Shape__Length",
+      "fieldFormat": {
+       "type": "number",
+       "useGrouping": "always"
+      }
+     }
+    ],
+    "drawingInfo": {
+     "labelingInfo": [
+      {
+       "labelExpression": "[Road_Names]",
+       "labelExpressionInfo": {
+        "expression": "$feature[\"Road_Names\"]"
+       },
+       "labelPlacement": "esriServerLinePlacementCenterAlong",
+       "maxScale": 0,
+       "minScale": 1873.6363,
+       "repeatLabel": true,
+       "repeatLabelDistance": 250,
+       "symbol": {
+        "type": "esriTS",
+        "color": [
+         255,
+         255,
+         255,
+         255
+        ],
+        "font": {
+         "family": "Arial",
+         "size": 8.25
+        },
+        "horizontalAlignment": "center",
+        "kerning": true,
+        "haloSize": 1,
+        "rotated": false,
+        "text": "",
+        "verticalAlignment": "baseline",
+        "xoffset": 0,
+        "yoffset": 0,
+        "angle": 0
+       }
+      }
+     ],
+     "renderer": {
+      "type": "simple",
+      "symbol": {
+       "type": "esriSLS",
+       "color": [
+        28,
+        15,
+        15,
+        0
+       ],
+       "width": 0.998,
+       "style": "esriSLSSolid"
+      }
+     }
+    }
+   },
+   "featureEffect": null,
+   "showLabels": true,
+   "popupInfo": {
+    "popupElements": [
+     {
+      "type": "fields",
+      "description": "",
+      "fieldInfos": [
+       {
+        "fieldFormat": {
+         "type": "number",
+         "maximumFractionDigits": 0,
+         "useGrouping": "never"
+        },
+        "fieldName": "FID",
+        "format": {
+         "digitSeparator": false,
+         "places": 0
+        },
+        "isEditable": false,
+        "label": "FID",
+        "visible": true
+       },
+       {
+        "fieldFormat": {
+         "type": "number",
+         "maximumFractionDigits": 0,
+         "useGrouping": "never"
+        },
+        "fieldName": "OBJECTID_1",
+        "format": {
+         "digitSeparator": false,
+         "places": 0
+        },
+        "isEditable": true,
+        "label": "OBJECTID_1",
+        "visible": true
+       },
+       {
+        "fieldName": "Road_Names",
+        "isEditable": true,
+        "label": "Road_Names",
+        "visible": true
+       },
+       {
+        "fieldFormat": {
+         "type": "number",
+         "maximumFractionDigits": 0,
+         "useGrouping": "never"
+        },
+        "fieldName": "UPDEC",
+        "format": {
+         "digitSeparator": false,
+         "places": 0
+        },
+        "isEditable": true,
+        "label": "UPDEC",
+        "visible": true
+       },
+       {
+        "fieldName": "Phase",
+        "isEditable": true,
+        "label": "Phase",
+        "visible": true
+       },
+       {
+        "fieldName": "Shape__Length",
+        "isEditable": true,
+        "label": "Shape__Length",
+        "visible": true
+       }
+      ],
+      "title": ""
+     }
+    ],
+    "expressionInfos": [],
+    "fieldInfos": [
+     {
+      "fieldName": "FID",
+      "format": {
+       "digitSeparator": false,
+       "places": 0
+      },
+      "isEditable": false,
+      "label": "FID",
+      "visible": true
+     },
+     {
+      "fieldName": "OBJECTID_1",
+      "format": {
+       "digitSeparator": false,
+       "places": 0
+      },
+      "isEditable": true,
+      "label": "OBJECTID_1",
+      "visible": true
+     },
+     {
+      "fieldName": "Road_Names",
+      "isEditable": true,
+      "label": "Road_Names",
+      "visible": true
+     },
+     {
+      "fieldName": "UPDEC",
+      "format": {
+       "digitSeparator": false,
+       "places": 0
+      },
+      "isEditable": true,
+      "label": "UPDEC",
+      "visible": true
+     },
+     {
+      "fieldName": "Phase",
+      "isEditable": true,
+      "label": "Phase",
+      "visible": true
+     },
+     {
+      "fieldName": "Shape__Length",
+      "isEditable": true,
+      "label": "Shape__Length",
+      "visible": true
+     }
+    ],
+    "title": "{Road_Names}"
+   }
+  },
+  {
+   "id": "19c08e253c9-layer-28",
+   "title": "LAND LABELS",
+   "layers": [
+    {
+     "id": "19c08e253ca-layer-29",
+     "showLegend": false,
+     "disablePopup": true,
+     "title": "BUILDING LABELS",
+     "url": "https://gis.hdc.mv/server/rest/services/Hosted/Land_Labels_W_Outline/FeatureServer/1",
+     "layerType": "ArcGISFeatureLayer",
+     "layerDefinition": {
+      "fieldConfigurations": [
+       {
+        "name": "SHAPE__Area",
+        "fieldFormat": {
+         "type": "number",
+         "minimumFractionDigits": 2,
+         "useGrouping": "always"
+        }
+       },
+       {
+        "name": "SHAPE__Length",
+        "fieldFormat": {
+         "type": "number",
+         "minimumFractionDigits": 2,
+         "useGrouping": "always"
+        }
+       }
+      ],
+      "drawingInfo": {
+       "labelingInfo": [
+        {
+         "name": "Class 1",
+         "allowOverrun": true,
+         "deconflictionStrategy": "dynamic",
+         "labelExpression": "[name]",
+         "labelExpressionInfo": {
+          "expression": "$feature.name",
+          "title": "Custom"
+         },
+         "labelPlacement": "esriServerPolygonPlacementAlwaysHorizontal",
+         "maxScale": 0,
+         "minScale": 1433.174086799983,
+         "repeatLabel": false,
+         "symbol": {
+          "type": "esriTS",
+          "color": [
+           0,
+           0,
+           0,
+           255
+          ],
+          "font": {
+           "family": "Arial",
+           "size": 8.75
+          },
+          "horizontalAlignment": "left",
+          "kerning": true,
+          "haloColor": [
+           255,
+           255,
+           255,
+           255
+          ],
+          "haloSize": 2,
+          "rightToLeft": false,
+          "rotated": false,
+          "text": "",
+          "verticalAlignment": "bottom",
+          "xoffset": 0,
+          "yoffset": 0,
+          "angle": 0
+         },
+         "useCodedValues": true
+        }
+       ],
+       "renderer": {
+        "type": "simple",
+        "symbol": {
+         "type": "esriSFS",
+         "color": [
+          0,
+          0,
+          0,
+          0
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "color": [
+           0,
+           0,
+           0,
+           0
+          ],
+          "width": 0.203,
+          "style": "esriSLSSolid"
+         },
+         "style": "esriSFSSolid"
+        }
+       }
+      }
+     },
+     "showLabels": true,
+     "popupInfo": {
+      "popupElements": [
+       {
+        "type": "fields",
+        "description": "",
+        "fieldInfos": [
+         {
+          "fieldName": "name",
+          "isEditable": true,
+          "label": "NAME",
+          "visible": true
+         },
+         {
+          "fieldName": "lot_no",
+          "isEditable": true,
+          "label": "LOT_NO",
+          "visible": true
+         },
+         {
+          "fieldName": "phase_no",
+          "isEditable": true,
+          "label": "PHASE_NO",
+          "visible": true
+         },
+         {
+          "fieldFormat": {
+           "type": "number",
+           "minimumFractionDigits": 2,
+           "useGrouping": "always"
+          },
+          "fieldName": "SHAPE__Area",
+          "format": {
+           "digitSeparator": true,
+           "places": 2
+          },
+          "isEditable": false,
+          "label": "SHAPE__Area",
+          "visible": true
+         },
+         {
+          "fieldFormat": {
+           "type": "number",
+           "minimumFractionDigits": 2,
+           "useGrouping": "always"
+          },
+          "fieldName": "SHAPE__Length",
+          "format": {
+           "digitSeparator": true,
+           "places": 2
+          },
+          "isEditable": false,
+          "label": "SHAPE__Length",
+          "visible": true
+         }
+        ],
+        "title": ""
+       }
+      ],
+      "fieldInfos": [
+       {
+        "fieldName": "objectid",
+        "isEditable": false,
+        "label": "fid",
+        "visible": false
+       },
+       {
+        "fieldName": "name",
+        "isEditable": true,
+        "label": "NAME",
+        "visible": true
+       },
+       {
+        "fieldName": "lot_no",
+        "isEditable": true,
+        "label": "LOT_NO",
+        "visible": true
+       },
+       {
+        "fieldName": "phase_no",
+        "isEditable": true,
+        "label": "PHASE_NO",
+        "visible": true
+       },
+       {
+        "fieldName": "SHAPE__Area",
+        "format": {
+         "digitSeparator": true,
+         "places": 2
+        },
+        "isEditable": false,
+        "label": "SHAPE__Area",
+        "visible": true
+       },
+       {
+        "fieldName": "SHAPE__Length",
+        "format": {
+         "digitSeparator": true,
+         "places": 2
+        },
+        "isEditable": false,
+        "label": "SHAPE__Length",
+        "visible": true
+       }
+      ],
+      "title": "BUILDING LABELS: {name}"
+     }
+    },
+    {
+     "id": "19c08e253cb-layer-30",
+     "showLegend": false,
+     "disablePopup": true,
+     "title": "LOT LABELS",
+     "url": "https://gis.hdc.mv/server/rest/services/Hosted/Land_Labels_W_Outline/FeatureServer/0",
+     "layerType": "ArcGISFeatureLayer",
+     "layerDefinition": {
+      "fieldConfigurations": [
+       {
+        "name": "SHAPE__Area",
+        "fieldFormat": {
+         "type": "number",
+         "minimumFractionDigits": 2,
+         "useGrouping": "always"
+        }
+       },
+       {
+        "name": "SHAPE__Length",
+        "fieldFormat": {
+         "type": "number",
+         "minimumFractionDigits": 2,
+         "useGrouping": "always"
+        }
+       }
+      ],
+      "drawingInfo": {
+       "labelingInfo": [
+        {
+         "name": "Class 1",
+         "allowOverrun": true,
+         "deconflictionStrategy": "dynamic",
+         "labelExpression": "[lot_no]",
+         "labelExpressionInfo": {
+          "expression": "$feature[\"lot_no\"]"
+         },
+         "labelPlacement": "esriServerPolygonPlacementAlwaysHorizontal",
+         "maxScale": 0,
+         "minScale": 1502.407088,
+         "repeatLabel": false,
+         "symbol": {
+          "type": "esriTS",
+          "color": [
+           0,
+           0,
+           0,
+           255
+          ],
+          "font": {
+           "family": "Arial",
+           "size": 9.5
+          },
+          "horizontalAlignment": "left",
+          "kerning": true,
+          "haloColor": [
+           255,
+           255,
+           255,
+           255
+          ],
+          "haloSize": 2,
+          "rightToLeft": false,
+          "rotated": false,
+          "text": "",
+          "verticalAlignment": "bottom",
+          "xoffset": 0,
+          "yoffset": 0,
+          "angle": 0
+         },
+         "useCodedValues": true
+        }
+       ],
+       "renderer": {
+        "type": "simple",
+        "symbol": {
+         "type": "esriSFS",
+         "color": [
+          0,
+          0,
+          0,
+          0
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "color": [
+           0,
+           0,
+           0,
+           0
+          ],
+          "width": 0.698,
+          "style": "esriSLSSolid"
+         },
+         "style": "esriSFSSolid"
+        }
+       }
+      }
+     },
+     "showLabels": true,
+     "popupInfo": {
+      "popupElements": [
+       {
+        "type": "fields"
+       },
+       {
+        "type": "attachments",
+        "displayType": "auto"
+       }
+      ],
+      "showAttachments": true,
+      "fieldInfos": [
+       {
+        "fieldName": "objectid",
+        "isEditable": false,
+        "label": "fid",
+        "visible": false
+       },
+       {
+        "fieldName": "lot_no",
+        "isEditable": true,
+        "label": "LOT_NO",
+        "visible": true
+       },
+       {
+        "fieldName": "parcel_no",
+        "isEditable": true,
+        "label": "PARCEL_NO",
+        "visible": true
+       },
+       {
+        "fieldName": "SHAPE__Area",
+        "format": {
+         "digitSeparator": true,
+         "places": 2
+        },
+        "isEditable": false,
+        "label": "SHAPE__Area",
+        "visible": true
+       },
+       {
+        "fieldName": "SHAPE__Length",
+        "format": {
+         "digitSeparator": true,
+         "places": 2
+        },
+        "isEditable": false,
+        "label": "SHAPE__Length",
+        "visible": true
+       }
+      ],
+      "title": "LOT LABELS: {parcel_no}"
+     }
+    }
+   ],
+   "layerType": "GroupLayer"
+  }
+ ],
+ "baseMap": {
+  "baseMapLayers": [
+   {
+    "id": "World_Imagery_2017",
+    "opacity": 1,
+    "title": "World Imagery",
+    "url": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer",
+    "visibility": true,
+    "layerType": "ArcGISTiledMapServiceLayer"
+   }
+  ],
+  "title": "Imagery"
+ },
+ "applicationProperties": {
+  "viewing": {
+   "search": {
+    "disablePlaceFinder": true,
+    "enabled": true,
+    "hintText": "Place or Address"
+   }
+  }
+ },
+ "authoringApp": "ArcGISMapViewer",
+ "authoringAppVersion": "2026.1",
+ "initialState": {
+  "viewpoint": {
+   "targetGeometry": {
+    "spatialReference": {
+     "latestWkid": 3857,
+     "wkid": 102100
+    },
+    "xmin": 8184696.120676964,
+    "ymin": 468406.20113439707,
+    "xmax": 8189731.409915383,
+    "ymax": 472529.0233476374
+   }
+  }
+ },
+ "spatialReference": {
+  "latestWkid": 3857,
+  "wkid": 102100
+ },
+ "timeZone": "system",
+ "version": "2.36"
+}

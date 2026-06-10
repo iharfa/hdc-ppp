@@ -1,0 +1,67 @@
+{
+ "id": "46865dadd00d48f0b23f87e9b49085b1",
+ "owner": "m.sameeh",
+ "orgId": "TGjun5cqf5Jwp2Ad",
+ "created": 1659411327000,
+ "modified": 1780372410000,
+ "guid": null,
+ "name": null,
+ "title": "DRONE IMAGERY",
+ "type": "Web Map",
+ "typeKeywords": [
+  "ArcGIS API for JavaScript",
+  "ArcGIS Online",
+  "Explorer Web Map",
+  "FieldMapsDisabled",
+  "Map",
+  "Online Map",
+  "Web Map"
+ ],
+ "description": "",
+ "tags": [
+  "HULHUMALE"
+ ],
+ "snippet": "",
+ "thumbnail": "thumbnail/ago_downloaded.png",
+ "documentation": null,
+ "extent": [
+  [
+   73.52437621077871,
+   4.2039872728429115
+  ],
+  [
+   73.56960898360707,
+   4.240922687528799
+  ]
+ ],
+ "categories": [],
+ "spatialReference": "",
+ "accessInformation": "",
+ "classification": null,
+ "licenseInfo": "",
+ "culture": "en-us",
+ "properties": null,
+ "advancedSettings": null,
+ "url": "",
+ "proxyFilter": null,
+ "access": "public",
+ "size": 16950,
+ "subInfo": 0,
+ "appCategories": [],
+ "industries": [],
+ "languages": [],
+ "largeThumbnail": null,
+ "banner": null,
+ "screenshots": [],
+ "listed": false,
+ "commentsEnabled": true,
+ "numComments": 0,
+ "numRatings": 0,
+ "avgRating": 0,
+ "numViews": 96423,
+ "scoreCompleteness": 33,
+ "groupDesignations": null,
+ "apiToken1ExpirationDate": -1,
+ "apiToken2ExpirationDate": -1,
+ "lastViewed": 1781082000000
+}
