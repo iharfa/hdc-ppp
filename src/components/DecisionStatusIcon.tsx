@@ -4,9 +4,9 @@ import type { DecisionStatus } from "../types";
 // label, so meaning never relies on colour alone.
 const ICONS: Record<DecisionStatus, { color: string; path: string }> = {
   // check mark
-  Approved: { color: "#1a7f37", path: "M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z" },
-  // check mark with a small pencil stroke (amended)
-  "Approved with amendments": { color: "#0e7c86", path: "M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z" },
+  Approved: { color: "#0f8f46", path: "M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z" },
+  // check mark (amended) — teal accent to distinguish from plain approval
+  "Approved with amendments": { color: "#00a6a6", path: "M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z" },
   // half-filled circle
   "Partially approved": { color: "#b54708", path: "M12 2a10 10 0 1 0 0 20V2z" },
   // cross

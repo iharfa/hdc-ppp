@@ -1,7 +1,8 @@
 import { useEffect, useRef } from "react";
 import * as echarts from "echarts";
 
-const PALETTE = ["#0b3a6f", "#0e7c86", "#5390d9", "#48bfe3", "#80ced7", "#868e96", "#b9d0e8"];
+// HDC-aligned chart palette: greens, teal, and blue-green accents.
+const PALETTE = ["#0f8f46", "#056839", "#00a6a6", "#006b7a", "#6cc28a", "#9bd9c2", "#b7c2cc"];
 
 interface ChartProps {
   option: echarts.EChartsOption;
@@ -44,7 +45,7 @@ export function barOption(title: string, data: { name: string; value: number }[]
     grid: { left: horizontal ? 140 : 50, right: 20, bottom: 60, top: 40 },
     xAxis: horizontal ? val : cat,
     yAxis: horizontal ? cat : val,
-    series: [{ type: "bar", data: data.map((d) => d.value), itemStyle: { color: "#0e7c86" } }],
+    series: [{ type: "bar", data: data.map((d) => d.value), itemStyle: { color: "#0f8f46", borderRadius: 3 } }],
   };
 }
 
@@ -55,6 +56,6 @@ export function lineOption(title: string, categories: string[], values: number[]
     grid: { left: 50, right: 20, bottom: 50, top: 40 },
     xAxis: { type: "category", data: categories, axisLabel: { fontSize: 10 } },
     yAxis: { type: "value" },
-    series: [{ type: "line", data: values, smooth: true, areaStyle: { opacity: 0.15 }, itemStyle: { color: "#0b3a6f" } }],
+    series: [{ type: "line", data: values, smooth: true, areaStyle: { opacity: 0.15 }, itemStyle: { color: "#056839" }, lineStyle: { color: "#0f8f46" } }],
   };
 }
