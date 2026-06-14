@@ -1,5 +1,5 @@
-hdc-logo.png is the official Housing Development Corporation logo,
-sourced from https://hdccdn.blob.core.windows.net/brand/hdc/HDCLOGO-01.png
+hdc-logo.png is the official Housing Development Corporation logo mark,
+sourced from https://www.hdc.mv/assets/HDCLogo-CAf16HYA.png
 
 To update the logo, replace this file. The app renders an
 "HDC" / "Housing Development Corporation" text fallback if the file is

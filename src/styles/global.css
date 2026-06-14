@@ -132,7 +132,7 @@ button { font-family: inherit; }
 
 /* ---------- Logo ---------- */
 .hdc-logo { display: flex; align-items: center; gap: 0.5rem; }
-.hdc-logo img { height: 38px; width: auto; background: var(--white); border-radius: 4px; padding: 4px 8px; }
+.hdc-logo img { height: 40px; width: auto; background: var(--white); border-radius: 8px; padding: 4px; }
 .hdc-logo .logo-fallback {
   display: inline-flex;
   align-items: center;
