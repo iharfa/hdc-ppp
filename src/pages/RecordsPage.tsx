@@ -3,6 +3,7 @@ import { records } from "../services/dataService";
 import { useRecordFilters } from "../hooks/useRecordFilters";
 import { FiltersSidebar } from "../components/FiltersSidebar";
 import { StatusBadge } from "../components/StatusBadge";
+import { DecisionStatusIcon } from "../components/DecisionStatusIcon";
 
 export function RecordsPage() {
   const { filters, setFilters, filtered } = useRecordFilters(records);
@@ -48,9 +49,11 @@ export function RecordsPage() {
                 <p style={{ fontSize: "0.88rem", margin: "0.4rem 0" }}>{r.summary}</p>
                 {r.status === "Completed" && r.decision && (
                   <div className="rc-result">
-                    <span className="rc-result-status">Result: {r.decision.decisionStatus}</span>{" "}
-                    <span className="muted">({r.decision.decidedOn})</span>
-                    <br />
+                    <div className="rc-result-head">
+                      <DecisionStatusIcon status={r.decision.decisionStatus} size={20} />
+                      <span className="rc-result-status">Result: {r.decision.decisionStatus}</span>
+                      <span className="muted">({r.decision.decidedOn})</span>
+                    </div>
                     {r.decision.conclusion.replace("SAMPLE DECISION (POC): ", "").split(". ").slice(0, 2).join(". ")}.
                     <span className="muted"> Sample decision.</span>
                   </div>

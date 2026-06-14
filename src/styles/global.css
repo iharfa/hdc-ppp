@@ -379,6 +379,8 @@ button { font-family: inherit; }
   margin: 0.5rem 0;
 }
 .rc-result .rc-result-status { font-weight: 700; color: var(--ok); }
+.rc-result-head { display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.25rem; }
+.record-card .rc-body .panel-actions { gap: 0.9rem; }
 
 /* ---------- View more toggle ---------- */
 .link-toggle {
