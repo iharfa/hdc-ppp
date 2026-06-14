@@ -30,7 +30,7 @@ export function RecordsPage() {
                       (e.currentTarget as HTMLImageElement).style.display = "none";
                     }}
                   />
-                  <p className="rc-image-caption">AI concept illustration — sample, not an approved design</p>
+                  <p className="rc-image-caption">Representative image — illustrative only, not an approved design</p>
                 </>
               )}
               <div className="rc-body">

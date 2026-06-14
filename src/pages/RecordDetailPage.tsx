@@ -39,7 +39,7 @@ export function RecordDetailPage() {
                 }}
               />
               <p className="muted" style={{ fontSize: "0.7rem", margin: "0.2rem 0 0.6rem" }}>
-                AI concept illustration — sample, not an approved design
+                Representative image — illustrative only, not an approved design
               </p>
             </>
           )}

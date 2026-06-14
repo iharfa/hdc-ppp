@@ -183,7 +183,7 @@
     },
     "workflowStage": "archived",
     "sampleData": true,
-    "image": "/images/records/HDC-PP-2025-001.svg"
+    "image": "/images/records/HDC-PP-2025-001.jpg"
   },
   {
     "recordId": "HDC-PP-2025-002",
@@ -361,7 +361,7 @@
     },
     "workflowStage": "archived",
     "sampleData": true,
-    "image": "/images/records/HDC-PP-2025-002.svg"
+    "image": "/images/records/HDC-PP-2025-002.jpg"
   },
   {
     "recordId": "HDC-PP-2025-003",
@@ -533,7 +533,7 @@
     },
     "workflowStage": "archived",
     "sampleData": true,
-    "image": "/images/records/HDC-PP-2025-003.svg"
+    "image": "/images/records/HDC-PP-2025-003.jpg"
   },
   {
     "recordId": "HDC-PP-2026-004",
@@ -689,7 +689,7 @@
     ],
     "workflowStage": "active",
     "sampleData": true,
-    "image": "/images/records/HDC-PP-2026-004.svg"
+    "image": "/images/records/HDC-PP-2026-004.jpg"
   },
   {
     "recordId": "HDC-PP-2026-005",
@@ -833,7 +833,7 @@
     ],
     "workflowStage": "active",
     "sampleData": true,
-    "image": "/images/records/HDC-PP-2026-005.svg"
+    "image": "/images/records/HDC-PP-2026-005.jpg"
   },
   {
     "recordId": "HDC-PP-2026-006",
@@ -881,7 +881,7 @@
     "surveyQuestions": [],
     "workflowStage": "internal-review",
     "sampleData": true,
-    "image": "/images/records/HDC-PP-2026-006.svg"
+    "image": "/images/records/HDC-PP-2026-006.jpg"
   },
   {
     "recordId": "HDC-PP-2026-007",
@@ -927,6 +927,6 @@
     "surveyQuestions": [],
     "workflowStage": "gis-linking",
     "sampleData": true,
-    "image": "/images/records/HDC-PP-2026-007.svg"
+    "image": "/images/records/HDC-PP-2026-007.jpg"
   }
 ]

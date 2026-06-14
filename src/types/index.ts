@@ -161,7 +161,7 @@ export interface ParticipationRecord {
   timeline: TimelineEntry[];
   surveyQuestions: SurveyQuestion[];
   decision?: DecisionSummary;
-  image?: string; // AI concept illustration (sample) shown on record cards
+  image?: string; // representative illustrative image (sample) shown on record cards
   workflowStage: string;
   sampleData: true;
 }

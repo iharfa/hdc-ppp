@@ -77,13 +77,13 @@ The official HDC logo is bundled at `public/brand/hdc-logo.png` (sourced from th
 component renders a text fallback ("HDC" / Housing Development Corporation) if the image is missing, so the layout
 never breaks. Do not use old Urbanco branding.
 
-## Concept illustrations
+## Record images
 
-Record cards show concept illustrations from `public/images/records/<recordId>.svg`, labelled
-"AI concept illustration — sample, not an approved design". The bundled images are generated placeholder
-illustrations; swap them for real AI renders or architect visuals by replacing the files (any image format works —
-update the `image` path in `src/data/participationRecords.json` if you change the extension). Cards hide the image
-gracefully if a file is missing.
+Record cards and detail pages show a representative image from `public/images/records/<recordId>.jpg`, labelled
+"Representative image — illustrative only, not an approved design". The bundled photos are royalty-free stock
+imagery (Unsplash license) chosen to match each project theme; swap them for real site photos or architect renders
+by replacing the files (any image format works — update the `image` path in `src/data/participationRecords.json` if
+you change the extension). Cards hide the image gracefully if a file is missing.
 
 ## Moderation note
 
