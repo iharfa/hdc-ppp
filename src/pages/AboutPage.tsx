@@ -5,19 +5,39 @@ export function AboutPage() {
   return (
     <div className="page">
       <Logo dark showName />
+      <span className="eyebrow">About the portal</span>
       <h1>About this portal</h1>
       <div className="card">
-        <p>
-          The <strong>Public Participation Portal</strong> is a map-based civic participation platform for Hulhumalé
-          and HDC-managed areas. It helps the public view planned developments, respond to active participation
-          processes, and review completed decisions with supporting data.
+        <p className="lead">
+          The <strong>Hulhumalé Public Participation Portal</strong> is a platform for open governance, public
+          participation, and data-informed decision making.
         </p>
         <p>
-          Every participation record is linked to a GIS location — plots, buildings, roads, parks, public spaces,
-          waterfronts, and planned development areas — through a <strong>canonical place ID</strong> that bridges
-          Estate, Planning, GIS, and project records.
+          This portal gives the public a clear way to understand, engage with, and contribute to urban planning
+          projects that shape the city they live in. It brings planning information, public consultations, feedback
+          opportunities, and decision updates into one accessible space.
+        </p>
+        <p>
+          The portal supports participation throughout the full planning cycle, from early ideas and project
+          initiation to implementation, upgrades, and changes in public needs or priorities. It helps residents,
+          communities, policymakers, and decision makers see how urban spaces are planned, used, improved, and managed
+          over time.
+        </p>
+        <p>
+          By making information and feedback more visible, the portal helps HDC strengthen public trust, improve
+          planning outcomes, and ensure that decisions about Hulhumalé are informed by both evidence and the lived
+          experience of the people who use the city every day.
         </p>
         <p className="warn-text">Proof of Concept. Sample participation data only. Nothing here is a real HDC decision.</p>
+      </div>
+      <h2>Linked to real places</h2>
+      <div className="card">
+        <p>
+          The portal is map-based: every participation record is linked to a GIS location — plots, buildings, roads,
+          parks, public spaces, waterfronts, and planned development areas — through a{" "}
+          <strong>canonical place ID</strong> that bridges Estate, Planning, GIS, and project records. This keeps
+          planning information, consultations, and decisions tied to the actual spaces they affect.
+        </p>
       </div>
       <h2>How it works</h2>
       <div className="card">

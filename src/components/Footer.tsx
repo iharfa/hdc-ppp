@@ -11,8 +11,7 @@ export function Footer() {
           Public Participation Portal
           <br />
           <span className="footer-blurb">
-            A proof of concept for map-based public participation, survey response collection, consultation result
-            disclosure, and data harmonization across HDC-managed areas.
+            Open governance, public participation, and data-informed decision making for Hulhumalé.
             <br />
           </span>
           <span className="muted">Proof of Concept. Sample participation data only.</span>
