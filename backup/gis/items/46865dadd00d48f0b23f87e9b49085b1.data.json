@@ -2,6 +2,7 @@
  "operationalLayers": [
   {
    "id": "18286df0520-layer-6",
+   "showLegend": false,
    "opacity": 1,
    "title": "KUDAGIRI IMAGERY - 8th August 2022",
    "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/KUDAGIRI_NEW/MapServer",
@@ -11,6 +12,7 @@
   },
   {
    "id": "182ba24a589-layer-16",
+   "showLegend": false,
    "opacity": 1,
    "title": "KUDAGIRI IMAGERY - 16th August 2022",
    "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/KUDAGIRI_IMAGERY_16082022/MapServer",
@@ -20,6 +22,7 @@
   },
   {
    "id": "182e339ee51-layer-12",
+   "showLegend": false,
    "opacity": 1,
    "title": "KUDAGIRI IMAGERY - 28th August 2022",
    "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/KUDAGIRI_IMAGERY_28082022/MapServer",
@@ -29,6 +32,7 @@
   },
   {
    "id": "185577bb36a-layer-16",
+   "showLegend": false,
    "opacity": 1,
    "title": "KUDAGIRI IMAGERY -9th November 2022",
    "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/KUDAGIRI_9TH_NOVEMBER_2022/MapServer",
@@ -38,6 +42,7 @@
   },
   {
    "id": "1855821a6a4-layer-19",
+   "showLegend": false,
    "opacity": 1,
    "title": "KUDAGIRI IMAGERY 13th December 2022",
    "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/kudagriri_12132022or_6_tif/MapServer",
@@ -47,6 +52,7 @@
   },
   {
    "id": "18ddeed880c-layer-21",
+   "showLegend": false,
    "title": "KUDAGIRI IMAGERY - 8th JANUARY 2024",
    "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/KUDAGIRI_IMAGERY_8TH_JANUARY_2024/MapServer",
    "visibility": false,
@@ -55,6 +61,7 @@
   },
   {
    "id": "18e9ddbab17-layer-24",
+   "showLegend": false,
    "title": "KUDAGIR IMAGERY - 31st March 2024",
    "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/KUDAGIRIMARCH2024/MapServer",
    "visibility": false,
@@ -63,12 +70,23 @@
   },
   {
    "id": "194b0caa45b-layer-27",
+   "showLegend": false,
    "title": "KUDAGIRI IMAGERY - 21 JANUARY 2025",
    "url": "https://gis.hdc.mv/server/rest/services/Hosted/KUDAGIRI_IMAGERY___21_JANUARY_2025/MapServer",
+   "visibility": false,
+   "layerType": "ArcGISTiledMapServiceLayer"
+  },
+  {
+   "id": "19efe3d4a4f-layer-37",
+   "showLegend": false,
+   "title": "KUDAGIRI IMAGERY - 10th December 2025",
+   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_KDG10DEC2025/MapServer",
+   "visibility": true,
    "layerType": "ArcGISTiledMapServiceLayer"
   },
   {
    "id": "1855333ca5b-layer-80",
+   "showLegend": false,
    "opacity": 1,
    "title": "GULHIFALHU IMAGERY 18th DECEMBER 2022",
    "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/GULHIFALHU_IMAGERY_18th_DECEMBER_2022/MapServer",
@@ -81,6 +99,7 @@
   },
   {
    "id": "1869627ad10-layer-23",
+   "showLegend": false,
    "opacity": 1,
    "title": "GULHIFALHU IMAGERY 31 January 2023",
    "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/GULHIFALHU_IMAGERY_31_January_2023/MapServer",
@@ -90,6 +109,7 @@
   },
   {
    "id": "18e9dd09275-layer-23",
+   "showLegend": false,
    "title": "GULHIFALHU IMAGERY - 31st March 2024",
    "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/GULHIFALHU2024/MapServer",
    "visibility": false,
@@ -98,14 +118,23 @@
   },
   {
    "id": "1909beefd47-layer-25",
+   "showLegend": false,
    "title": "GULHIFALHU IMAGERY - 24th June 2024",
    "url": "https://gis.hdc.mv/server/rest/services/IMAGERY_GFLJUN2024/MapServer",
-   "visibility": true,
+   "visibility": false,
    "layerType": "ArcGISTiledMapServiceLayer",
    "minScale": 78313.800582
   },
   {
+   "id": "19efe3ae27c-layer-35",
+   "showLegend": false,
+   "title": "GULHIFALHU IMAGERY - 3rd June 2025",
+   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_GFLJUNE25/MapServer",
+   "layerType": "ArcGISTiledMapServiceLayer"
+  },
+  {
    "id": "182ba78d2eb-layer-12",
+   "showLegend": false,
    "opacity": 1,
    "title": "THILAFUSHI IMAGERY -  28th January 2021",
    "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/THILAFUSHI_IMAGERY_28012021/MapServer",
@@ -115,6 +144,7 @@
   },
   {
    "id": "182ba1ab998-layer-13",
+   "showLegend": false,
    "opacity": 1,
    "title": "THILAFUSHI IMAGERY - 14th June 2022",
    "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/THILAFUSHI_IMAGERY/MapServer",
@@ -124,6 +154,7 @@
   },
   {
    "id": "18654848d57-layer-20",
+   "showLegend": false,
    "opacity": 1,
    "title": "THILAFUSHI IMAGERY - 15th February 2023",
    "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/THILAFUSHI_IMAGERY_15022023/MapServer",
@@ -133,6 +164,7 @@
   },
   {
    "id": "18e5fff2339-layer-23",
+   "showLegend": false,
    "title": "THILAFUSHI IMAGERY - 19th January 2024",
    "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/THILAFUSHIIMAGERY/MapServer",
    "visibility": false,
@@ -141,13 +173,23 @@
   },
   {
    "id": "1909bf30f96-layer-26",
+   "showLegend": false,
    "title": "THILAFUSHI IMAGERY - 14th June 2024",
    "url": "https://gis.hdc.mv/server/rest/services/IMAGERY_TFS_JUN2024/MapServer",
+   "visibility": false,
+   "layerType": "ArcGISTiledMapServiceLayer"
+  },
+  {
+   "id": "19efe39392e-layer-34",
+   "showLegend": false,
+   "title": "THILAFUSHI IMAGERY - 9th July 2025",
+   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_TFS19JUL2025/MapServer",
    "visibility": true,
    "layerType": "ArcGISTiledMapServiceLayer"
   },
   {
    "id": "182b9f4997c-layer-8",
+   "showLegend": false,
    "opacity": 1,
    "title": "HULHUMALE IMAGERY - 24th July 2022",
    "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/HM_IMAGERY/MapServer",
@@ -157,6 +199,7 @@
   },
   {
    "id": "190b51df9c9-layer-27",
+   "showLegend": false,
    "title": "HULHUMALE IMAGERY - 4th June 2024",
    "url": "https://gis.hdc.mv/server/rest/services/IMAGERY_HMLJUN2024/MapServer",
    "visibility": false,
@@ -165,28 +208,52 @@
   },
   {
    "id": "192cd17bf92-layer-25",
+   "showLegend": false,
    "title": "HULHUMALÉ PHASE 2 IMAGERY - 16th October 2024",
    "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_HMLOCT2024/MapServer",
+   "visibility": false,
    "layerType": "ArcGISTiledMapServiceLayer"
   },
   {
    "id": "19300357db0-layer-26",
+   "showLegend": false,
    "title": "HULHUMALE PHASE 1 IMAGERY - 04th November 2024",
    "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_HMLP1OCT2024/MapServer",
+   "visibility": false,
    "layerType": "ArcGISTiledMapServiceLayer"
   },
   {
-   "id": "18dcab752b1-layer-20",
-   "opacity": 1,
-   "title": "RASMALE IMAGERY - 7TH January 2024",
-   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/RASMALE_IMAGERY_7TH_JANUARY_2024/MapServer",
-   "itemId": "84281f1e60d14c6b99c4ccb12b11e9ed",
+   "id": "19efe354d9c-layer-32",
+   "showLegend": false,
+   "title": "HULHUMALE IMAGERY - November 2025",
+   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_HMLNOV2025/MapServer",
+   "visibility": true,
    "layerType": "ArcGISTiledMapServiceLayer"
   },
   {
    "id": "197a6ae6787-layer-29",
+   "showLegend": false,
    "title": "RASMALE IMAGERY 13 March 2025",
    "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_RASMALE_13_March_2025/MapServer",
+   "visibility": false,
+   "layerType": "ArcGISTiledMapServiceLayer"
+  },
+  {
+   "id": "18dcab752b1-layer-20",
+   "showLegend": false,
+   "opacity": 1,
+   "title": "RASMALE IMAGERY - 7TH January 2024",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/RASMALE_IMAGERY_7TH_JANUARY_2024/MapServer",
+   "visibility": false,
+   "itemId": "84281f1e60d14c6b99c4ccb12b11e9ed",
+   "layerType": "ArcGISTiledMapServiceLayer"
+  },
+  {
+   "id": "19efe32e056-layer-31",
+   "showLegend": false,
+   "title": "RASMALE IMAGERY - 25th June 2025",
+   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_RASMALEJUN2025/MapServer",
+   "visibility": true,
    "layerType": "ArcGISTiledMapServiceLayer"
   },
   {
@@ -194,6 +261,7 @@
    "showLegend": false,
    "title": "Survey Day2025 orthomosaic",
    "url": "https://gis.hdc.mv/server/rest/services/Hosted/Survey_Day2025_orthomosaic/MapServer",
+   "visibility": false,
    "layerType": "ArcGISTiledMapServiceLayer"
   },
   {
@@ -956,10 +1024,10 @@
      "latestWkid": 3857,
      "wkid": 102100
     },
-    "xmin": 8184696.120676964,
-    "ymin": 468406.20113439707,
-    "xmax": 8189731.409915383,
-    "ymax": 472529.0233476374
+    "xmin": 8173105.415481693,
+    "ymin": 464236.2281312828,
+    "xmax": 8188603.022966492,
+    "ymax": 475405.58888943907
    }
   }
  },

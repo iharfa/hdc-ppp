@@ -32,7 +32,7 @@
      "relativeTo": "map",
      "zIndex": 0
     },
-    "version": "2.35",
+    "version": "2.36",
     "id": "themes_LaunchpadTheme_widgets_AnchorBarController_Widget_20",
     "name": "AnchorBarController"
    },
@@ -45,7 +45,7 @@
      "height": 46,
      "relativeTo": "map"
     },
-    "version": "2.35",
+    "version": "2.36",
     "id": "themes_LaunchpadTheme_widgets_Header_Widget_21",
     "name": "Header"
    },
@@ -58,7 +58,7 @@
      "zIndex": 1,
      "relativeTo": "map"
     },
-    "version": "2.35",
+    "version": "2.36",
     "id": "widgets_Search_Widget_22",
     "name": "Search",
     "config": {
@@ -127,7 +127,7 @@
      "top": 20,
      "relativeTo": "map"
     },
-    "version": "2.35",
+    "version": "2.36",
     "id": "widgets_OverviewMap_Widget_23",
     "name": "OverviewMap"
    },
@@ -138,7 +138,7 @@
      "top": 95,
      "relativeTo": "map"
     },
-    "version": "2.35",
+    "version": "2.36",
     "id": "widgets_ZoomSlider_Widget_24",
     "name": "ZoomSlider"
    },
@@ -151,7 +151,7 @@
     },
     "id": "widgets_HomeButton_Widget_25",
     "name": "HomeButton",
-    "version": "2.35"
+    "version": "2.36"
    },
    {
     "uri": "widgets/MyLocation/Widget",
@@ -160,7 +160,7 @@
      "top": 215,
      "relativeTo": "map"
     },
-    "version": "2.35",
+    "version": "2.36",
     "id": "widgets_MyLocation_Widget_26",
     "name": "MyLocation"
    },
@@ -185,7 +185,7 @@
     },
     "id": "widgets_Coordinate_Widget_28",
     "name": "Coordinate",
-    "version": "2.35"
+    "version": "2.36"
    },
    {
     "uri": "widgets/Scalebar/Widget",
@@ -194,7 +194,7 @@
      "bottom": 25,
      "relativeTo": "map"
     },
-    "version": "2.35",
+    "version": "2.36",
     "id": "widgets_Scalebar_Widget_29",
     "name": "Scalebar"
    },
@@ -203,12 +203,12 @@
     "position": {
      "relativeTo": "browser"
     },
-    "version": "2.35",
+    "version": "2.36",
     "id": "widgets_Splash_Widget_30",
     "name": "Splash",
     "config": {
      "splash": {
-      "splashContent": "<div><br /></div>\n\t<div align=\"center\"><div align=\"center\"><b style=\"font-size: medium;\"><br /></b></div><div align=\"center\"><span style=\"font-size: small;\"> </span><b style=\"font-size: medium;\">Latest Imagery Updates</b></div><div align=\"center\"><div align=\"center\"><br /></div><div align=\"center\"><font size=\"2\">Kudagiri - </font><span style=\"font-size: small;\">21st January 2025<br /></span></div></div><div align=\"center\"><span style=\"font-size: small;\">Hulhumalé Phase 1 - 04th November 2024</span><span style=\"font-size: small;\"></span></div><div align=\"center\"><span style=\"font-size: small;\">Hulhumale' Phase 2- 16th October 2024</span></div><div align=\"center\"><span style=\"font-size: small;\">Gulhifalhu - 24th June 2024</span><span style=\"font-size: small;\"><br /></span></div><div align=\"center\"><span style=\"font-size: small;\">Thilafushi - 14th June 2024</span><font size=\"2\"><br /></font></div><div align=\"center\"><span style=\"font-size: small;\">Rasmale' - 7th January 2024</span></div></div>",
+      "splashContent": "<div><br /></div>\n\t<div align=\"center\"><div align=\"center\"><b style=\"font-size: medium;\"><br /></b></div><div align=\"center\"><span style=\"font-size: small;\"> </span><b style=\"font-size: medium;\">Latest Imagery Updates</b></div><div align=\"center\"><div align=\"center\"><br /></div><div align=\"center\"><div align=\"center\">Kudagiri - 10th December 2025</div><div align=\"center\">Hulhumalé - November 2025</div><div align=\"center\">Gulhifalhu - 3rd June 2025</div><div align=\"center\">Thilafushi - 9th July 2025</div><div align=\"center\">Rasmale' - 25th June 2025</div></div></div></div>",
       "requireConfirm": false,
       "confirm": {
        "text": "",
@@ -276,7 +276,7 @@
      "left": 25,
      "relativeTo": "map"
     },
-    "version": "2.35",
+    "version": "2.36",
     "id": "widgets_ExtentNavigate_Widget_34",
     "name": "ExtentNavigate"
    },
@@ -288,7 +288,7 @@
      "top": 20,
      "relativeTo": "map"
     },
-    "version": "2.35",
+    "version": "2.36",
     "id": "widgets_FullScreen_Widget_35",
     "name": "FullScreen"
    }
@@ -312,10 +312,10 @@
   "itemId": "46865dadd00d48f0b23f87e9b49085b1",
   "mapOptions": {
    "extent": {
-    "xmin": 8186440.667446711,
-    "ymin": 469815.2364575375,
-    "xmax": 8186554.128660536,
-    "ymax": 469878.6851626376,
+    "xmin": 8182562.972232573,
+    "ymin": 467240.5009956909,
+    "xmax": 8192881.971051343,
+    "ymax": 472801.29480358394,
     "spatialReference": {
      "wkid": 102100
     }
@@ -341,7 +341,7 @@
   "widgets": [
    {
     "uri": "widgets/LayerList/Widget",
-    "version": "2.35",
+    "version": "2.36",
     "id": "widgets_LayerList_Widget_19",
     "name": "LayerList",
     "index": 2,
@@ -362,10 +362,10 @@
      },
      "layerOptions": {
       "19c08e253cb-layer-30": {
-       "display": true
+       "display": false
       },
       "19c08e253ca-layer-29": {
-       "display": true
+       "display": false
       },
       "188be4153c2-layer-20": {
        "display": false
@@ -377,15 +377,15 @@
        "display": false
       },
       "19874736ee0-layer-30": {
-       "display": true
+       "display": false
       },
       "19874736ee0-layer-30_0": {
        "display": true
       },
-      "197a6ae6787-layer-29": {
+      "19efe32e056-layer-31": {
        "display": true
       },
-      "197a6ae6787-layer-29_0": {
+      "19efe32e056-layer-31_0": {
        "display": true
       },
       "18dcab752b1-layer-20": {
@@ -394,14 +394,26 @@
       "18dcab752b1-layer-20_0": {
        "display": true
       },
-      "19300357db0-layer-26": {
+      "197a6ae6787-layer-29": {
        "display": true
+      },
+      "197a6ae6787-layer-29_0": {
+       "display": true
+      },
+      "19efe354d9c-layer-32": {
+       "display": true
+      },
+      "19efe354d9c-layer-32_0": {
+       "display": true
+      },
+      "19300357db0-layer-26": {
+       "display": false
       },
       "19300357db0-layer-26_0": {
        "display": true
       },
       "192cd17bf92-layer-25": {
-       "display": true
+       "display": false
       },
       "192cd17bf92-layer-25_0": {
        "display": true
@@ -416,6 +428,12 @@
        "display": false
       },
       "182b9f4997c-layer-8_0": {
+       "display": true
+      },
+      "19efe39392e-layer-34": {
+       "display": true
+      },
+      "19efe39392e-layer-34_0": {
        "display": true
       },
       "1909bf30f96-layer-26": {
@@ -448,6 +466,12 @@
       "182ba78d2eb-layer-12_0": {
        "display": true
       },
+      "19efe3ae27c-layer-35": {
+       "display": true
+      },
+      "19efe3ae27c-layer-35_0": {
+       "display": true
+      },
       "1909beefd47-layer-25": {
        "display": true
       },
@@ -470,6 +494,12 @@
        "display": false
       },
       "1855333ca5b-layer-80_0": {
+       "display": true
+      },
+      "19efe3d4a4f-layer-37": {
+       "display": true
+      },
+      "19efe3d4a4f-layer-37_0": {
        "display": true
       },
       "194b0caa45b-layer-27": {
@@ -525,28 +555,28 @@
    },
    {
     "name": "Draw",
-    "version": "2.35",
+    "version": "2.36",
     "uri": "widgets/Draw/Widget",
     "index": 3,
     "id": "widgets_Draw_Widget_36"
    },
    {
     "name": "Measurement",
-    "version": "2.35",
+    "version": "2.36",
     "uri": "widgets/Measurement/Widget",
     "index": 4,
     "id": "widgets_Measurement_Widget_38"
    },
    {
     "name": "Filter",
-    "version": "2.35",
+    "version": "2.36",
     "uri": "widgets/Filter/Widget",
     "index": 5,
     "id": "widgets_Filter_Widget_37"
    },
    {
     "name": "Swipe",
-    "version": "2.35",
+    "version": "2.36",
     "uri": "widgets/Swipe/Widget",
     "index": 6,
     "id": "widgets_Swipe_Widget_39",
@@ -649,7 +679,7 @@
    },
    {
     "uri": "widgets/Legend/Widget",
-    "version": "2.35",
+    "version": "2.36",
     "id": "widgets_Legend_Widget_18",
     "name": "Legend",
     "index": 7,
@@ -924,7 +954,7 @@
    "height": 29
   }
  },
- "wabVersion": "2.35",
+ "wabVersion": "2.36",
  "_buildInfo": {
   "widgetManifestsMerged": true
  },

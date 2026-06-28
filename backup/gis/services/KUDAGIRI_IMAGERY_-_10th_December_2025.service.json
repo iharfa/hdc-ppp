@@ -1,6 +1,6 @@
 {
- "currentVersion": 12,
- "cimVersion": "3.6.0",
+ "currentVersion": 11.5,
+ "cimVersion": "3.5.0",
  "serviceDescription": "",
  "mapName": "Map",
  "description": "",
@@ -9,7 +9,7 @@
  "layers": [
   {
    "id": 0,
-   "name": "THILAFUSHI_2026-01-14-orthomosaic_TFSGRID.tiff",
+   "name": "KUDAGIRI_10_DEC_2025",
    "parentLayerId": -1,
    "defaultVisibility": true,
    "subLayerIds": null,
@@ -187,10 +187,10 @@
   "packetSize": 128
  },
  "initialExtent": {
-  "xmin": 8172128.491533728,
-  "ymin": 464959.0960827439,
-  "xmax": 8175103.894597872,
-  "ymax": 467161.5270201263,
+  "xmin": 8173315.018748807,
+  "ymin": 470714.1758987264,
+  "xmax": 8174450.657378467,
+  "ymax": 471084.9431902645,
   "spatialReference": {
    "wkid": 102100,
    "latestWkid": 3857,
@@ -207,10 +207,10 @@
   }
  },
  "fullExtent": {
-  "xmin": 8171934.348868915,
-  "ymin": 465265.92772976385,
-  "xmax": 8176739.291948912,
-  "ymax": 466921.88134230784,
+  "xmin": 8173538.481846358,
+  "ymin": 470478.35554230754,
+  "xmax": 8174178.502136832,
+  "ymax": 471357.87575201463,
   "spatialReference": {
    "wkid": 102100,
    "latestWkid": 3857,
@@ -235,7 +235,7 @@
   "Comments": "",
   "Subject": "",
   "Category": "",
-  "Version": "3.6.0",
+  "Version": "3.5.0",
   "AntialiasingMode": "None",
   "TextAntialiasingMode": "Force",
   "Keywords": ""
@@ -271,5 +271,5 @@
  "minLOD": 0,
  "maxLOD": 23,
  "supportedExtensions": "",
- "serviceItemId": "047755c2f82b435baf393887a5ca300f"
+ "serviceItemId": "0546b0a745cd41088a35e18fb6f169f2"
 }

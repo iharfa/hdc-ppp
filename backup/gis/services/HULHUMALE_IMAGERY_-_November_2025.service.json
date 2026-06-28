@@ -1,6 +1,6 @@
 {
- "currentVersion": 12,
- "cimVersion": "3.6.0",
+ "currentVersion": 11.5,
+ "cimVersion": "3.5.0",
  "serviceDescription": "",
  "mapName": "Map",
  "description": "",
@@ -9,7 +9,7 @@
  "layers": [
   {
    "id": 0,
-   "name": "THILAFUSHI_2026-01-14-orthomosaic_TFSGRID.tiff",
+   "name": "Drone Imagery Nov 25-orthomosaic HMLGRID.tiff",
    "parentLayerId": -1,
    "defaultVisibility": true,
    "subLayerIds": null,
@@ -187,10 +187,10 @@
   "packetSize": 128
  },
  "initialExtent": {
-  "xmin": 8172128.491533728,
-  "ymin": 464959.0960827439,
-  "xmax": 8175103.894597872,
-  "ymax": 467161.5270201263,
+  "xmin": 8178796.441146192,
+  "ymin": 464077.710819684,
+  "xmax": 8195144.250640907,
+  "ymax": 475496.98537860083,
   "spatialReference": {
    "wkid": 102100,
    "latestWkid": 3857,
@@ -207,10 +207,10 @@
   }
  },
  "fullExtent": {
-  "xmin": 8171934.348868915,
-  "ymin": 465265.92772976385,
-  "xmax": 8176739.291948912,
-  "ymax": 466921.88134230784,
+  "xmin": 8185770.436683201,
+  "ymin": 467832.08926505776,
+  "xmax": 8187901.532294547,
+  "ymax": 472661.0771883795,
   "spatialReference": {
    "wkid": 102100,
    "latestWkid": 3857,
@@ -235,7 +235,7 @@
   "Comments": "",
   "Subject": "",
   "Category": "",
-  "Version": "3.6.0",
+  "Version": "3.5.0",
   "AntialiasingMode": "None",
   "TextAntialiasingMode": "Force",
   "Keywords": ""
@@ -271,5 +271,5 @@
  "minLOD": 0,
  "maxLOD": 23,
  "supportedExtensions": "",
- "serviceItemId": "047755c2f82b435baf393887a5ca300f"
+ "serviceItemId": "1725afbb1f6749a2a90dd4a102c422f8"
 }

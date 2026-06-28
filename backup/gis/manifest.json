@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-06-21T11:58:25.558Z",
+ "generatedAt": "2026-06-28T06:13:57.226Z",
  "source": "Public HDC ArcGIS Online items and services. Backup for redundancy.",
  "items": [
   {
@@ -81,6 +81,12 @@
    "file": "services/KUDAGIRI_IMAGERY_-_21_JANUARY_2025.service.json"
   },
   {
+   "title": "KUDAGIRI IMAGERY - 10th December 2025",
+   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_KDG10DEC2025/MapServer",
+   "type": "tile/map service (metadata only)",
+   "file": "services/KUDAGIRI_IMAGERY_-_10th_December_2025.service.json"
+  },
+  {
    "title": "GULHIFALHU IMAGERY 18th DECEMBER 2022",
    "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/GULHIFALHU_IMAGERY_18th_DECEMBER_2022/MapServer",
    "type": "tile/map service (metadata only)",
@@ -103,6 +109,12 @@
    "url": "https://gis.hdc.mv/server/rest/services/IMAGERY_GFLJUN2024/MapServer",
    "type": "tile/map service (metadata only)",
    "file": "services/GULHIFALHU_IMAGERY_-_24th_June_2024.service.json"
+  },
+  {
+   "title": "GULHIFALHU IMAGERY - 3rd June 2025",
+   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_GFLJUNE25/MapServer",
+   "type": "tile/map service (metadata only)",
+   "file": "services/GULHIFALHU_IMAGERY_-_3rd_June_2025.service.json"
   },
   {
    "title": "THILAFUSHI IMAGERY -  28th January 2021",
@@ -135,6 +147,12 @@
    "file": "services/THILAFUSHI_IMAGERY_-_14th_June_2024.service.json"
   },
   {
+   "title": "THILAFUSHI IMAGERY - 9th July 2025",
+   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_TFS19JUL2025/MapServer",
+   "type": "tile/map service (metadata only)",
+   "file": "services/THILAFUSHI_IMAGERY_-_9th_July_2025.service.json"
+  },
+  {
    "title": "HULHUMALE IMAGERY - 24th July 2022",
    "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/HM_IMAGERY/MapServer",
    "type": "tile/map service (metadata only)",
@@ -159,16 +177,28 @@
    "file": "services/HULHUMALE_PHASE_1_IMAGERY_-_04th_November_2024.service.json"
   },
   {
-   "title": "RASMALE IMAGERY - 7TH January 2024",
-   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/RASMALE_IMAGERY_7TH_JANUARY_2024/MapServer",
+   "title": "HULHUMALE IMAGERY - November 2025",
+   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_HMLNOV2025/MapServer",
    "type": "tile/map service (metadata only)",
-   "file": "services/RASMALE_IMAGERY_-_7TH_January_2024.service.json"
+   "file": "services/HULHUMALE_IMAGERY_-_November_2025.service.json"
   },
   {
    "title": "RASMALE IMAGERY 13 March 2025",
    "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_RASMALE_13_March_2025/MapServer",
    "type": "tile/map service (metadata only)",
    "file": "services/RASMALE_IMAGERY_13_March_2025.service.json"
+  },
+  {
+   "title": "RASMALE IMAGERY - 7TH January 2024",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/RASMALE_IMAGERY_7TH_JANUARY_2024/MapServer",
+   "type": "tile/map service (metadata only)",
+   "file": "services/RASMALE_IMAGERY_-_7TH_January_2024.service.json"
+  },
+  {
+   "title": "RASMALE IMAGERY - 25th June 2025",
+   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_RASMALEJUN2025/MapServer",
+   "type": "tile/map service (metadata only)",
+   "file": "services/RASMALE_IMAGERY_-_25th_June_2025.service.json"
   },
   {
    "title": "Survey Day2025 orthomosaic",
@@ -281,6 +311,11 @@
    "reason": "Tile cache too large for git backup; metadata stored for re-publishing."
   },
   {
+   "title": "KUDAGIRI IMAGERY - 10th December 2025",
+   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_KDG10DEC2025/MapServer",
+   "reason": "Tile cache too large for git backup; metadata stored for re-publishing."
+  },
+  {
    "title": "GULHIFALHU IMAGERY 18th DECEMBER 2022",
    "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/GULHIFALHU_IMAGERY_18th_DECEMBER_2022/MapServer",
    "reason": "Tile cache too large for git backup; metadata stored for re-publishing."
@@ -298,6 +333,11 @@
   {
    "title": "GULHIFALHU IMAGERY - 24th June 2024",
    "url": "https://gis.hdc.mv/server/rest/services/IMAGERY_GFLJUN2024/MapServer",
+   "reason": "Tile cache too large for git backup; metadata stored for re-publishing."
+  },
+  {
+   "title": "GULHIFALHU IMAGERY - 3rd June 2025",
+   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_GFLJUNE25/MapServer",
    "reason": "Tile cache too large for git backup; metadata stored for re-publishing."
   },
   {
@@ -326,6 +366,11 @@
    "reason": "Tile cache too large for git backup; metadata stored for re-publishing."
   },
   {
+   "title": "THILAFUSHI IMAGERY - 9th July 2025",
+   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_TFS19JUL2025/MapServer",
+   "reason": "Tile cache too large for git backup; metadata stored for re-publishing."
+  },
+  {
    "title": "HULHUMALE IMAGERY - 24th July 2022",
    "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/HM_IMAGERY/MapServer",
    "reason": "Tile cache too large for git backup; metadata stored for re-publishing."
@@ -346,13 +391,23 @@
    "reason": "Tile cache too large for git backup; metadata stored for re-publishing."
   },
   {
-   "title": "RASMALE IMAGERY - 7TH January 2024",
-   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/RASMALE_IMAGERY_7TH_JANUARY_2024/MapServer",
+   "title": "HULHUMALE IMAGERY - November 2025",
+   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_HMLNOV2025/MapServer",
    "reason": "Tile cache too large for git backup; metadata stored for re-publishing."
   },
   {
    "title": "RASMALE IMAGERY 13 March 2025",
    "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_RASMALE_13_March_2025/MapServer",
+   "reason": "Tile cache too large for git backup; metadata stored for re-publishing."
+  },
+  {
+   "title": "RASMALE IMAGERY - 7TH January 2024",
+   "url": "https://tiles.arcgis.com/tiles/TGjun5cqf5Jwp2Ad/arcgis/rest/services/RASMALE_IMAGERY_7TH_JANUARY_2024/MapServer",
+   "reason": "Tile cache too large for git backup; metadata stored for re-publishing."
+  },
+  {
+   "title": "RASMALE IMAGERY - 25th June 2025",
+   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_RASMALEJUN2025/MapServer",
    "reason": "Tile cache too large for git backup; metadata stored for re-publishing."
   },
   {

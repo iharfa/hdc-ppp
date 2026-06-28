@@ -1,9 +1,10 @@
 {
  "id": "46865dadd00d48f0b23f87e9b49085b1",
  "owner": "m.sameeh",
+ "ownerId": "d678289b4d0263bf943e268cf2e67ac8",
  "orgId": "TGjun5cqf5Jwp2Ad",
  "created": 1659411327000,
- "modified": 1780372410000,
+ "modified": 1782381961000,
  "guid": null,
  "name": null,
  "title": "DRONE IMAGERY",
@@ -26,12 +27,12 @@
  "documentation": null,
  "extent": [
   [
-   73.52437621077871,
-   4.2039872728429115
+   73.42025513447237,
+   4.166627664747421
   ],
   [
-   73.56960898360707,
-   4.240922687528799
+   73.55947251118117,
+   4.266692130972418
   ]
  ],
  "categories": [],
@@ -45,7 +46,7 @@
  "url": "",
  "proxyFilter": null,
  "access": "public",
- "size": 16950,
+ "size": 18677,
  "subInfo": 0,
  "appCategories": [],
  "industries": [],
@@ -58,10 +59,10 @@
  "numComments": 0,
  "numRatings": 0,
  "avgRating": 0,
- "numViews": 97211,
+ "numViews": 97760,
  "scoreCompleteness": 33,
  "groupDesignations": null,
  "apiToken1ExpirationDate": -1,
  "apiToken2ExpirationDate": -1,
- "lastViewed": 1782039600000
+ "lastViewed": 1782622800000
 }

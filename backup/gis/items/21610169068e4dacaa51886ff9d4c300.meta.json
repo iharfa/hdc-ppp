@@ -1,9 +1,10 @@
 {
  "id": "21610169068e4dacaa51886ff9d4c300",
  "owner": "aishath.udhuma",
+ "ownerId": "83d61b9180f041629d7ba9f0d4e8bac4",
  "orgId": "TGjun5cqf5Jwp2Ad",
  "created": 1769669278000,
- "modified": 1769676445000,
+ "modified": 1782382328000,
  "guid": null,
  "name": null,
  "title": "DRONE IMAGERY PUBLIC",
@@ -37,7 +38,7 @@
  "url": "https://hulhumale.maps.arcgis.com/apps/webappviewer/index.html?id=21610169068e4dacaa51886ff9d4c300",
  "proxyFilter": null,
  "access": "public",
- "size": 81168,
+ "size": 81137,
  "subInfo": 0,
  "appCategories": [],
  "industries": [],
@@ -50,10 +51,10 @@
  "numComments": 0,
  "numRatings": 0,
  "avgRating": 0,
- "numViews": 2552,
+ "numViews": 2803,
  "scoreCompleteness": 33,
  "groupDesignations": null,
  "apiToken1ExpirationDate": -1,
  "apiToken2ExpirationDate": -1,
- "lastViewed": 1782039600000
+ "lastViewed": 1782622800000
 }
