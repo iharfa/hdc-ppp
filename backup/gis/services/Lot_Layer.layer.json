@@ -444,7 +444,7 @@
    }
   }
  ],
- "supportedQueryFormats": "JSON, geoJSON, PBF, Parquet",
+ "supportedQueryFormats": "JSON, geoJSON, PBF",
  "supportedAppendFormats": "sqlite,geoPackage,shapefile,filegdb,featureCollection,geojson,csv,excel,jsonl,featureService,pbf,imageCollection",
  "supportedAppendSourceFilterFormats": "sqlite,geoPackage,shapefile,filegdb,featureService",
  "supportedExportFormats": "csv,shapefile,sqlite,geoPackage,filegdb,featureCollection,geojson,kml,excel,parquet",
@@ -471,7 +471,7 @@
  "hasStaticData": true,
  "maxRecordCount": 2000,
  "standardMaxRecordCount": 2000,
- "maxIdsCount": 100000,
+ "maxIdsCount": 1000000,
  "standardMaxRecordCountNoGeometry": 32000,
  "tileMaxRecordCount": 4000,
  "maxRecordCountFactor": 1,
