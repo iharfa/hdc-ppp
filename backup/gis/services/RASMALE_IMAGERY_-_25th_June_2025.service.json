@@ -192,18 +192,8 @@
   "xmax": 8174783.725765964,
   "ymax": 466943.57963063923,
   "spatialReference": {
-   "wkid": 102100,
-   "latestWkid": 3857,
-   "xyTolerance": 0.001,
-   "zTolerance": 0.001,
-   "mTolerance": 0.001,
-   "falseX": -20037700,
-   "falseY": -30241100,
-   "xyUnits": 10000,
-   "falseZ": -100000,
-   "zUnits": 10000,
-   "falseM": -100000,
-   "mUnits": 10000
+   "cs": "pcs",
+   "wkid": 102100
   }
  },
  "fullExtent": {
@@ -212,18 +202,8 @@
   "xmax": 8185903.510707023,
   "ymax": 452742.8956347025,
   "spatialReference": {
-   "wkid": 102100,
-   "latestWkid": 3857,
-   "xyTolerance": 0.001,
-   "zTolerance": 0.001,
-   "mTolerance": 0.001,
-   "falseX": -20037700,
-   "falseY": -30241100,
-   "xyUnits": 10000,
-   "falseZ": -100000,
-   "zUnits": 10000,
-   "falseM": -100000,
-   "mUnits": 10000
+   "cs": "pcs",
+   "wkid": 102100
   }
  },
  "datesInUnknownTimezone": false,
