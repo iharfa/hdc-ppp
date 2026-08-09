@@ -31,13 +31,31 @@
  "type": "Feature Layer",
  "onlyAllowTrueCurveUpdatesByTrueCurveClients": true,
  "supportsAttachmentsByUploadId": true,
+ "editingInfo": {
+  "lastEditDate": 1769675501749
+ },
  "relationships": [],
+ "supportedAppendCapabilities": "Features,Attachments",
  "supportsAttachmentsResizing": true,
  "cimVersion": "3.3.0",
  "isDataArchived": false,
  "id": 1,
+ "spatialReference": {
+  "falseM": -100000,
+  "xyTolerance": 0.001,
+  "mUnits": 10000,
+  "zUnits": 10000,
+  "latestWkid": 3857,
+  "zTolerance": 0.001,
+  "wkid": 102100,
+  "xyUnits": 10000,
+  "mTolerance": 0.001,
+  "falseX": -20037700,
+  "falseY": -30241100,
+  "falseZ": -100000
+ },
  "supportsStatistics": true,
- "supportedExportFormats": "sqlite,filegdb,shapefile,csv,geojson",
+ "supportedExportFormats": "csv,excel,featureCollection,filegdb,geojson,kml,shapefile,sqlite",
  "standardMaxRecordCount": 2000,
  "isDataVersioned": false,
  "templates": [
@@ -57,7 +75,7 @@
  "hasGeometryProperties": true,
  "supportsAdvancedQueries": true,
  "parentLayer": null,
- "currentVersion": 11.3,
+ "currentVersion": 12.1,
  "canScaleSymbols": false,
  "hasZ": true,
  "advancedEditingCapabilities": {
@@ -67,25 +85,26 @@
   "supportedSqlFormatsInCalculate": [
    "standard"
   ],
-  "supportedApplyEditsUploadIDFormats": "JSON"
+  "supportedApplyEditsUploadIDFormats": "JSON,PBF"
  },
  "objectIdField": "objectid",
  "supportsQuantizationEditMode": true,
+ "hasContingentValuesDefinition": false,
  "name": "BUILDING_LABELS",
  "allowTrueCurvesUpdates": false,
  "displayField": "name",
  "supportsCalculate": true,
  "fields": [
   {
+   "modelName": "fid",
    "nullable": false,
    "defaultValue": null,
    "editable": false,
-   "length": 4,
-   "type": "esriFieldTypeOID",
-   "modelName": "fid",
    "domain": null,
+   "length": 4,
    "name": "objectid",
-   "alias": "fid"
+   "alias": "fid",
+   "type": "esriFieldTypeOID"
   },
   {
    "modelName": "phase_no",
@@ -143,6 +162,7 @@
  ],
  "maxRecordCountFactor": 1,
  "dateFieldsTimeReference": {
+  "timeZoneIANA": "Etc/UTC",
   "respectsDaylightSaving": false,
   "timeZone": "UTC"
  },
@@ -151,6 +171,19 @@
  "allowGeometryUpdates": true,
  "useStandardizedQueries": true,
  "globalIdField": null,
+ "sourceSpatialReference": {
+  "wkt": "PROJCS[\"WGS_1984_Web_Mercator_Auxiliary_Sphere\",GEOGCS[\"GCS_WGS_1984\",DATUM[\"D_WGS_1984\",SPHEROID[\"WGS_1984\",6378137.0,298.257223563]],PRIMEM[\"Greenwich\",0.0],UNIT[\"Degree\",0.0174532925199433]],PROJECTION[\"Mercator_Auxiliary_Sphere\"],PARAMETER[\"False_Easting\",0.0],PARAMETER[\"False_Northing\",0.0],PARAMETER[\"Central_Meridian\",0.0],PARAMETER[\"Standard_Parallel_1\",0.0],PARAMETER[\"Auxiliary_Sphere_Type\",0.0],UNIT[\"Meter\",1.0]]",
+  "falseM": -100000,
+  "mUnits": 10000,
+  "zUnits": 10000,
+  "zTolerance": 0.001,
+  "wkid": 3857,
+  "xyUnits": 10000,
+  "mTolerance": 0.001,
+  "falseX": -20037700,
+  "falseY": -30241100,
+  "falseZ": -100000
+ },
  "description": "",
  "syncCanReturnChanges": true,
  "supportsAsyncDelete": true,
@@ -188,13 +221,32 @@
    "isAscending": true
   }
  ],
- "supportedAppendSourceFilterFormats": "featureService",
+ "supportedAppendSourceFilterFormats": "csv,excel,featureCollection,featureService,geojson,imageCollection,jsonl,pbf,shapefile",
  "editFieldsInfo": null,
  "htmlPopupType": "esriServerHTMLPopupTypeAsHTMLText",
  "GUIDFormat": "O",
  "minScale": 0,
  "hasAttachments": false,
  "queryBinsCapabilities": {
+  "supportedNormalizationTypes": [
+   "boxCox",
+   "field",
+   "inverse",
+   "log",
+   "naturalLog",
+   "percentOfTotal",
+   "squareRoot"
+  ],
+  "supportsNormalization": true,
+  "supportsSnapToData": true,
+  "supportsFixedIntervalBin": true,
+  "supportsStackBy": true,
+  "supportsDateBin": true,
+  "supportsSplitBy": true,
+  "supportsClassificationBin": true,
+  "supportsAggIds": true,
+  "supportsReturnFullIntervalBin": true,
+  "supportsFirstDayOfWeek": true,
   "supportedStatisticTypes": [
    "count",
    "sum",
@@ -206,10 +258,8 @@
    "percentile_cont",
    "percentile_disc"
   ],
-  "supportsFixedIntervalBin": true,
   "supportsAutoIntervalBin": true,
-  "supportsFixedBoundariesBin": true,
-  "supportsDateBin": true
+  "supportsFixedBoundariesBin": true
  },
  "advancedQueryCapabilities": {
   "supportsSqlExpression": true,
@@ -219,23 +269,33 @@
   "supportsQueryWithDatumTransformation": true,
   "supportsCurrentUserQueries": true,
   "supportsQueryAttachmentsWithReturnUrl": true,
+  "fullTextSearchCapabilities": {
+   "supportsOperator": true,
+   "supportsSearchOperator": true
+  },
   "supportsDefaultSR": true,
-  "supportsQueryDateBins": false,
+  "supportsQueryDateBins": true,
+  "supportsQueryBins": true,
   "supportsQueryWithLodSR": true,
   "supportsPaginationOnAggregatedQueries": true,
   "supportsPagination": true,
   "supportsMaxRecordCountFactor": true,
+  "supportsDegeneratedQuantizedGeometry": true,
+  "fullTextSearchableFields": [],
   "supportsStatistics": true,
   "supportsOrderBy": true,
+  "supportsQueryAttachmentWithTypeWildcard": true,
   "supportsReturningGeometryProperties": true,
-  "supportsFullTextSearch": false,
+  "supportsFullTextSearch": true,
   "supportsQueryWithDistance": true,
   "supportsLod": true,
+  "supportsQueryAttachmentOrderByFields": true,
   "supportsCountDistinct": true,
   "supportsAdvancedQueryRelated": true,
   "supportsQueryAttachments": true,
   "supportsReturningQueryExtent": true,
   "supportsQueryAttachmentsCountOnly": true,
+  "supportsISODOW": true,
   "supportsOrderByOnlyOnLayerFields": false,
   "supportsOutFieldSqlExpression": true,
   "supportsTopFeaturesQuery": true,
@@ -244,6 +304,7 @@
   "supportsReturningGeometryCentroid": true,
   "supportsQueryAnalytic": true,
   "supportsPercentileStatistics": true,
+  "supportsISOWeek": true,
   "supportsHavingClause": true
  },
  "subtypeField": "",
@@ -264,13 +325,13 @@
   "supportsPercentileAnalytic": false
  },
  "hasMetadata": true,
- "supportedAppendFormats": "shapefile,geojson,csv,featureCollection,excel,jsonl,featureService",
+ "supportedAppendFormats": "csv,excel,featureCollection,featureService,geojson,imageCollection,jsonl,pbf,shapefile",
  "tileMaxRecordCount": 2000,
  "typeIdField": "",
  "supportsASyncCalculate": true,
  "supportsVCSProjection": true,
  "supportedQueryFormats": "JSON, geoJSON, PBF",
- "sqlParserVersion": "PG_11.2.0",
+ "sqlParserVersion": "PG_11.4.0",
  "drawingInfo": {
   "renderer": {
    "symbol": {

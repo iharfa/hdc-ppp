@@ -1,45 +1,6 @@
 {
  "operationalLayers": [
   {
-   "id": "19ea63e7dbb-layer-56",
-   "showLegend": false,
-   "listMode": "hide",
-   "title": "GULHIFALHU IMAGERY",
-   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_GFLJAN2026/MapServer",
-   "visibility": true,
-   "refreshInterval": 0,
-   "layerType": "ArcGISTiledMapServiceLayer"
-  },
-  {
-   "id": "19ea6401753-layer-58",
-   "showLegend": false,
-   "listMode": "hide",
-   "title": "THILAFUSHI IMAGERY",
-   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_TFSJAN26/MapServer",
-   "visibility": true,
-   "refreshInterval": 0,
-   "layerType": "ArcGISTiledMapServiceLayer"
-  },
-  {
-   "id": "19ea63ef347-layer-57",
-   "showLegend": false,
-   "listMode": "hide",
-   "title": "KUDAGIRI IMAGERY",
-   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_KDGMAY2026/MapServer",
-   "visibility": true,
-   "refreshInterval": 0,
-   "layerType": "ArcGISTiledMapServiceLayer"
-  },
-  {
-   "id": "19ea63dbfe2-layer-55",
-   "showLegend": false,
-   "listMode": "hide",
-   "title": "HULHUMALÉ IMAGEY",
-   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_HMLJAN26_CORS/MapServer",
-   "refreshInterval": 0,
-   "layerType": "ArcGISTiledMapServiceLayer"
-  },
-  {
    "id": "19ea5c95afd-layer-112",
    "title": "Lot Layer",
    "url": "https://services7.arcgis.com/TGjun5cqf5Jwp2Ad/arcgis/rest/services/Lot_Layer/FeatureServer/0",
@@ -1221,6 +1182,7 @@
   "baseMapLayers": [
    {
     "id": "World_Imagery_2017",
+    "showLegend": false,
     "opacity": 1,
     "title": "World Imagery",
     "url": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer",
@@ -1228,7 +1190,7 @@
     "layerType": "ArcGISTiledMapServiceLayer"
    }
   ],
-  "id": "18ee00f45b5-basemap-15",
+  "id": "19fc1bbcc01-basemap-11",
   "title": "Imagery",
   "elevationLayers": []
  },
@@ -1251,9 +1213,9 @@
   "heightModel": "gravity_related_height",
   "heightUnit": "meter"
  },
- "version": "1.39",
+ "version": "1.40",
  "authoringApp": "WebSceneViewer",
- "authoringAppVersion": "2026.1.0",
+ "authoringAppVersion": "2026.2.0",
  "initialState": {
   "environment": {
    "lighting": {
@@ -1270,18 +1232,19 @@
    }
   },
   "viewpoint": {
+   "scale": 24120.738914628517,
    "camera": {
     "position": {
      "spatialReference": {
       "latestWkid": 3857,
       "wkid": 102100
      },
-     "x": 8186447.752510232,
-     "y": 470738.21817315836,
-     "z": 7297.721983280033
+     "x": 8186730.059822656,
+     "y": 470320.03955990844,
+     "z": 14894.176437900402
     },
-    "heading": 105.85123121994725,
-    "tilt": 0.49964471435811253
+    "heading": 0,
+    "tilt": 0.49904791285345645
    }
   }
  },

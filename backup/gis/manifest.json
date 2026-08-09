@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-02T05:22:48.608Z",
+ "generatedAt": "2026-08-09T03:28:55.799Z",
  "source": "Public HDC ArcGIS Online items and services. Backup for redundancy.",
  "items": [
   {
@@ -205,30 +205,6 @@
    "url": "https://gis.hdc.mv/server/rest/services/Hosted/Survey_Day2025_orthomosaic/MapServer",
    "type": "tile/map service (metadata only)",
    "file": "services/Survey_Day2025_orthomosaic.service.json"
-  },
-  {
-   "title": "GULHIFALHU IMAGERY",
-   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_GFLJAN2026/MapServer",
-   "type": "tile/map service (metadata only)",
-   "file": "services/GULHIFALHU_IMAGERY.service.json"
-  },
-  {
-   "title": "THILAFUSHI IMAGERY",
-   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_TFSJAN26/MapServer",
-   "type": "tile/map service (metadata only)",
-   "file": "services/THILAFUSHI_IMAGERY.service.json"
-  },
-  {
-   "title": "KUDAGIRI IMAGERY",
-   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_KDGMAY2026/MapServer",
-   "type": "tile/map service (metadata only)",
-   "file": "services/KUDAGIRI_IMAGERY.service.json"
-  },
-  {
-   "title": "HULHUMALÉ IMAGEY",
-   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_HMLJAN26_CORS/MapServer",
-   "type": "tile/map service (metadata only)",
-   "file": "services/HULHUMAL_IMAGEY.service.json"
   }
  ],
  "featureLayers": [
@@ -413,26 +389,6 @@
   {
    "title": "Survey Day2025 orthomosaic",
    "url": "https://gis.hdc.mv/server/rest/services/Hosted/Survey_Day2025_orthomosaic/MapServer",
-   "reason": "Tile cache too large for git backup; metadata stored for re-publishing."
-  },
-  {
-   "title": "GULHIFALHU IMAGERY",
-   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_GFLJAN2026/MapServer",
-   "reason": "Tile cache too large for git backup; metadata stored for re-publishing."
-  },
-  {
-   "title": "THILAFUSHI IMAGERY",
-   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_TFSJAN26/MapServer",
-   "reason": "Tile cache too large for git backup; metadata stored for re-publishing."
-  },
-  {
-   "title": "KUDAGIRI IMAGERY",
-   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_KDGMAY2026/MapServer",
-   "reason": "Tile cache too large for git backup; metadata stored for re-publishing."
-  },
-  {
-   "title": "HULHUMALÉ IMAGEY",
-   "url": "https://gis.hdc.mv/server/rest/services/Hosted/IMAGERY_HMLJAN26_CORS/MapServer",
    "reason": "Tile cache too large for git backup; metadata stored for re-publishing."
   }
  ],

@@ -4,7 +4,7 @@
  "ownerId": "69658c7491cc497da2b981512bf1d544",
  "orgId": "TGjun5cqf5Jwp2Ad",
  "created": 1689565095000,
- "modified": 1780905805000,
+ "modified": 1785661962000,
  "guid": null,
  "name": null,
  "title": "Land Use Plan Scene",
@@ -22,7 +22,7 @@
   ""
  ],
  "snippet": "To be used in the LUP Application, Live parcel layer",
- "thumbnail": "thumbnail/ago_downloaded.jpg",
+ "thumbnail": "thumbnail/ago_downloaded.jpeg",
  "documentation": null,
  "extent": [],
  "categories": [],
@@ -36,7 +36,7 @@
  "url": "",
  "proxyFilter": null,
  "access": "public",
- "size": 12196,
+ "size": 11211,
  "subInfo": 0,
  "appCategories": [],
  "industries": [],
@@ -49,10 +49,10 @@
  "numComments": 0,
  "numRatings": 0,
  "avgRating": 0,
- "numViews": 46858,
+ "numViews": 0,
  "scoreCompleteness": 50,
  "groupDesignations": null,
  "apiToken1ExpirationDate": -1,
  "apiToken2ExpirationDate": -1,
- "lastViewed": 1785643200000
+ "lastViewed": -1
 }
