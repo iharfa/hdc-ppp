@@ -209,8 +209,18 @@
   "ymax": 472682.16524072195,
   "xmax": 8187873.266746212,
   "spatialReference": {
-   "cs": "pcs",
-   "wkid": 102100
+   "falseM": -100000,
+   "xyTolerance": 0.001,
+   "mUnits": 10000,
+   "zUnits": 10000,
+   "latestWkid": 3857,
+   "zTolerance": 0.001,
+   "wkid": 102100,
+   "xyUnits": 10000,
+   "mTolerance": 0.001,
+   "falseX": -20037700,
+   "falseY": -30241100,
+   "falseZ": -100000
   }
  },
  "supportedExtensions": "",
@@ -244,8 +254,18 @@
   "ymax": 475079.60653014027,
   "xmax": 8193927.003767859,
   "spatialReference": {
-   "cs": "pcs",
-   "wkid": 102100
+   "falseM": -100000,
+   "xyTolerance": 0.001,
+   "mUnits": 10000,
+   "zUnits": 10000,
+   "latestWkid": 3857,
+   "zTolerance": 0.001,
+   "wkid": 102100,
+   "xyUnits": 10000,
+   "mTolerance": 0.001,
+   "falseX": -20037700,
+   "falseY": -30241100,
+   "falseZ": -100000
   }
  },
  "serviceDescription": "",
