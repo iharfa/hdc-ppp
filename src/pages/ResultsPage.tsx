@@ -59,9 +59,9 @@ export function ResultsPage() {
       <h1>Results and dashboard</h1>
       <p className="muted">Aggregated view across all participation processes. Sample POC data only.</p>
 
-      <div className="grid-4" style={{ marginBottom: "1rem" }}>
+      <div className="grid-4">
         {stats.map((s) => (
-          <div className="card stat-card" key={s.label} style={{ marginTop: 0 }}>
+          <div className="card stat-card" key={s.label}>
             <div className="stat-value">{s.value}</div>
             <div className="stat-label">{s.label}</div>
           </div>
@@ -69,25 +69,25 @@ export function ResultsPage() {
       </div>
 
       <div className="grid-2">
-        <div className="card" style={{ marginTop: 0 }}>
+        <div className="card">
           <Chart option={barOption("Response totals by record (sample)", byRecord, true)} ariaLabel="Bar chart of response totals by participation record" height={320} />
         </div>
-        <div className="card" style={{ marginTop: 0 }}>
+        <div className="card">
           <Chart option={pieOption("Overall yes / no split (sample)", yesNo)} ariaLabel="Pie chart of yes and no answers across all surveys" height={320} />
         </div>
-        <div className="card" style={{ marginTop: 0 }}>
+        <div className="card">
           <Chart
             option={lineOption("Timeline of participation (responses per month, sample)", byMonth.map(([m]) => m), byMonth.map(([, v]) => v))}
             ariaLabel="Line chart of responses per month"
           />
         </div>
-        <div className="card" style={{ marginTop: 0 }}>
+        <div className="card">
           <Chart option={barOption("Support by ward or area (responses, sample)", byWard)} ariaLabel="Bar chart of responses by ward" />
         </div>
-        <div className="card" style={{ marginTop: 0 }}>
+        <div className="card">
           <Chart option={pieOption("Demographic breakdown by age group (sample)", byAge)} ariaLabel="Pie chart of responses by age group" />
         </div>
-        <div className="card" style={{ marginTop: 0 }}>
+        <div className="card">
           <Chart option={pieOption("Moderation outcome summary (sample)", modOutcome)} ariaLabel="Pie chart of moderation outcomes" />
         </div>
       </div>
@@ -98,9 +98,9 @@ export function ResultsPage() {
       ) : (
         <div className="grid-3">
           {completed.map((r) => (
-            <div className="card" key={r.recordId} style={{ marginTop: 0 }}>
+            <div className="card" key={r.recordId}>
               <StatusBadge status={r.status} />
-              <h3 style={{ margin: "0.4rem 0", color: "var(--hdc-blue)" }}>{r.title}</h3>
+              <h3 className="results-title">{r.title}</h3>
               <p className="muted">Decision published: {r.decision?.decidedOn}</p>
               <Link className="btn btn-sm btn-blue" to={`/results/${r.recordId}`}>
                 View results and decision

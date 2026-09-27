@@ -20,16 +20,20 @@ export function MapFallback({ message, records, selectedId, onSelect }: Props) {
   const project = ([lon, lat]: [number, number]) => [350 + (lon - cx) * scale, 250 - (lat - cy) * scale];
 
   return (
-    <div className="map-container" style={{ background: "#eef3f7", display: "flex", flexDirection: "column" }}>
-      <div className="map-status-note" style={{ position: "static", margin: "0.75rem" }} role="alert">
+    <div className="map-container map-fallback">
+      <div className="map-status-note" role="alert">
         {message} Showing a schematic offline fallback of the sample participation areas.
       </div>
-      <svg viewBox="0 0 700 500" style={{ flex: 1, width: "100%" }} role="img" aria-label="Schematic map of sample participation areas">
+      <svg viewBox="0 0 700 500" role="img" aria-label="Schematic map of sample participation areas">
         {records.map((r) => {
           const place = getPlace(r.canonicalPlaceId);
           if (!place) return null;
           const sel = r.recordId === selectedId;
-          const color = r.status === "Ongoing" ? "#e6b000" : r.status === "Planned" ? "#0d6efd" : r.status === "Completed" ? "#167c42" : "#6c757d";
+          const color =
+            r.status === "Ongoing" ? "var(--status-ongoing-pin)"
+            : r.status === "Planned" ? "var(--status-planned-pin)"
+            : r.status === "Completed" ? "var(--color-accent)"
+            : "var(--color-ink-2)";
           const [x, y] = project(centroidOf(place.geometry));
           const pinScale = sel ? 1.6 : r.status === "Ongoing" ? 1.3 : 1;
           return (
@@ -42,16 +46,18 @@ export function MapFallback({ message, records, selectedId, onSelect }: Props) {
               <title>{`${r.title} — ${r.status}`}</title>
               <path
                 d="M12 0C7 0 3 4 3 9c0 6.2 8.1 14.3 8.4 14.7.3.3.9.3 1.2 0C12.9 23.3 21 15.2 21 9c0-5-4-9-9-9z"
-                fill={r.status === "Planned" ? "#ffffff" : color}
-                stroke={sel ? "#ffc400" : r.status === "Planned" ? color : "#ffffff"}
+                style={{
+                  fill: r.status === "Planned" ? "var(--color-paper)" : color,
+                  stroke: sel ? "var(--status-selected-ring)" : r.status === "Planned" ? color : "var(--color-paper)",
+                }}
                 strokeWidth={sel ? 2.5 : 1.5}
               />
-              <circle cx={12} cy={9} r={3.5} fill={r.status === "Planned" ? color : "#ffffff"} />
+              <circle cx={12} cy={9} r={3.5} style={{ fill: r.status === "Planned" ? color : "var(--color-paper)" }} />
             </g>
           );
         })}
       </svg>
-      <ul style={{ listStyle: "none", margin: 0, padding: "0.5rem 0.75rem", display: "flex", gap: "0.75rem", flexWrap: "wrap", fontSize: "0.78rem" }}>
+      <ul className="map-fallback-list">
         {records.map((r) => (
           <li key={r.recordId}>
             <button type="button" className="btn btn-sm" onClick={() => onSelect(r.recordId)}>

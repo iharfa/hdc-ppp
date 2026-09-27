@@ -62,9 +62,9 @@ export function AdminPage() {
 
   return (
     <div className="page">
-      <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", flexWrap: "wrap" }}>
+      <div className="admin-title">
         <Logo dark />
-        <h1 style={{ margin: 0 }}>Admin Preview</h1>
+        <h1>Admin Preview</h1>
       </div>
       <p className="muted">
         Frontend-only preview of HDC staff workflows. No authentication in this POC; role-based access control will be
@@ -103,7 +103,7 @@ export function AdminPage() {
 
       {tab === "Participation registry" && (
         <div className="card">
-          <h2 style={{ marginTop: 0 }}>Participation registry</h2>
+          <h2>Participation registry</h2>
           <div className="table-wrap">
             <table className="data-table">
               <thead>
@@ -139,7 +139,7 @@ export function AdminPage() {
 
       {tab === "Create record" && (
         <div className="card survey-step">
-          <h2 style={{ marginTop: 0 }}>Create participation record (Draft stage)</h2>
+          <h2>Create participation record (Draft stage)</h2>
           <p className="muted">SPES officer drafts a new record. Saved to localStorage in this POC.</p>
           <div className="form-field">
             <label htmlFor="cr-title">Title</label>
@@ -182,7 +182,7 @@ export function AdminPage() {
 
       {tab === "GIS linking" && (
         <div className="card">
-          <h2 style={{ marginTop: 0 }}>Link record to GIS location</h2>
+          <h2>Link record to GIS location</h2>
           <p className="muted">
             GIS data steward links each record to a canonical place ID. All known aliases from Estate, Planning, GIS,
             and project records are stored against that place.
@@ -220,12 +220,12 @@ export function AdminPage() {
 
       {tab === "Survey builder" && (
         <div className="card">
-          <h2 style={{ marginTop: 0 }}>Survey builder (preview)</h2>
+          <h2>Survey builder (preview)</h2>
           <p className="muted">Read-only preview of survey structures. Full builder arrives with the backend phase.</p>
           {records.filter((r) => r.surveyQuestions.length > 0).map((r) => (
-            <details key={r.recordId} style={{ marginBottom: "0.6rem" }}>
-              <summary style={{ cursor: "pointer", fontWeight: 600, color: "var(--hdc-blue)" }}>{r.title}</summary>
-              <ol style={{ fontSize: "0.86rem" }}>
+            <details key={r.recordId} className="survey-preview">
+              <summary>{r.title}</summary>
+              <ol>
                 {r.surveyQuestions.map((q) => (
                   <li key={q.id}>
                     {q.label} <span className="muted">({q.type}{q.required ? ", required" : ""}{q.options ? `, ${q.options.length} options` : ""})</span>
@@ -239,14 +239,14 @@ export function AdminPage() {
 
       {tab === "Moderation queue" && (
         <div className="card">
-          <h2 style={{ marginTop: 0 }}>Moderation queue</h2>
+          <h2>Moderation queue</h2>
           <ModerationQueue />
         </div>
       )}
 
       {tab === "Results review" && (
         <div className="card">
-          <h2 style={{ marginTop: 0 }}>Results review (SPES)</h2>
+          <h2>Results review (SPES)</h2>
           <p className="muted">SPES reviews cleaned results before preparing the conclusion and response matrix.</p>
           <div className="table-wrap">
             <table className="data-table">
@@ -281,7 +281,7 @@ export function AdminPage() {
 
       {tab === "Conclusion publishing" && (
         <div className="card">
-          <h2 style={{ marginTop: 0 }}>Conclusion publishing</h2>
+          <h2>Conclusion publishing</h2>
           <p className="muted">Senior approver / SPES publish the final decision to the public portal.</p>
           <div className="table-wrap">
             <table className="data-table">
@@ -316,21 +316,21 @@ export function AdminPage() {
 
       {tab === "ID harmonization" && (
         <div className="card">
-          <h2 style={{ marginTop: 0 }}>ID harmonization</h2>
+          <h2>ID harmonization</h2>
           <HarmonizationTable />
         </div>
       )}
 
       {tab === "Role access matrix" && (
         <div className="card">
-          <h2 style={{ marginTop: 0 }}>Role access matrix</h2>
+          <h2>Role access matrix</h2>
           <RoleMatrix />
         </div>
       )}
 
       {tab === "Workflow pipeline" && (
         <div className="card">
-          <h2 style={{ marginTop: 0 }}>Participation workflow pipeline</h2>
+          <h2>Participation workflow pipeline</h2>
           <WorkflowPipeline />
           <h3>Where each record sits</h3>
           <ul className="alias-list">

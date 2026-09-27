@@ -58,56 +58,56 @@ export function ResultDetailPage() {
 
       <div className="card decision-card">
         <DecisionStatusCard status={record.decision.decisionStatus} decidedOn={record.decision.decidedOn} />
-        <h2 style={{ marginTop: 0 }}>Official decision / conclusion</h2>
+        <h2>Official decision / conclusion</h2>
         <p>{record.decision.conclusion}</p>
         <p className="muted">Decision published: {record.decision.decidedOn} · Responsible: {record.responsibleSection}</p>
       </div>
 
-      <div className="grid-4" style={{ marginTop: "1rem" }}>
-        <div className="card stat-card" style={{ marginTop: 0 }}>
+      <div className="grid-4 section-gap">
+        <div className="card stat-card">
           <div className="stat-value">{responses.length}</div>
           <div className="stat-label">Total responses (cleaned)</div>
         </div>
-        <div className="card stat-card" style={{ marginTop: 0 }}>
+        <div className="card stat-card">
           <div className="stat-value">{comments.length}</div>
           <div className="stat-label">Published comments</div>
         </div>
-        <div className="card stat-card" style={{ marginTop: 0 }}>
+        <div className="card stat-card">
           <div className="stat-value">{responses.filter((r) => r.answers["q-comment"]).length}</div>
           <div className="stat-label">Open-ended answers</div>
         </div>
-        <div className="card stat-card" style={{ marginTop: 0 }}>
+        <div className="card stat-card">
           <div className="stat-value">{moderation.length}</div>
           <div className="stat-label">Items flagged in moderation</div>
         </div>
       </div>
 
-      <div className="grid-2" style={{ marginTop: "1rem" }}>
-        <div className="card" style={{ marginTop: 0 }}>
+      <div className="grid-2 section-gap">
+        <div className="card">
           <Chart option={pieOption("Yes / no result (sample)", yesNo)} ariaLabel="Pie chart of yes and no responses" />
         </div>
         {mc.length > 0 && (
-          <div className="card" style={{ marginTop: 0 }}>
+          <div className="card">
             <Chart option={barOption(`${mcQuestion?.label ?? "Multiple choice"} (sample)`, mc, true)} ariaLabel="Bar chart of multiple choice answers" height={320} />
           </div>
         )}
-        <div className="card" style={{ marginTop: 0 }}>
+        <div className="card">
           <Chart option={pieOption("Participation by age group (sample)", byAge)} ariaLabel="Pie chart of participation by age group" />
         </div>
-        <div className="card" style={{ marginTop: 0 }}>
+        <div className="card">
           <Chart option={pieOption("Participation by gender (sample)", byGender)} ariaLabel="Pie chart of participation by gender" />
         </div>
-        <div className="card" style={{ marginTop: 0 }}>
+        <div className="card">
           <Chart option={barOption("Participation by ward (sample)", byWard)} ariaLabel="Bar chart of participation by ward" />
         </div>
-        <div className="card" style={{ marginTop: 0 }}>
+        <div className="card">
           <Chart option={pieOption("Participation by resident type (sample)", byResident)} ariaLabel="Pie chart of participation by resident type" />
         </div>
       </div>
 
-      <div className="grid-2" style={{ marginTop: "1rem" }}>
-        <div className="card" style={{ marginTop: 0 }}>
-          <h2 style={{ marginTop: 0 }}>Common themes from open-ended responses</h2>
+      <div className="grid-2 section-gap">
+        <div className="card">
+          <h2>Common themes from open-ended responses</h2>
           <ul>
             {record.decision.commonThemes.map((t) => (
               <li key={t}>{t}</li>
@@ -118,14 +118,14 @@ export function ResultDetailPage() {
           <h2>Data quality summary</h2>
           <p>{record.decision.dataQualitySummary}</p>
         </div>
-        <div className="card" style={{ marginTop: 0 }}>
-          <h2 style={{ marginTop: 0 }}>Cleaned public comment samples</h2>
+        <div className="card">
+          <h2>Cleaned public comment samples</h2>
           {comments.length === 0 ? (
             <div className="empty-state">No published comments.</div>
           ) : (
-            <ul style={{ paddingLeft: "1.1rem", fontSize: "0.88rem" }}>
+            <ul className="comment-list">
               {comments.map((c) => (
-                <li key={c.commentId} style={{ marginBottom: "0.4rem" }}>
+                <li key={c.commentId}>
                   "{c.text}" <span className="muted">— {c.ward}, {c.submittedAt} (cleaned sample)</span>
                 </li>
               ))}
@@ -140,7 +140,7 @@ export function ResultDetailPage() {
         <DownloadPlaceholder />
       </div>
 
-      <p style={{ marginTop: "1.5rem" }}>
+      <p className="section-gap-lg">
         <Link className="btn" to={`/records/${record.recordId}`}>
           Back to participation record
         </Link>

@@ -22,7 +22,7 @@ export function RecordsPage() {
       ) : (
         <div className="grid-2">
           {filtered.map((r) => (
-            <article className={`card record-card ${r.status === "Completed" ? "completed" : ""}`} key={r.recordId} style={{ marginTop: 0 }}>
+            <article className={`card record-card ${r.status === "Completed" ? "completed" : ""}`} key={r.recordId}>
               {r.image && (
                 <>
                   <img

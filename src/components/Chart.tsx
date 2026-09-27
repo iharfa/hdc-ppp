@@ -1,8 +1,20 @@
 import { useEffect, useRef } from "react";
 import * as echarts from "echarts";
 
-// HDC-aligned chart palette: greens, teal, and blue-green accents.
-const PALETTE = ["#0f8f46", "#056839", "#00a6a6", "#006b7a", "#6cc28a", "#9bd9c2", "#b7c2cc"];
+// Chart series colours come from the --chart-N tokens so charts follow the design system.
+// Tokens are OKLCH; zrender only parses rgb/hex, so normalise through a canvas context.
+function palette(): string[] {
+  const cs = getComputedStyle(document.documentElement);
+  const ctx = document.createElement("canvas").getContext("2d");
+  return [1, 2, 3, 4, 5, 6, 7]
+    .map((i) => cs.getPropertyValue(`--chart-${i}`).trim())
+    .filter(Boolean)
+    .map((c) => {
+      if (!ctx) return c;
+      ctx.fillStyle = c;
+      return String(ctx.fillStyle);
+    });
+}
 
 interface ChartProps {
   option: echarts.EChartsOption;
@@ -16,7 +28,8 @@ export function Chart({ option, height = 300, ariaLabel }: ChartProps) {
   useEffect(() => {
     if (!ref.current) return;
     const chart = echarts.init(ref.current);
-    chart.setOption({ color: PALETTE, ...option });
+    const colors = palette();
+    chart.setOption({ color: colors, ...option });
     const onResize = () => chart.resize();
     window.addEventListener("resize", onResize);
     return () => {
@@ -45,7 +58,7 @@ export function barOption(title: string, data: { name: string; value: number }[]
     grid: { left: horizontal ? 140 : 50, right: 20, bottom: 60, top: 40 },
     xAxis: horizontal ? val : cat,
     yAxis: horizontal ? cat : val,
-    series: [{ type: "bar", data: data.map((d) => d.value), itemStyle: { color: "#0f8f46", borderRadius: 3 } }],
+    series: [{ type: "bar", data: data.map((d) => d.value), itemStyle: { borderRadius: 3 } }],
   };
 }
 
@@ -56,6 +69,6 @@ export function lineOption(title: string, categories: string[], values: number[]
     grid: { left: 50, right: 20, bottom: 50, top: 40 },
     xAxis: { type: "category", data: categories, axisLabel: { fontSize: 10 } },
     yAxis: { type: "value" },
-    series: [{ type: "line", data: values, smooth: true, areaStyle: { opacity: 0.15 }, itemStyle: { color: "#056839" }, lineStyle: { color: "#0f8f46" } }],
+    series: [{ type: "line", data: values, smooth: true, areaStyle: { opacity: 0.15 } }],
   };
 }

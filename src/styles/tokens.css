@@ -12,7 +12,7 @@
   --color-rule-strong:  oklch(82% 0.01 150);
   --color-ink:          oklch(21% 0.012 160);
   --color-ink-2:        oklch(46% 0.015 160);
-  --color-ink-3:        oklch(60% 0.012 160);
+  --color-ink-3:        oklch(52% 0.014 160);   /* 4.5:1+ on paper for small labels */
   --color-accent:       oklch(57% 0.16 152);   /* HDC green */
   --color-accent-deep:  oklch(46% 0.13 152);
   --color-accent-tint:  oklch(95.5% 0.03 152);
@@ -21,11 +21,22 @@
   --color-teal:         oklch(63% 0.11 195);
   --color-warn:         oklch(52% 0.14 55);
   --color-danger:       oklch(50% 0.19 28);
+  /* Chart series (read by Chart.tsx via getComputedStyle) */
+  --chart-1: oklch(57% 0.16 152);
+  --chart-2: oklch(46% 0.13 152);
+  --chart-3: oklch(63% 0.11 195);
+  --chart-4: oklch(50% 0.09 200);
+  --chart-5: oklch(75% 0.11 150);
+  --chart-6: oklch(85% 0.06 165);
+  --chart-7: oklch(78% 0.02 200);
 
   /* Status semantics (label always accompanies colour) */
   --status-ongoing-bg:   oklch(96% 0.06 90);
   --status-ongoing-ink:  oklch(42% 0.11 80);
   --status-ongoing-pin:  oklch(78% 0.16 85);
+  --status-planned-pin:  oklch(55% 0.19 255);
+  --status-selected-ring: oklch(80% 0.17 90);
+  --map-fallback-bg:     oklch(96% 0.01 220);
   --status-completed-bg: var(--color-accent-tint);
   --status-completed-ink: var(--color-accent-deep);
   --status-planned-bg:   oklch(95% 0.03 250);

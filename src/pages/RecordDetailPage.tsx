@@ -29,7 +29,7 @@ export function RecordDetailPage() {
       <h1>{record.title}</h1>
 
       <div className="grid-2">
-        <div className="card" style={{ marginTop: 0 }}>
+        <div className="card">
           {record.image && (
             <>
               <img
@@ -45,7 +45,7 @@ export function RecordDetailPage() {
               </p>
             </>
           )}
-          <h2 style={{ marginTop: 0 }}>Project summary</h2>
+          <h2>Project summary</h2>
           <p>{record.summary}</p>
           <h2>Why public participation is needed</h2>
           <p>{record.whyParticipation}</p>
@@ -61,7 +61,7 @@ export function RecordDetailPage() {
                 <dt>Known references</dt>
                 <dd>
                   {record.knownReferences.map((ref) => (
-                    <span key={ref} className="alias-tag" style={{ marginRight: 4 }}>{ref}</span>
+                    <span key={ref} className="alias-tag">{ref}</span>
                   ))}
                 </dd>
                 <dt>Responsible section</dt>
@@ -109,8 +109,8 @@ export function RecordDetailPage() {
         </div>
 
         <div>
-          <div className="card" style={{ marginTop: 0 }}>
-            <h2 style={{ marginTop: 0 }}>Participation timeline</h2>
+          <div className="card">
+            <h2>Participation timeline</h2>
             <ul className="timeline">
               {record.timeline.map((t) => (
                 <li key={`${t.date}-${t.label}`}>
@@ -129,7 +129,7 @@ export function RecordDetailPage() {
             </ul>
           </div>
           <div className="card">
-            <h2 style={{ marginTop: 0 }}>Documents</h2>
+            <h2>Documents</h2>
             {record.documents.length === 0 ? (
               <div className="empty-state">No documents published yet.</div>
             ) : (
@@ -165,11 +165,11 @@ export function RecordDetailPage() {
             )}
           </div>
           <div className="card">
-            <h2 style={{ marginTop: 0 }}>Survey questions</h2>
+            <h2>Survey questions</h2>
             {record.surveyQuestions.length === 0 ? (
               <div className="empty-state">Survey not yet published for this record.</div>
             ) : (
-              <ol style={{ paddingLeft: "1.2rem", fontSize: "0.88rem" }}>
+              <ol className="question-list">
                 {record.surveyQuestions.map((q) => (
                   <li key={q.id}>
                     {q.label} <span className="muted">({q.type}{q.required ? ", required" : ""})</span>

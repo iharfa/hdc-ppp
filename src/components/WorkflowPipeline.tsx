@@ -7,7 +7,7 @@ interface Props {
 export function WorkflowPipeline({ currentStepId }: Props) {
   const currentOrder = workflowSteps.find((s) => s.stepId === currentStepId)?.order ?? 0;
   return (
-    <ol className="pipeline" style={{ listStyle: "none", margin: 0, padding: 0 }}>
+    <ol className="pipeline">
       {workflowSteps.map((s) => {
         const state = currentOrder === 0 ? "" : s.order < currentOrder ? "done" : s.order === currentOrder ? "current" : "";
         return (

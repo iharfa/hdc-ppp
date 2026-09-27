@@ -54,7 +54,7 @@ export function ModerationQueue() {
                   </td>
                   <td>
                     {item.status === "pending" ? (
-                      <span style={{ display: "flex", gap: "0.3rem" }}>
+                      <span className="inline-actions">
                         <button type="button" className="btn btn-sm" onClick={() => decide(item, "kept")}>
                           Keep
                         </button>

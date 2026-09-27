@@ -27,7 +27,7 @@ export function DetailPanel({ record, onClose }: Props) {
         <dt>Known references</dt>
         <dd>
           {record.knownReferences.map((ref) => (
-            <span key={ref} className="alias-tag" style={{ marginRight: 4 }}>
+            <span key={ref} className="alias-tag">
               {ref}
             </span>
           ))}
@@ -41,7 +41,7 @@ export function DetailPanel({ record, onClose }: Props) {
         <dt>Place type</dt>
         <dd>{place?.placeType ?? "unknown"}</dd>
       </dl>
-      <p style={{ fontSize: "0.85rem" }}>{record.summary}</p>
+      <p>{record.summary}</p>
       <div>
         <span className="filter-label">Key documents</span>
         <ul className="alias-list">

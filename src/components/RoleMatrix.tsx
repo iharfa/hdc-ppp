@@ -4,7 +4,7 @@ export function RoleMatrix() {
   return (
     <div className="table-wrap">
       <table className="data-table">
-        <caption className="muted" style={{ textAlign: "left", paddingBottom: "0.5rem" }}>
+        <caption className="muted">
           Role access matrix (POC). Server-side enforcement arrives with the backend phase.
         </caption>
         <thead>
@@ -22,7 +22,7 @@ export function RoleMatrix() {
             <tr key={p.key}>
               <th scope="row">{p.label}</th>
               {roles.map((r) => (
-                <td key={r.roleId} style={{ textAlign: "center" }}>
+                <td key={r.roleId} className="center">
                   {r.permissions.includes(p.key) ? <span className="ok-text" aria-label="allowed">✓</span> : <span className="muted" aria-label="not allowed">—</span>}
                 </td>
               ))}
