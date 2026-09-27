@@ -1,5 +1,5 @@
 import type { ParticipationStatus, ParticipationType, RecordFilters } from "../types";
-import { records } from "../services/dataService";
+import { getRecords } from "../services/dataService";
 import { emptyFilters } from "../hooks/useRecordFilters";
 
 const STATUSES: ParticipationStatus[] = ["Ongoing", "Completed", "Planned", "Internal Review", "Closed"];
@@ -21,6 +21,7 @@ interface Props {
 }
 
 export function FiltersSidebar({ filters, onChange, resultCount }: Props) {
+  const records = getRecords();
   const phases = [...new Set(records.map((r) => r.islandPhase))];
   const departments = [...new Set(records.map((r) => r.department))];
 

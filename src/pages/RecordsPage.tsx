@@ -1,11 +1,13 @@
+import { useMemo } from "react";
 import { Link } from "react-router-dom";
-import { records } from "../services/dataService";
+import { getRecords } from "../services/dataService";
 import { useRecordFilters } from "../hooks/useRecordFilters";
 import { FiltersSidebar } from "../components/FiltersSidebar";
 import { StatusBadge } from "../components/StatusBadge";
 import { DecisionStatusIcon } from "../components/DecisionStatusIcon";
 
 export function RecordsPage() {
+  const records = useMemo(getRecords, []);
   const { filters, setFilters, filtered } = useRecordFilters(records);
   return (
     <div className="page">

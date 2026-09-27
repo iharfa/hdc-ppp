@@ -1,11 +1,12 @@
 // localStorage persistence for mock survey submissions, admin edits, and
 // moderation decisions. Replace with secure backend storage in production.
-import type { ModerationItem, SurveyResponse } from "../types";
+import type { ModerationItem, ParticipationRecord, SurveyResponse } from "../types";
 
 const SUBMISSIONS_KEY = "hdc-ppp-submissions";
 const MODERATION_KEY = "hdc-ppp-moderation-overrides";
 const HARMONIZATION_KEY = "hdc-ppp-harmonization-links";
-const DRAFTS_KEY = "hdc-ppp-admin-drafts";
+const RECORD_OVERRIDES_KEY = "hdc-ppp-record-overrides";
+const CREATED_RECORDS_KEY = "hdc-ppp-created-records";
 
 function read<T>(key: string, fallback: T): T {
   try {
@@ -58,19 +59,27 @@ export function saveHarmonizationLink(link: HarmonizationLink): void {
   write(HARMONIZATION_KEY, [...rest, link]);
 }
 
-export interface AdminDraft {
-  draftId: string;
-  title: string;
-  participationType: string;
-  summary: string;
-  locationName: string;
-  createdAt: string;
+// ---- Admin edits to records (workflow stage, status, decision, survey, timeline) ----
+
+export type RecordOverride = Partial<ParticipationRecord> & { recordId: string };
+
+export function getRecordOverrides(): Record<string, RecordOverride> {
+  return read<Record<string, RecordOverride>>(RECORD_OVERRIDES_KEY, {});
 }
 
-export function getAdminDrafts(): AdminDraft[] {
-  return read<AdminDraft[]>(DRAFTS_KEY, []);
+/** Merge a partial edit into the stored override for one record. */
+export function saveRecordOverride(patch: RecordOverride): void {
+  const all = getRecordOverrides();
+  all[patch.recordId] = { ...all[patch.recordId], ...patch };
+  write(RECORD_OVERRIDES_KEY, all);
 }
 
-export function saveAdminDraft(draft: AdminDraft): void {
-  write(DRAFTS_KEY, [...getAdminDrafts(), draft]);
+/** Records created from the admin "Create record" form (full records, not drafts). */
+export function getCreatedRecords(): ParticipationRecord[] {
+  return read<ParticipationRecord[]>(CREATED_RECORDS_KEY, []);
+}
+
+export function saveCreatedRecord(record: ParticipationRecord): void {
+  const rest = getCreatedRecords().filter((r) => r.recordId !== record.recordId);
+  write(CREATED_RECORDS_KEY, [...rest, record]);
 }

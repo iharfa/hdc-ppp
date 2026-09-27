@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { places, records } from "../services/dataService";
+import { places, getRecords } from "../services/dataService";
 import { getHarmonizationLinks, saveHarmonizationLink } from "../services/storage";
 
 /** Data harmonization admin view: canonical places, aliases, confidence, manual linking. */
 export function HarmonizationTable() {
   const [links, setLinks] = useState(getHarmonizationLinks());
+  const records = getRecords();
   const [linkRecord, setLinkRecord] = useState("");
   const [linkPlace, setLinkPlace] = useState("");
 

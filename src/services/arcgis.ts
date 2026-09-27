@@ -75,6 +75,26 @@ function pinSymbol(record: ParticipationRecord, selected: boolean) {
 
 type GraphicCtor = typeof import("@arcgis/core/Graphic").default;
 
+/** Outline of the place (polygon ring or line) drawn beneath the pin so the affected area is visible. */
+function shapeGraphic(Graphic: GraphicCtor, rec: ParticipationRecord) {
+  const place = getPlace(effectivePlaceId(rec));
+  if (!place || place.geometry.type === "point") return null;
+  const rgb = STATUS_COLORS[rec.status];
+  const geometry =
+    place.geometry.type === "polygon"
+      ? { type: "polygon", rings: place.geometry.coordinates }
+      : { type: "polyline", paths: [place.geometry.coordinates] };
+  const symbol =
+    place.geometry.type === "polygon"
+      ? { type: "simple-fill", color: [...rgb, 0.18], outline: { color: [...rgb, 0.9], width: 1.5 } }
+      : { type: "simple-line", color: [...rgb, 0.9], width: 4 };
+  return new Graphic({
+    geometry: geometry as unknown as __esri.GeometryUnion,
+    symbol: symbol as unknown as __esri.SymbolUnion,
+    attributes: { recordId: rec.recordId, title: rec.title, status: rec.status },
+  });
+}
+
 function pinGraphic(Graphic: GraphicCtor, rec: ParticipationRecord, selected: boolean) {
   const place = getPlace(effectivePlaceId(rec));
   if (!place) return null;
@@ -130,6 +150,10 @@ export async function createMapView(
   function redraw() {
     overlay.removeAll();
     graphicsByRecord.clear();
+    for (const rec of records) {
+      const shape = shapeGraphic(Graphic, rec);
+      if (shape) overlay.add(shape);
+    }
     for (const rec of records) {
       const g = pinGraphic(Graphic, rec, rec.recordId === selectedId);
       if (!g) continue;
@@ -243,6 +267,8 @@ export async function createSceneView(
   // Same participation pins as the 2D map, draped onto the scene.
   const overlay = new GraphicsLayer({ title: "Sample participation areas (POC)", elevationInfo: { mode: "relative-to-ground", offset: 5 } });
   for (const rec of participationRecords) {
+    const shape = shapeGraphic(Graphic, rec);
+    if (shape) overlay.add(shape);
     const g = pinGraphic(Graphic, rec, false);
     if (g) overlay.add(g);
   }
@@ -271,4 +297,57 @@ export async function createSceneView(
     view.goTo({ center: HULHUMALE_CENTER, zoom: 16, tilt: 55 }, { duration: 1200 }).catch(() => {});
   }
   return { destroy: () => view.destroy(), message };
+}
+
+/**
+ * Small map for the survey "map pin" question. Click places (or moves) a
+ * single marker and reports it back as [lon, lat].
+ */
+export async function createPinPicker(
+  container: HTMLDivElement,
+  initial: [number, number] | null,
+  onPick: (lonLat: [number, number]) => void,
+): Promise<{ destroy(): void }> {
+  const [{ default: Map }, { default: MapView }, { default: WebMap }, { default: GraphicsLayer }, { default: Graphic }] =
+    await Promise.all([
+      import("@arcgis/core/Map"),
+      import("@arcgis/core/views/MapView"),
+      import("@arcgis/core/WebMap"),
+      import("@arcgis/core/layers/GraphicsLayer"),
+      import("@arcgis/core/Graphic"),
+    ]);
+  let map: InstanceType<typeof Map>;
+  try {
+    const webmap = new WebMap({ portalItem: { id: WEBMAP_ID } });
+    await webmap.load();
+    map = webmap;
+  } catch {
+    map = new Map({ basemap: "streets-vector" });
+  }
+  const layer = new GraphicsLayer();
+  map.add(layer);
+  const view = new MapView({ container, map, center: initial ?? HULHUMALE_CENTER, zoom: initial ? 17 : 15, popupEnabled: false, ui: { components: ["zoom"] } });
+  function place(lon: number, lat: number) {
+    layer.removeAll();
+    layer.add(
+      new Graphic({
+        geometry: { type: "point", longitude: lon, latitude: lat } as unknown as __esri.GeometryUnion,
+        symbol: { type: "simple-marker", path: PIN_PATH, color: STATUS_COLORS.Ongoing, size: 28, yoffset: 14, outline: { color: [255, 255, 255, 1], width: 1.5 } } as unknown as __esri.SymbolUnion,
+      }),
+    );
+  }
+  if (initial) place(initial[0], initial[1]);
+  const handle = view.on("click", (event) => {
+    const pt = event.mapPoint;
+    if (!pt?.longitude || !pt.latitude) return;
+    place(pt.longitude, pt.latitude);
+    onPick([pt.longitude, pt.latitude]);
+  });
+  await view.when().catch(() => {});
+  return {
+    destroy() {
+      handle.remove();
+      view.destroy();
+    },
+  };
 }

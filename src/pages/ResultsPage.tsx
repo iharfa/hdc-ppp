@@ -1,12 +1,13 @@
 import { useMemo } from "react";
 import { Link } from "react-router-dom";
-import { records, sampleResponses, getEffectiveModeration, countBy } from "../services/dataService";
+import { getRecords, sampleResponses, getEffectiveModeration, countBy } from "../services/dataService";
 import { getLocalSubmissions } from "../services/storage";
 import { Chart, barOption, pieOption, lineOption } from "../components/Chart";
 import { StatusBadge } from "../components/StatusBadge";
 
 export function ResultsPage() {
   const allResponses = useMemo(() => [...sampleResponses, ...getLocalSubmissions()], []);
+  const records = useMemo(getRecords, []);
 
   const completed = records.filter((r) => r.status === "Completed");
   const ongoing = records.filter((r) => r.status === "Ongoing");

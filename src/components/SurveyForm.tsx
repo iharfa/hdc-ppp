@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import type { DemographicProfile, ParticipationRecord, SurveyQuestion, SurveyResponse } from "../types";
 import { saveSubmission } from "../services/storage";
+import { MapPinPicker } from "./MapPinPicker";
 
 type Step = "questions" | "review" | "confirm";
 
@@ -79,15 +80,15 @@ export function SurveyForm({ record }: Props) {
     );
     return (
       <div className="form-field" key={q.id}>
-        {q.type === "opentext" || q.type === "mappin" ? (
+        {q.type === "mappin" ? (
+          <>
+            <span className="field-label">{labelText}</span>
+            <p className="help-text">Click the map to drop a pin on the spot your answer refers to.</p>
+            <MapPinPicker id={q.id} value={answers[q.id] ?? ""} onChange={(v) => setAnswer(q.id, v)} invalid={!!error} />
+          </>
+        ) : q.type === "opentext" ? (
           <>
             <label htmlFor={q.id}>{labelText}</label>
-            {q.type === "mappin" && (
-              <p className="help-text">
-                POC placeholder: enter a short location description instead of a live map pin (e.g. "near the east
-                entrance"). A real map-pin picker arrives with the backend phase.
-              </p>
-            )}
             <textarea id={q.id} value={answers[q.id] ?? ""} onChange={(e) => setAnswer(q.id, e.target.value)} aria-invalid={!!error} />
           </>
         ) : q.type === "consent" ? (

@@ -11,10 +11,12 @@ function escapePdf(s: string): string {
   return asciize(s).replace(/\\/g, "\\\\").replace(/\(/g, "\\(").replace(/\)/g, "\\)");
 }
 
-function makePdfBlob(title: string, lines: string[]): Blob {
+export function makePdfBlob(title: string, lines: string[]): Blob {
   const textLines = [title, "", ...lines];
-  let content = "BT\n/F1 15 Tf\n72 780 Td\n20 TL\n";
-  for (const ln of textLines) content += `(${escapePdf(ln)}) Tj\nT*\n`;
+  // Single page, 11pt Helvetica, 16pt leading: ~44 lines fit. Wrap long lines at 90 chars.
+  const wrapped = textLines.flatMap((ln) => (ln.length <= 90 ? [ln] : ln.match(/.{1,90}(\s|$)/g) ?? [ln]));
+  let content = "BT\n/F1 11 Tf\n56 790 Td\n16 TL\n";
+  for (const ln of wrapped.slice(0, 44)) content += `(${escapePdf(ln.trimEnd())}) Tj\nT*\n`;
   content += "ET";
 
   const objs = [
@@ -55,10 +57,18 @@ export function downloadPlaceholderDoc(docTitle: string, recordTitle: string): v
     "Housing Development Corporation",
     "Public Participation Portal",
   ]);
+  downloadBlob(blob, safeFilename(docTitle) + ".pdf");
+}
+
+export function safeFilename(s: string): string {
+  return asciize(s).replace(/[^a-z0-9]+/gi, "_").replace(/^_+|_+$/g, "");
+}
+
+export function downloadBlob(blob: Blob, filename: string): void {
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.href = url;
-  a.download = asciize(docTitle).replace(/[^a-z0-9]+/gi, "_").replace(/^_+|_+$/g, "") + ".pdf";
+  a.download = filename;
   document.body.appendChild(a);
   a.click();
   a.remove();

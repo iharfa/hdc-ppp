@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { records } from "../services/dataService";
+import { useMemo, useState } from "react";
+import { getRecords } from "../services/dataService";
 import { useRecordFilters } from "../hooks/useRecordFilters";
 import { MapView } from "../components/MapView";
 import { FiltersSidebar } from "../components/FiltersSidebar";
@@ -7,6 +7,7 @@ import { ParticipationList } from "../components/ParticipationList";
 import { DetailPanel } from "../components/DetailPanel";
 
 export function MapPage() {
+  const records = useMemo(getRecords, []);
   const { filters, setFilters, filtered } = useRecordFilters(records);
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const selected = filtered.find((r) => r.recordId === selectedId); // filtered out = deselected

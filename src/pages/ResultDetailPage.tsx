@@ -9,7 +9,7 @@ import {
 } from "../services/dataService";
 import { Chart, barOption, pieOption } from "../components/Chart";
 import { StatusBadge } from "../components/StatusBadge";
-import { DownloadPlaceholder } from "../components/DownloadPlaceholder";
+import { ResultExports } from "../components/ResultExports";
 import { DecisionStatusCard } from "../components/DecisionStatusCard";
 
 export function ResultDetailPage() {
@@ -136,8 +136,8 @@ export function ResultDetailPage() {
 
       <h2>Public datasets</h2>
       <div className="card">
-        <p className="muted">Cleaned result datasets approved for public disclosure. Placeholders in this POC.</p>
-        <DownloadPlaceholder />
+        <p className="muted">Cleaned result datasets approved for public disclosure. Generated in the browser from the sample data.</p>
+        <ResultExports record={record} responses={responses} comments={comments} moderationCount={moderation.length} />
       </div>
 
       <p className="section-gap-lg">
