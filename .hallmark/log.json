@@ -1,3 +1,25 @@
 [
-  { "date": "2026-09-27", "scope": "app", "macrostructure": "Map/Diagram · Catalogue · Stat-Led · Workbench · Long Document", "theme": "custom", "theme_axes": "light / grotesk-sans / chromatic-green", "vibe": "civic, white, HDC green, instrument-panel calm", "enrichment": "none", "nav": "N9", "footer": "Ft2", "brief": "HDC Public Participation Portal redesign, keep HDC green, white style" }
+  {
+    "date": "2026-09-27",
+    "scope": "page",
+    "macrostructure": "Split Studio + Catalogue",
+    "theme": "custom",
+    "theme_axes": "light / grotesk-sans / chromatic-green",
+    "enrichment": "real photo in figure",
+    "nav": "N9",
+    "footer": "Ft2",
+    "brief": "Home page reworked after decide.madrid.es reference: hero, featured band, phase tabs"
+  },
+  {
+    "date": "2026-09-27",
+    "scope": "app",
+    "macrostructure": "Map/Diagram · Catalogue · Stat-Led · Workbench · Long Document",
+    "theme": "custom",
+    "theme_axes": "light / grotesk-sans / chromatic-green",
+    "vibe": "civic, white, HDC green, instrument-panel calm",
+    "enrichment": "none",
+    "nav": "N9",
+    "footer": "Ft2",
+    "brief": "HDC Public Participation Portal redesign, keep HDC green, white style"
+  }
 ]

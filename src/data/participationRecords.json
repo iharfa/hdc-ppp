@@ -180,7 +180,8 @@
     },
     "workflowStage": "archived",
     "sampleData": true,
-    "image": "/images/records/HDC-PP-2025-001.jpg"
+    "image": "/images/records/HDC-PP-2025-001.jpg",
+    "featured": true
   },
   {
     "recordId": "HDC-PP-2025-002",
@@ -687,7 +688,8 @@
     ],
     "workflowStage": "active",
     "sampleData": true,
-    "image": "/images/records/HDC-PP-2026-004.jpg"
+    "image": "/images/records/HDC-PP-2026-004.jpg",
+    "featured": true
   },
   {
     "recordId": "HDC-PP-2026-005",
@@ -833,7 +835,8 @@
     ],
     "workflowStage": "active",
     "sampleData": true,
-    "image": "/images/records/HDC-PP-2026-005.jpg"
+    "image": "/images/records/HDC-PP-2026-005.jpg",
+    "featured": true
   },
   {
     "recordId": "HDC-PP-2026-006",

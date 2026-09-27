@@ -2,7 +2,8 @@ import { NavLink } from "react-router-dom";
 import { Logo } from "./Logo";
 
 const navItems = [
-  { to: "/", label: "Map", end: true },
+  { to: "/", label: "Home", end: true },
+  { to: "/map", label: "Map" },
   { to: "/records", label: "Participation Records" },
   { to: "/results", label: "Results" },
   { to: "/admin", label: "Admin Preview" },

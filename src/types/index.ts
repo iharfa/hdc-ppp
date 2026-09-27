@@ -156,6 +156,7 @@ export interface ParticipationRecord {
   surveyQuestions: SurveyQuestion[];
   decision?: DecisionSummary;
   image?: string; // representative illustrative image (sample) shown on record cards
+  featured?: boolean; // shown in the home page "Featured" band
   workflowStage: string;
   sampleData: true;
 }

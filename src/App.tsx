@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
+import { HomePage } from "./pages/HomePage";
 import { MapPage } from "./pages/MapPage";
 import { RecordsPage } from "./pages/RecordsPage";
 import { RecordDetailPage } from "./pages/RecordDetailPage";
@@ -14,13 +15,14 @@ import { AboutPage } from "./pages/AboutPage";
 function Shell() {
   // The map homepage uses a fixed viewport layout: map fills the screen,
   // footer stays visible, and only the sidebar list scrolls.
-  const isMapPage = useLocation().pathname === "/";
+  const isMapPage = useLocation().pathname === "/map";
   return (
     <div className={`app-shell ${isMapPage ? "shell-fixed" : ""}`}>
         <Header />
         <main className="app-main">
             <Routes>
-              <Route path="/" element={<MapPage />} />
+              <Route path="/" element={<HomePage />} />
+              <Route path="/map" element={<MapPage />} />
               <Route path="/records" element={<RecordsPage />} />
               <Route path="/records/:recordId" element={<RecordDetailPage />} />
               <Route path="/records/:recordId/respond" element={<SurveyPage />} />

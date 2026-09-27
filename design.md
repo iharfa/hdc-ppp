@@ -8,7 +8,8 @@ adding one-off values in components.
 modern-minimal. Civic instrument panel: white paper, one green accent, sans throughout.
 
 ## Macrostructure family
-- App pages: Map/Diagram (map home), Workbench (admin), Stat-Led (results dashboard)
+- Home: Split Studio hero + Catalogue bands (featured band on accent tint, phase tabs with left rail)
+- App pages: Map/Diagram (map), Workbench (admin), Stat-Led (results dashboard)
 - Catalogue pages: Catalogue (participation records, result cards)
 - Content pages: Long Document (about, record detail, survey)
 

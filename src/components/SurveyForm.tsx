@@ -193,7 +193,7 @@ export function SurveyForm({ record }: Props) {
             <Link className="btn" to={`/records/${record.recordId}`}>
               Back to record
             </Link>
-            <Link className="btn btn-blue" to="/">
+            <Link className="btn btn-blue" to="/map">
               Back to map
             </Link>
           </div>
