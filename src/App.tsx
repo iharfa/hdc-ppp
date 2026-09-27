@@ -11,6 +11,9 @@ import { ResultsPage } from "./pages/ResultsPage";
 import { ResultDetailPage } from "./pages/ResultDetailPage";
 import { AdminPage } from "./pages/AdminPage";
 import { AboutPage } from "./pages/AboutPage";
+import { IdeasPage } from "./pages/IdeasPage";
+import { IdeaNewPage } from "./pages/IdeaNewPage";
+import { IdeaDetailPage } from "./pages/IdeaDetailPage";
 
 function Shell() {
   // The map homepage uses a fixed viewport layout: map fills the screen,
@@ -29,6 +32,9 @@ function Shell() {
               <Route path="/results" element={<ResultsPage />} />
               <Route path="/results/:recordId" element={<ResultDetailPage />} />
               <Route path="/admin" element={<AdminPage />} />
+              <Route path="/ideas" element={<IdeasPage />} />
+              <Route path="/ideas/new" element={<IdeaNewPage />} />
+              <Route path="/ideas/:proposalId" element={<IdeaDetailPage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="*" element={<div className="page"><div className="empty-state">Page not found.</div></div>} />
             </Routes>

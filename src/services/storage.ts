@@ -1,12 +1,15 @@
 // localStorage persistence for mock survey submissions, admin edits, and
 // moderation decisions. Replace with secure backend storage in production.
-import type { ModerationItem, ParticipationRecord, SurveyResponse } from "../types";
+import type { CommunityProposal, ModerationItem, ParticipationRecord, SurveyResponse } from "../types";
 
 const SUBMISSIONS_KEY = "hdc-ppp-submissions";
 const MODERATION_KEY = "hdc-ppp-moderation-overrides";
 const HARMONIZATION_KEY = "hdc-ppp-harmonization-links";
 const RECORD_OVERRIDES_KEY = "hdc-ppp-record-overrides";
 const CREATED_RECORDS_KEY = "hdc-ppp-created-records";
+const PROPOSALS_KEY = "hdc-ppp-proposals";
+const PROPOSAL_OVERRIDES_KEY = "hdc-ppp-proposal-overrides";
+const PROPOSAL_SUPPORTS_KEY = "hdc-ppp-proposal-supports";
 
 function read<T>(key: string, fallback: T): T {
   try {
@@ -82,4 +85,46 @@ export function getCreatedRecords(): ParticipationRecord[] {
 export function saveCreatedRecord(record: ParticipationRecord): void {
   const rest = getCreatedRecords().filter((r) => r.recordId !== record.recordId);
   write(CREATED_RECORDS_KEY, [...rest, record]);
+}
+
+// ---- Community proposals ----
+
+/** Proposals submitted from this browser (with downscaled images inline). */
+export function getLocalProposals(): CommunityProposal[] {
+  return read<CommunityProposal[]>(PROPOSALS_KEY, []);
+}
+
+/** Returns false when localStorage refuses (usually quota from too many photos). */
+export function saveLocalProposal(p: CommunityProposal): boolean {
+  const rest = getLocalProposals().filter((x) => x.proposalId !== p.proposalId);
+  try {
+    localStorage.setItem(PROPOSALS_KEY, JSON.stringify([...rest, p]));
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+export type ProposalOverride = Partial<CommunityProposal> & { proposalId: string };
+
+export function getProposalOverrides(): Record<string, ProposalOverride> {
+  return read<Record<string, ProposalOverride>>(PROPOSAL_OVERRIDES_KEY, {});
+}
+
+export function saveProposalOverride(patch: ProposalOverride): void {
+  const all = getProposalOverrides();
+  all[patch.proposalId] = { ...all[patch.proposalId], ...patch };
+  write(PROPOSAL_OVERRIDES_KEY, all);
+}
+
+/** IDs this browser has supported (one support per browser per idea in the POC). */
+export function getSupportedIds(): string[] {
+  return read<string[]>(PROPOSAL_SUPPORTS_KEY, []);
+}
+
+export function toggleSupport(proposalId: string): boolean {
+  const ids = getSupportedIds();
+  const on = !ids.includes(proposalId);
+  write(PROPOSAL_SUPPORTS_KEY, on ? [...ids, proposalId] : ids.filter((i) => i !== proposalId));
+  return on;
 }

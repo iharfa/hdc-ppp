@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { getRecords } from "../services/dataService";
 import { sortRecords } from "../hooks/useRecordFilters";
 import { ProjectCard } from "../components/ProjectCard";
+import { getProposals } from "../services/dataService";
 
 const PHASE_ORDER = ["Hulhumalé Phase 1", "Hulhumalé Phase 1-2 Link", "Hulhumalé Phase 2"];
 
@@ -11,6 +12,7 @@ export function HomePage() {
   const featured = records.filter((r) => r.featured).slice(0, 3);
   const ongoingCount = records.filter((r) => r.status === "Ongoing").length;
   const heroImage = featured[0]?.image ?? records.find((r) => r.image)?.image;
+  const ideaCount = useMemo(() => getProposals().length, []);
 
   const phases = useMemo(() => {
     const seen = [...new Set(records.map((r) => r.islandPhase))];
@@ -41,6 +43,11 @@ export function HomePage() {
               Open the map
             </Link>
           </div>
+          <p className="hero-idea">
+            Have an idea of your own?{" "}
+            <Link to="/ideas/new">Suggest a change for Hulhumalé</Link>
+            <span className="muted"> · {ideaCount} community {ideaCount === 1 ? "idea" : "ideas"} so far</span>
+          </p>
         </div>
         {heroImage && (
           <figure className="home-hero-figure">

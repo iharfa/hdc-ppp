@@ -10,9 +10,11 @@ import { RoleMatrix } from "../components/RoleMatrix";
 import { ModerationQueue } from "../components/ModerationQueue";
 import { HarmonizationTable } from "../components/HarmonizationTable";
 import { SurveyBuilder } from "../components/SurveyBuilder";
+import { ProposalReview } from "../components/ProposalReview";
 
 const TABS = [
   "Participation registry",
+  "Community ideas",
   "Create record",
   "GIS linking",
   "Survey builder",
@@ -29,12 +31,12 @@ type Tab = (typeof TABS)[number];
 const ROLE_TABS: Record<string, Tab[]> = {
   "public-viewer": ["Participation registry"],
   "public-respondent": ["Participation registry"],
-  "spes-officer": ["Participation registry", "Create record", "Survey builder", "Results review", "Conclusion publishing", "Workflow pipeline"],
-  "participation-manager": ["Participation registry", "Create record", "Survey builder", "Results review", "Workflow pipeline"],
+  "spes-officer": ["Participation registry", "Community ideas", "Create record", "Survey builder", "Results review", "Conclusion publishing", "Workflow pipeline"],
+  "participation-manager": ["Participation registry", "Community ideas", "Create record", "Survey builder", "Results review", "Workflow pipeline"],
   "gis-steward": ["Participation registry", "GIS linking", "ID harmonization"],
   moderator: ["Participation registry", "Moderation queue"],
   "dept-reviewer": ["Participation registry", "Workflow pipeline"],
-  "senior-approver": ["Participation registry", "Conclusion publishing", "Workflow pipeline"],
+  "senior-approver": ["Participation registry", "Community ideas", "Conclusion publishing", "Workflow pipeline"],
   "system-admin": [...TABS],
 };
 
@@ -289,6 +291,20 @@ export function AdminPage() {
               </tbody>
             </table>
           </div>
+        </div>
+      )}
+
+      {tab === "Community ideas" && (
+        <div className="card">
+          <h2>Community ideas</h2>
+          <ProposalReview
+            actor={role?.name ?? "staff"}
+            defaultQuestions={defaultQuestions}
+            onRecordCreated={() => {
+              refresh();
+              setMsg("Idea taken up: a draft participation record was created. Set its dates and survey in the registry.");
+            }}
+          />
         </div>
       )}
 

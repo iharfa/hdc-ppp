@@ -210,6 +210,65 @@ export interface PublicComment {
   cleaned: true;
 }
 
+// ---- Community proposals (public ideas for Hulhumalé) ----
+
+export type ProposalStatus =
+  | "submitted"
+  | "under-review"
+  | "invited-co-create"
+  | "taken-up"
+  | "not-taken-forward";
+
+export const PROPOSAL_STATUS_LABEL: Record<ProposalStatus, string> = {
+  submitted: "Submitted",
+  "under-review": "Under review",
+  "invited-co-create": "Invited to co-create",
+  "taken-up": "Taken up by HDC",
+  "not-taken-forward": "Not taken forward",
+};
+
+export const PROPOSAL_CATEGORIES = [
+  "Public space",
+  "Green space",
+  "Roads and mobility",
+  "Housing and buildings",
+  "Waterfront and beach",
+  "Events and economy",
+  "Safety and lighting",
+  "Waste and environment",
+  "Other",
+] as const;
+export type ProposalCategory = (typeof PROPOSAL_CATEGORIES)[number];
+
+export interface ProposalImage {
+  name: string;
+  dataUrl: string;
+}
+
+export interface CommunityProposal {
+  proposalId: string;
+  title: string;
+  category: ProposalCategory;
+  islandPhase: string;
+  locationText: string;
+  pin: string; // "lat, lon" or ""
+  canonicalPlaceId?: string;
+  whatChanges: string;
+  benefit: string;
+  impact: string;
+  photos: ProposalImage[];
+  sketches: ProposalImage[];
+  submittedAt: string;
+  submitterName: string; // optional display name; may be empty
+  contact?: string; // optional email or phone, shown to staff only
+  wantsToCoCreate: boolean;
+  status: ProposalStatus;
+  statusNote: string;
+  linkedRecordId?: string; // set when taken up as a participation record
+  supports: number;
+  sample?: boolean;
+}
+
 export interface RecordFilters {
   statuses: ParticipationStatus[];
   types: ParticipationType[];

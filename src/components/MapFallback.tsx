@@ -8,13 +8,14 @@ interface Props {
   records: ParticipationRecord[];
   selectedId: string | null;
   onSelect(recordId: string): void;
+  extraPin?: { lon: number; lat: number; title: string };
 }
 
 /**
  * Pure-SVG schematic map used only when the ArcGIS SDK itself fails to start
  * (e.g. offline, WebGL unavailable). Plots sample geometries on a plain grid.
  */
-export function MapFallback({ message, records, selectedId, onSelect }: Props) {
+export function MapFallback({ message, records, selectedId, onSelect, extraPin }: Props) {
   const [cx, cy] = HULHUMALE_CENTER;
   const scale = 22000;
   const project = ([lon, lat]: [number, number]) => [350 + (lon - cx) * scale, 250 - (lat - cy) * scale];
@@ -25,6 +26,20 @@ export function MapFallback({ message, records, selectedId, onSelect }: Props) {
         {message} Showing a schematic offline fallback of the sample participation areas.
       </div>
       <svg viewBox="0 0 700 500" role="img" aria-label="Schematic map of sample participation areas">
+        {extraPin && (() => {
+          const [x, y] = project([extraPin.lon, extraPin.lat]);
+          return (
+            <g transform={`translate(${x - 12 * 1.4}, ${y - 24 * 1.4}) scale(1.4)`}>
+              <title>{extraPin.title}</title>
+              <path
+                d="M12 0C7 0 3 4 3 9c0 6.2 8.1 14.3 8.4 14.7.3.3.9.3 1.2 0C12.9 23.3 21 15.2 21 9c0-5-4-9-9-9z"
+                style={{ fill: "var(--color-accent)", stroke: "var(--color-paper)" }}
+                strokeWidth={1.5}
+              />
+              <circle cx={12} cy={9} r={3.5} style={{ fill: "var(--color-paper)" }} />
+            </g>
+          );
+        })()}
         {records.map((r) => {
           const place = getPlace(r.canonicalPlaceId);
           if (!place) return null;

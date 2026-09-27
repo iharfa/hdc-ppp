@@ -8,8 +8,10 @@ import commentsJson from "../data/comments.json";
 import moderationJson from "../data/moderation.json";
 import rolesJson from "../data/roles.json";
 import workflowJson from "../data/workflow.json";
+import proposalsJson from "../data/proposals.json";
 import type {
   CanonicalPlace,
+  CommunityProposal,
   ModerationItem,
   ParticipationRecord,
   Permission,
@@ -20,6 +22,9 @@ import type {
 } from "../types";
 import {
   getCreatedRecords,
+  getLocalProposals,
+  getProposalOverrides,
+  getSupportedIds,
   getHarmonizationLinks,
   getLocalSubmissions,
   getModerationOverrides,
@@ -84,6 +89,33 @@ export function nextRecordId(): string {
   const year = new Date().getFullYear();
   const max = getRecords().reduce((m, r) => Math.max(m, Number(r.recordId.slice(-3)) || 0), 0);
   return `HDC-PP-${year}-${String(max + 1).padStart(3, "0")}`;
+}
+
+// ---- Community proposals ----
+
+const seedProposals = proposalsJson as unknown as CommunityProposal[];
+
+/** Sample proposals plus ones submitted in this browser, with staff decisions and local supports applied. */
+export function getProposals(): CommunityProposal[] {
+  const overrides = getProposalOverrides();
+  const supported = new Set(getSupportedIds());
+  return [...seedProposals, ...getLocalProposals()]
+    .map((p) => {
+      const o = overrides[p.proposalId];
+      const merged = o ? { ...p, ...o } : p;
+      return supported.has(p.proposalId) ? { ...merged, supports: merged.supports + 1 } : merged;
+    })
+    .sort((a, b) => b.submittedAt.localeCompare(a.submittedAt));
+}
+
+export function getProposal(proposalId: string): CommunityProposal | undefined {
+  return getProposals().find((p) => p.proposalId === proposalId);
+}
+
+export function nextProposalId(): string {
+  const year = new Date().getFullYear();
+  const max = getProposals().reduce((m, p) => Math.max(m, Number(p.proposalId.slice(-3)) || 0), 0);
+  return `IDEA-${year}-${String(max + 1).padStart(3, "0")}`;
 }
 
 export function countBy<T>(items: T[], key: (item: T) => string): { name: string; value: number }[] {
