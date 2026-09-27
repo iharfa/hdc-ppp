@@ -10,12 +10,11 @@
 import type { Geometry, ParticipationRecord, ParticipationStatus } from "../types";
 import { effectivePlaceId, getPlace } from "./dataService";
 
-export const APP_ITEM_2D = "21610169068e4dacaa51886ff9d4c300";
-export const APP_ITEM_3D = "ed90beef77b643a58570072cc9a14830";
 // Public map/scene item IDs behind the two HDC apps ("DRONE IMAGERY" web map,
 // "Land Use Plan Scene" web scene). Re-run scripts/gisBackup.mjs to re-verify.
-export const WEBMAP_ID = "46865dadd00d48f0b23f87e9b49085b1";
-export const WEBSCENE_ID = "404e2256a01c44669287ac440ca258cd";
+// Not surfaced in the UI.
+const WEBMAP_ID = "46865dadd00d48f0b23f87e9b49085b1";
+const WEBSCENE_ID = "404e2256a01c44669287ac440ca258cd";
 
 export const HULHUMALE_CENTER: [number, number] = [73.5425, 4.219];
 
@@ -133,11 +132,11 @@ export async function createMapView(
     const webmap = new WebMap({ portalItem: { id: WEBMAP_ID } });
     await webmap.load();
     map = webmap;
-    statusMessage = "Showing the public HDC web map.";
+    statusMessage = "";
   } catch (e) {
     usedFallback = true;
     map = new Map({ basemap: "streets-vector" });
-    statusMessage = `HDC web map could not be loaded (${(e as Error).message}). Showing fallback basemap.`;
+    statusMessage = "Live HDC map unavailable right now. Showing a fallback basemap.";
   }
 
   const overlay = new GraphicsLayer({ title: "Sample participation areas (POC)" });
@@ -258,10 +257,10 @@ export async function createSceneView(
     await scene.load();
     mapOrScene = scene;
     sceneLoaded = true;
-    message = "Showing the public HDC Land Use Plan scene. Click a lot for parcel details.";
+    message = "Click a lot for parcel details.";
   } catch (e) {
     mapOrScene = new Map({ basemap: "satellite", ground: "world-elevation" });
-    message = `HDC web scene could not be loaded (${(e as Error).message}). Showing fallback 3D satellite view.`;
+    message = "Live HDC 3D scene unavailable right now. Showing a fallback satellite view.";
   }
 
   // Same participation pins as the 2D map, draped onto the scene.

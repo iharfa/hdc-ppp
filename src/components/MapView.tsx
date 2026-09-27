@@ -132,7 +132,7 @@ export function MapView({ records, selectedId, onSelect }: Props) {
       )}
       {!loading && (statusMsg || sceneMsg) && (
         <div className="map-status-note" role="note">
-          {mode === "2d" ? statusMsg : sceneMsg} Sample participation pins are POC data.
+          {mode === "2d" ? statusMsg : sceneMsg}
         </div>
       )}
     </div>
