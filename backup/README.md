@@ -25,9 +25,9 @@ source files exist only on the GIS server today.
 ## How it runs
 
 - Manually: `node scripts/gisBackup.mjs`
-- Automatically: GitHub Actions (`.github/workflows/gis-backup.yml`) runs every
-  Sunday and commits changes only when the data actually changed. You can also
-  trigger it from the repo's Actions tab ("Run workflow").
+- On demand: GitHub Actions (`.github/workflows/gis-backup.yml`) via the repo Actions
+  tab ("Run workflow"). The weekly schedule is switched off for now; it commits
+  only when the feature data or item definitions actually changed.
 
 ## Restoring
 
