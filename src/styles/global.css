@@ -553,7 +553,10 @@ ul, ol { padding-left: 1.2rem; }
 .ideas-head h1 { margin-top: 0; }
 .ideas-head .btn { margin-top: var(--space-2xs); }
 .ideas-filters { border-bottom: none; }
-.hero-idea { margin: var(--space-md) 0 0; font-size: var(--text-sm); }
+.idea-bar { display: flex; align-items: center; justify-content: space-between; gap: var(--space-md); flex-wrap: wrap; padding: var(--space-md); border: var(--rule); border-radius: var(--radius-card); background: var(--color-paper-2); }
+.idea-bar > div:first-child { flex: 1 1 420px; font-size: var(--text-sm); }
+.idea-bar .panel-actions { margin-top: 0; }
+.home .idea-bar-section { margin-top: calc(-1 * var(--space-lg)); }
 .pstatus-submitted { background: var(--color-paper-3); color: var(--color-ink-2); }
 .pstatus-under-review { background: var(--status-ongoing-bg); color: var(--status-ongoing-ink); }
 .pstatus-invited-co-create { background: var(--status-planned-bg); color: var(--status-planned-ink); }

@@ -43,11 +43,6 @@ export function HomePage() {
               Open the map
             </Link>
           </div>
-          <p className="hero-idea">
-            Have an idea of your own?{" "}
-            <Link to="/ideas/new">Suggest a change for Hulhumalé</Link>
-            <span className="muted"> · {ideaCount} community {ideaCount === 1 ? "idea" : "ideas"} so far</span>
-          </p>
         </div>
         {heroImage && (
           <figure className="home-hero-figure">
@@ -55,6 +50,22 @@ export function HomePage() {
             <figcaption className="muted">Representative image, illustrative only</figcaption>
           </figure>
         )}
+      </section>
+
+      <section className="home-inner idea-bar-section" aria-label="Suggest a change">
+        <div className="idea-bar">
+          <div>
+            <strong>Have an idea of your own?</strong>
+            <span className="muted">
+              {" "}Suggest a change you want to see in Hulhumalé. HDC reviews every idea and can invite you to co-create it.
+              {" "}{ideaCount} community {ideaCount === 1 ? "idea" : "ideas"} so far.
+            </span>
+          </div>
+          <div className="panel-actions">
+            <Link className="btn btn-primary" to="/ideas/new">Suggest a change</Link>
+            <Link className="btn" to="/ideas">See community ideas</Link>
+          </div>
+        </div>
       </section>
 
       {featured.length > 0 && (
