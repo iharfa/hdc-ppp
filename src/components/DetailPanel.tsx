@@ -36,8 +36,6 @@ export function DetailPanel({ record, onClose }: Props) {
         <dd>
           {record.periodStart} to {record.periodEnd}
         </dd>
-        <dt>Verification mode</dt>
-        <dd>{record.verificationMode}</dd>
         <dt>Responsible section</dt>
         <dd>{record.responsibleSection}</dd>
         <dt>Place type</dt>
@@ -49,7 +47,7 @@ export function DetailPanel({ record, onClose }: Props) {
         <ul className="alias-list">
           {record.documents.map((d) => (
             <li key={d.title}>
-              📄 {d.title} <span className="muted">({d.type}, {d.sizeLabel})</span>
+              {d.title} <span className="muted">({d.type}, {d.sizeLabel})</span>
             </li>
           ))}
         </ul>

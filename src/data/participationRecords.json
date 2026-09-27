@@ -19,9 +19,6 @@
       "Estate",
       "Landscape Unit"
     ],
-    "anonymousAllowed": true,
-    "efaasRequired": false,
-    "verificationMode": "Anonymous or eFaas",
     "periodStart": "2025-09-01",
     "periodEnd": "2025-10-15",
     "summary": "Sample consultation on a proposed redesign of Central Park including new shaded seating, a children's play zone, improved lighting, and stormwater-friendly landscaping.",
@@ -204,9 +201,6 @@
       "Traffic Unit",
       "Planning"
     ],
-    "anonymousAllowed": true,
-    "efaasRequired": false,
-    "verificationMode": "Anonymous or eFaas",
     "periodStart": "2025-07-01",
     "periodEnd": "2025-08-10",
     "summary": "Sample survey on pedestrian crossing locations, speed-calming measures, and school-zone safety along Nirolhu Magu.",
@@ -382,9 +376,6 @@
       "Estate",
       "Environment Unit"
     ],
-    "anonymousAllowed": false,
-    "efaasRequired": true,
-    "verificationMode": "eFaas verified",
     "periodStart": "2025-05-01",
     "periodEnd": "2025-06-15",
     "summary": "Sample consultation on upgrading the east waterfront promenade with seating, food kiosk zones, swimming access steps, and storm-resilient edge treatment.",
@@ -534,7 +525,7 @@
         "Protect coral edge"
       ],
       "moderationSummary": "298 raw verified responses; 5 removed as duplicates. All published comments cleaned of personal data.",
-      "dataQualitySummary": "All responses eFaas-verified (POC simulation). Strong representation from Wards 2 and 3."
+      "dataQualitySummary": "Strong representation from Wards 2 and 3."
     },
     "workflowStage": "archived",
     "sampleData": true,
@@ -560,11 +551,8 @@
       "Estate",
       "Business Development"
     ],
-    "anonymousAllowed": true,
-    "efaasRequired": false,
-    "verificationMode": "Anonymous or eFaas",
-    "periodStart": "2026-05-20",
-    "periodEnd": "2026-07-05",
+    "periodStart": "2026-09-01",
+    "periodEnd": "2026-10-17",
     "summary": "Sample design feedback process for redeveloping plot 10078 into a mixed-use building with ground-floor retail, community space, and residential units above.",
     "whyParticipation": "Neighbouring residents are directly affected by massing, parking, and ground-floor uses. Feedback shapes the design brief before tendering.",
     "documents": [
@@ -586,27 +574,27 @@
     ],
     "timeline": [
       {
-        "date": "2026-04-10",
+        "date": "2026-07-23",
         "label": "Record drafted"
       },
       {
-        "date": "2026-04-22",
+        "date": "2026-08-04",
         "label": "GIS linked"
       },
       {
-        "date": "2026-05-05",
+        "date": "2026-08-17",
         "label": "Internal review completed"
       },
       {
-        "date": "2026-05-15",
+        "date": "2026-08-27",
         "label": "Approved for publication"
       },
       {
-        "date": "2026-05-20",
+        "date": "2026-09-01",
         "label": "Participation opened"
       },
       {
-        "date": "2026-07-05",
+        "date": "2026-10-17",
         "label": "Participation closes (planned)"
       }
     ],
@@ -719,11 +707,8 @@
       "Landscape Unit",
       "Infrastructure"
     ],
-    "anonymousAllowed": true,
-    "efaasRequired": false,
-    "verificationMode": "Anonymous or eFaas",
-    "periodStart": "2026-06-01",
-    "periodEnd": "2026-07-20",
+    "periodStart": "2026-09-15",
+    "periodEnd": "2026-11-03",
     "summary": "Sample survey on a proposed continuous shaded walkway and green corridor linking Phase 1 and Phase 2, with native planting and rest points.",
     "whyParticipation": "The corridor crosses several neighbourhoods and daily walking routes. Input is needed on shade priorities, rest point locations, and planting preferences.",
     "documents": [
@@ -740,27 +725,27 @@
     ],
     "timeline": [
       {
-        "date": "2026-04-28",
+        "date": "2026-08-12",
         "label": "Record drafted"
       },
       {
-        "date": "2026-05-08",
+        "date": "2026-08-22",
         "label": "GIS linked"
       },
       {
-        "date": "2026-05-18",
+        "date": "2026-09-01",
         "label": "Internal review completed"
       },
       {
-        "date": "2026-05-26",
+        "date": "2026-09-09",
         "label": "Approved for publication"
       },
       {
-        "date": "2026-06-01",
+        "date": "2026-09-15",
         "label": "Participation opened"
       },
       {
-        "date": "2026-07-20",
+        "date": "2026-11-03",
         "label": "Participation closes (planned)"
       }
     ],
@@ -869,11 +854,8 @@
       "Planning",
       "Community Development"
     ],
-    "anonymousAllowed": true,
-    "efaasRequired": false,
-    "verificationMode": "Anonymous or eFaas",
-    "periodStart": "2026-08-01",
-    "periodEnd": "2026-09-15",
+    "periodStart": "2026-11-01",
+    "periodEnd": "2026-12-16",
     "summary": "Sample planned development notice for a community facility (multi-purpose hall, library corner, youth space) at site CF-03. Public participation will open later in 2026.",
     "whyParticipation": "Facility programming should reflect what Phase 2 residents need most. A survey will run when the concept brief is ready.",
     "documents": [
@@ -890,11 +872,11 @@
     ],
     "timeline": [
       {
-        "date": "2026-05-30",
+        "date": "2026-08-30",
         "label": "Development notice published"
       },
       {
-        "date": "2026-08-01",
+        "date": "2026-11-01",
         "label": "Participation expected to open"
       }
     ],
@@ -920,11 +902,8 @@
       "Infrastructure",
       "Traffic Unit"
     ],
-    "anonymousAllowed": true,
-    "efaasRequired": false,
-    "verificationMode": "Anonymous or eFaas",
-    "periodStart": "2026-09-01",
-    "periodEnd": "2026-10-15",
+    "periodStart": "2026-12-01",
+    "periodEnd": "2027-01-14",
     "summary": "Sample planning disclosure for a surface public parking area serving the Phase 2 commercial frontage. Survey on layout and landscaping planned for later in 2026.",
     "whyParticipation": "Parking demand and pedestrian safety trade-offs affect nearby residents and businesses; input will refine the layout.",
     "documents": [
@@ -941,11 +920,11 @@
     ],
     "timeline": [
       {
-        "date": "2026-06-05",
+        "date": "2026-09-04",
         "label": "Planning disclosure published"
       },
       {
-        "date": "2026-09-01",
+        "date": "2026-12-01",
         "label": "Participation expected to open"
       }
     ],

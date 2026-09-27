@@ -87,30 +87,6 @@ export function FiltersSidebar({ filters, onChange, resultCount }: Props) {
       </div>
       <div className="filter-group filter-row">
         <label>
-          Anonymous allowed
-          <select
-            value={filters.anonymousAllowed}
-            onChange={(e) => onChange({ ...filters, anonymousAllowed: e.target.value as RecordFilters["anonymousAllowed"] })}
-          >
-            <option value="all">All</option>
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
-          </select>
-        </label>
-        <label>
-          eFaas verification required
-          <select
-            value={filters.efaasRequired}
-            onChange={(e) => onChange({ ...filters, efaasRequired: e.target.value as RecordFilters["efaasRequired"] })}
-          >
-            <option value="all">All</option>
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
-          </select>
-        </label>
-      </div>
-      <div className="filter-group filter-row">
-        <label>
           From date
           <input type="date" value={filters.dateFrom} onChange={(e) => onChange({ ...filters, dateFrom: e.target.value })} />
         </label>

@@ -32,7 +32,7 @@ const APP_ITEMS = [
 
 const MAX_FEATURES_PER_LAYER = 200000; // safety cap
 const manifest = {
-  generatedAt: new Date().toISOString(),
+  // generatedAt intentionally omitted: the commit date records when the backup ran.
   source: "Public HDC ArcGIS Online items and services. Backup for redundancy.",
   items: [],
   services: [],
@@ -57,10 +57,20 @@ async function getJson(url, attempt = 1) {
   }
 }
 
+// Portal counters change on every read; drop them so unchanged data produces no diff.
+const VOLATILE = new Set(["numViews", "numComments", "numRatings", "avgRating", "scoreCompleteness", "lastViewed"]);
+function stable(v) {
+  if (Array.isArray(v)) return v.map(stable);
+  if (v && typeof v === "object") {
+    return Object.fromEntries(Object.keys(v).filter((k) => !VOLATILE.has(k)).sort().map((k) => [k, stable(v[k])]));
+  }
+  return v;
+}
+
 function save(relPath, data) {
   const full = join(OUT, relPath);
   mkdirSync(dirname(full), { recursive: true });
-  writeFileSync(full, typeof data === "string" ? data : JSON.stringify(data, null, 1));
+  writeFileSync(full, typeof data === "string" ? data : JSON.stringify(stable(data), null, 1));
   return relPath;
 }
 

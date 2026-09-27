@@ -21,8 +21,6 @@ export const emptyFilters: RecordFilters = {
   types: [],
   islandPhase: "all",
   department: "all",
-  anonymousAllowed: "all",
-  efaasRequired: "all",
   dateFrom: "",
   dateTo: "",
 };
@@ -33,8 +31,6 @@ export function applyFilters(records: ParticipationRecord[], f: RecordFilters): 
     if (f.types.length && !f.types.includes(r.participationType)) return false;
     if (f.islandPhase !== "all" && r.islandPhase !== f.islandPhase) return false;
     if (f.department !== "all" && r.department !== f.department) return false;
-    if (f.anonymousAllowed !== "all" && r.anonymousAllowed !== (f.anonymousAllowed === "yes")) return false;
-    if (f.efaasRequired !== "all" && r.efaasRequired !== (f.efaasRequired === "yes")) return false;
     if (f.dateFrom && r.periodEnd < f.dateFrom) return false;
     if (f.dateTo && r.periodStart > f.dateTo) return false;
     return true;

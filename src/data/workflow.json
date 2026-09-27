@@ -32,7 +32,7 @@
     "order": 5,
     "name": "Active",
     "actor": "Public",
-    "description": "The record appears publicly on the map and list. The public submits responses. Survey mode is either anonymous or eFaas verified."
+    "description": "The record appears publicly on the map and list. The public submits responses."
   },
   {
     "stepId": "closed",

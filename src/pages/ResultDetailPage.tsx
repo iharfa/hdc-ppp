@@ -42,7 +42,6 @@ export function ResultDetailPage() {
 
   const comments = getCommentsForRecord(record.recordId);
   const moderation = getModerationForRecord(record.recordId);
-  const verified = responses.filter((r) => r.verification === "efaas-verified").length;
 
   const yesNo = countBy(responses.filter((r) => r.answers["q-support"]), (r) => r.answers["q-support"]);
   const mcQuestion = record.surveyQuestions.find((q) => q.type === "multiplechoice");
@@ -57,7 +56,7 @@ export function ResultDetailPage() {
       <StatusBadge status={record.status} /> <span className="muted">Sample POC data — not a real HDC decision</span>
       <h1>Results: {record.title}</h1>
 
-      <div className="card decision-card" style={{ borderLeft: "4px solid var(--hdc-blue)" }}>
+      <div className="card decision-card">
         <DecisionStatusCard status={record.decision.decisionStatus} decidedOn={record.decision.decidedOn} />
         <h2 style={{ marginTop: 0 }}>Official decision / conclusion</h2>
         <p>{record.decision.conclusion}</p>
@@ -70,12 +69,12 @@ export function ResultDetailPage() {
           <div className="stat-label">Total responses (cleaned)</div>
         </div>
         <div className="card stat-card" style={{ marginTop: 0 }}>
-          <div className="stat-value">{verified}</div>
-          <div className="stat-label">Verified responses</div>
+          <div className="stat-value">{comments.length}</div>
+          <div className="stat-label">Published comments</div>
         </div>
         <div className="card stat-card" style={{ marginTop: 0 }}>
-          <div className="stat-value">{responses.length - verified}</div>
-          <div className="stat-label">Anonymous responses</div>
+          <div className="stat-value">{responses.filter((r) => r.answers["q-comment"]).length}</div>
+          <div className="stat-label">Open-ended answers</div>
         </div>
         <div className="card stat-card" style={{ marginTop: 0 }}>
           <div className="stat-value">{moderation.length}</div>

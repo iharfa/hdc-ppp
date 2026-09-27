@@ -14,7 +14,7 @@ export function DownloadPlaceholder() {
             className="btn"
             onClick={() => setMsg(`${label}: placeholder only. Approved cleaned datasets will be exportable in the backend phase.`)}
           >
-            ⬇ {label}
+            {label}
           </button>
         ))}
       </div>

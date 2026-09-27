@@ -24,7 +24,7 @@
     {
       "roleId": "public-respondent",
       "name": "Public respondent",
-      "description": "A member of the public submitting a response (anonymous or eFaas verified).",
+      "description": "A member of the public submitting a response.",
       "permissions": ["view-public", "respond"]
     },
     {

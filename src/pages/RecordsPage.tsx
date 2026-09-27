@@ -9,13 +9,12 @@ export function RecordsPage() {
   const { filters, setFilters, filtered } = useRecordFilters(records);
   return (
     <div className="page">
-      <span className="eyebrow">Participate</span>
       <h1>Participation Records</h1>
       <p className="muted">
         Understand, engage with, and contribute to the urban planning projects shaping Hulhumalé — across the full
         planning cycle, from early ideas to implementation and upgrades. Sample POC data.
       </p>
-      <div style={{ border: "1px solid var(--grey-300)", borderRadius: 8, marginBottom: "1rem" }}>
+      <div className="filters-inline">
         <FiltersSidebar filters={filters} onChange={setFilters} resultCount={filtered.length} />
       </div>
       {filtered.length === 0 ? (
@@ -42,15 +41,15 @@ export function RecordsPage() {
                 <span>
                   <StatusBadge status={r.status} />
                 </span>
-                <h2 style={{ margin: "0.4rem 0 0.2rem", fontSize: "1.05rem" }}>
-                  <Link to={`/records/${r.recordId}`} style={{ color: "var(--hdc-blue)" }}>
+                <h2 className="rc-title">
+                  <Link to={`/records/${r.recordId}`}>
                     {r.title}
                   </Link>
                 </h2>
-                <p className="muted" style={{ margin: "0.2rem 0" }}>
+                <p className="muted rc-meta">
                   {r.participationType} · {r.locationName} · {r.periodStart} to {r.periodEnd}
                 </p>
-                <p style={{ fontSize: "0.88rem", margin: "0.4rem 0" }}>{r.summary}</p>
+                <p className="rc-summary">{r.summary}</p>
                 {r.status === "Completed" && r.decision && (
                   <div className="rc-result">
                     <div className="rc-result-head">

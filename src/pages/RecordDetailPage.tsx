@@ -35,12 +35,12 @@ export function RecordDetailPage() {
               <img
                 src={record.image}
                 alt={`Concept illustration for ${record.title}`}
-                style={{ width: "100%", borderRadius: 6, display: "block" }}
+                className="rd-image"
                 onError={(e) => {
                   (e.currentTarget as HTMLImageElement).style.display = "none";
                 }}
               />
-              <p className="muted" style={{ fontSize: "0.7rem", margin: "0.2rem 0 0.6rem" }}>
+              <p className="rc-image-caption">
                 Representative image — illustrative only, not an approved design
               </p>
             </>
@@ -49,13 +49,11 @@ export function RecordDetailPage() {
           <p>{record.summary}</p>
           <h2>Why public participation is needed</h2>
           <p>{record.whyParticipation}</p>
-          <dl className="detail-panel" style={{ border: "none", padding: 0 }}>
+          <dl className="meta-list">
             <dt>Location</dt>
             <dd>{record.locationName}</dd>
             <dt>Participation period</dt>
             <dd>{record.periodStart} to {record.periodEnd}</dd>
-            <dt>Verification mode</dt>
-            <dd>{record.verificationMode}</dd>
             {showMoreMeta && (
               <>
                 <dt>Canonical place ID</dt>
@@ -81,7 +79,7 @@ export function RecordDetailPage() {
             aria-expanded={showMoreMeta}
             onClick={() => setShowMoreMeta((v) => !v)}
           >
-            {showMoreMeta ? "View less ▲" : "View more details ▼"}
+            {showMoreMeta ? "View less" : "View more details"}
           </button>
           <div className="panel-actions">
             {record.status === "Ongoing" && (
@@ -99,7 +97,7 @@ export function RecordDetailPage() {
             </button>
           </div>
           {showPreview && place && (
-            <div style={{ height: 320, marginTop: "0.8rem", border: "1px solid var(--grey-300)", borderRadius: 8, overflow: "hidden" }}>
+            <div className="location-preview">
               <MapFallback
                 message="Schematic location preview (POC)."
                 records={[record]}
@@ -159,7 +157,7 @@ export function RecordDetailPage() {
                       className="btn btn-sm"
                       onClick={() => downloadPlaceholderDoc(d.title, record.title)}
                     >
-                      ⬇ Download
+                      Download
                     </button>
                   </li>
                 ))}

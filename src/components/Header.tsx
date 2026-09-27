@@ -29,9 +29,9 @@ export function Header() {
           ))}
         </nav>
       </header>
-      <div className="poc-banner" role="note">
-        Proof of Concept. Sample participation data only.
-      </div>
+      <p className="poc-banner" role="note">
+        Proof of concept. Sample participation data only.
+      </p>
     </>
   );
 }

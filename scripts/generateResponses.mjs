@@ -152,6 +152,8 @@ function isoDateBetween(start, end, t) {
   return new Date(s + (e - s) * t).toISOString().slice(0, 10);
 }
 
+// Ongoing records only have responses up to the generation date.
+const TODAY = new Date().toISOString().slice(0, 10);
 const responses = [];
 const comments = [];
 
@@ -163,7 +165,6 @@ for (const rec of records) {
   const bank = commentBank[rec.recordId] ?? [];
   const num = rec.recordId.slice(-3);
   for (let i = 0; i < n; i++) {
-    const verified = rec.efaasRequired ? true : rand() < 0.35;
     const answers = {};
     if (yn) answers[yn.id] = rand() < supportBias[rec.recordId] ? "Yes" : "No";
     if (mc && mc.options) answers[mc.id] = pick(mc.options);
@@ -173,8 +174,7 @@ for (const rec of records) {
     responses.push({
       responseId: `SAMPLE-R-${num}-${String(i + 1).padStart(4, "0")}`,
       recordId: rec.recordId,
-      submittedAt: isoDateBetween(rec.periodStart, rec.periodEnd, rand()),
-      verification: verified ? "efaas-verified" : "anonymous",
+      submittedAt: isoDateBetween(rec.periodStart, rec.status === "Ongoing" ? TODAY : rec.periodEnd, rand()),
       demographics: {
         ageGroup: pick(ages, ageW),
         gender: pick(genders, genderW),
@@ -191,7 +191,7 @@ for (const rec of records) {
       recordId: rec.recordId,
       text,
       ward: pick(wards, wardW),
-      submittedAt: isoDateBetween(rec.periodStart, rec.periodEnd, rand()),
+      submittedAt: isoDateBetween(rec.periodStart, rec.status === "Ongoing" ? TODAY : rec.periodEnd, rand()),
       cleaned: true
     });
   });

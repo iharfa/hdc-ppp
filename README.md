@@ -26,7 +26,7 @@ Regenerate deterministically with `npm run generate:responses`.
 ## Stack
 
 React + Vite + TypeScript, ArcGIS Maps SDK for JavaScript (`@arcgis/core`), Apache ECharts, plain CSS,
-local JSON data, localStorage for mock submissions and admin edits. No backend, no login, no environment variables.
+local JSON data, localStorage for mock submissions and admin edits (moderation decisions and manual GIS re-links are honoured across the app). No backend, no login, no environment variables.
 
 ## ArcGIS integration approach
 
@@ -37,17 +37,14 @@ The two supplied public HDC URLs are **Web AppBuilder application pages**, not l
 
 `src/services/arcgis.ts`:
 
-1. Extracts the item IDs from the URLs.
-2. Calls the public ArcGIS sharing REST endpoint
-   (`https://hulhumale.maps.arcgis.com/sharing/rest/content/items/<id>/data?f=json`) to read each app's
-   configuration — anonymously, public metadata only, no scraping of private data.
-3. Detects the underlying web map / web scene item ID from the app config (`map.itemId` / `values.webmap`).
-4. Loads the detected web map in the main 2D `MapView`; a **3D View** button loads the detected web scene in a
-   `SceneView`.
+1. Pins the public web map (`46865dadd00d48f0b23f87e9b49085b1`, "DRONE IMAGERY") and web scene
+   (`404e2256a01c44669287ac440ca258cd`, "Land Use Plan Scene") that sit behind those apps. They were resolved once
+   from the public sharing REST API; `scripts/gisBackup.mjs` re-verifies them.
+2. Loads the web map in the main 2D `MapView`; the **3D View** button loads the web scene in a `SceneView`.
 
 ### Fallback map approach
 
-If detection or loading fails (item private, network error, CORS), the app falls back to a streets/satellite basemap
+If loading fails (item private, network error, CORS), the app falls back to a streets/satellite basemap
 centered on Hulhumalé. Local sample geometries (polygons, lines, points from `src/data/places.json`) are **always**
 drawn as a graphics overlay, so the portal works fully offline from ArcGIS Online. A status note on the map explains
 what was loaded or why fallback was used. If the ArcGIS SDK itself cannot start (e.g. no WebGL), a pure-SVG schematic
@@ -63,12 +60,6 @@ source system, source ID, confidence score, and match status (`confirmed` / `amb
 Participation records reference places only by canonical ID. The Admin Preview → **ID harmonization** screen shows the
 alias table, flags ambiguous/unresolved matches, and lets a steward manually link records to places (saved to
 localStorage in the POC).
-
-## eFaas placeholder
-
-Real eFaas is **not** integrated. The survey flow includes a mock verification modal showing the intended journey:
-*Continue with eFaas → redirect placeholder → verified identity returned → submit response*, clearly labelled
-"POC only. Real eFaas integration pending." No identity data is collected.
 
 ## HDC logo
 
@@ -96,7 +87,7 @@ alongside cleaned public datasets, with a full moderation audit trail.
 - Store consultation and participation responses in a secure database (replace localStorage).
 - Separate raw datasets from cleaned public datasets; expose only approved cleaned datasets publicly.
 - Preserve moderation audit trails (who removed what, when, why).
-- Real eFaas identity verification where required.
+- Identity verification (e.g. eFaas) if a future phase requires it; the POC is anonymous-only.
 - Server-side role-based access control matching the role matrix in the Admin Preview.
 - Real document storage/downloads and dataset exports (PDF summary, cleaned CSV, response matrix).
 - Canonical place IDs as the bridge between Estate, Planning, GIS, and project systems, with a managed

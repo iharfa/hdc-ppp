@@ -3,95 +3,28 @@
 // The two supplied HDC URLs are Web AppBuilder application pages, not layer URLs:
 //   2D app item: 21610169068e4dacaa51886ff9d4c300
 //   3D app item: ed90beef77b643a58570072cc9a14830
-// We query the public ArcGIS sharing REST API (f=json, no login) for each app
-// item's /data to detect the underlying web map / web scene item ID, then load
-// that with the ArcGIS Maps SDK. Any failure falls back to a basemap centered
-// on Hulhumalé with local sample geometries overlaid. No private data is read.
+// The public web map / web scene behind them were resolved once via the
+// sharing REST API and are pinned below (see backup/gis/items for the raw
+// item JSON). Any load failure falls back to a basemap centered on Hulhumale
+// with local sample geometries overlaid. No private data is read.
 import type { Geometry, ParticipationRecord, ParticipationStatus } from "../types";
-import { getPlace } from "./dataService";
+import { effectivePlaceId, getPlace } from "./dataService";
 
 export const APP_ITEM_2D = "21610169068e4dacaa51886ff9d4c300";
 export const APP_ITEM_3D = "ed90beef77b643a58570072cc9a14830";
-// Public AGOL items are reachable through www.arcgis.com regardless of the
-// owning org's subdomain — and some networks block org subdomains.
-const PORTAL_SHARING = "https://www.arcgis.com/sharing/rest";
-
-// Public map/scene item IDs behind the two HDC apps, verified via the sharing
-// REST API. Live detection (detectHdcSources) refreshes these at runtime; if
-// that fetch fails (offline, CORS, transient), we still load by these IDs.
-const KNOWN_WEBMAP_ID = "46865dadd00d48f0b23f87e9b49085b1";
-const KNOWN_WEBSCENE_ID = "404e2256a01c44669287ac440ca258cd"; // "Land Use Plan Scene"
+// Public map/scene item IDs behind the two HDC apps ("DRONE IMAGERY" web map,
+// "Land Use Plan Scene" web scene). Re-run scripts/gisBackup.mjs to re-verify.
+export const WEBMAP_ID = "46865dadd00d48f0b23f87e9b49085b1";
+export const WEBSCENE_ID = "404e2256a01c44669287ac440ca258cd";
 
 export const HULHUMALE_CENTER: [number, number] = [73.5425, 4.219];
-
-export interface DetectedSource {
-  webmapId: string | null;
-  websceneId: string | null;
-  message: string;
-}
-
-async function fetchJson(url: string, timeoutMs = 8000): Promise<Record<string, unknown>> {
-  const ctrl = new AbortController();
-  const timer = setTimeout(() => ctrl.abort(), timeoutMs);
-  try {
-    const res = await fetch(url, { signal: ctrl.signal });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const json = (await res.json()) as Record<string, unknown>;
-    if (json.error) throw new Error("Portal item is not publicly accessible");
-    return json;
-  } finally {
-    clearTimeout(timer);
-  }
-}
-
-/** Extract the map/scene item ID from a Web AppBuilder app config. */
-function extractMapItemId(appData: Record<string, unknown>): string | null {
-  const map = appData.map as Record<string, unknown> | undefined;
-  if (map && typeof map.itemId === "string") return map.itemId;
-  const values = appData.values as Record<string, unknown> | undefined;
-  if (values && typeof values.webmap === "string") return values.webmap;
-  if (typeof appData.webmap === "string") return appData.webmap;
-  return null;
-}
-
-/** Detect the public web map and web scene behind the two HDC app items. */
-export async function detectHdcSources(): Promise<DetectedSource> {
-  const result: DetectedSource = { webmapId: null, websceneId: null, message: "" };
-  const notes: string[] = [];
-  try {
-    const data = await fetchJson(`${PORTAL_SHARING}/content/items/${APP_ITEM_2D}/data?f=json`);
-    result.webmapId = extractMapItemId(data);
-    notes.push(result.webmapId ? `Detected public web map ${result.webmapId}.` : "2D app config did not expose a web map ID.");
-  } catch (e) {
-    notes.push(`Could not read 2D app config (${(e as Error).message}).`);
-  }
-  try {
-    const data = await fetchJson(`${PORTAL_SHARING}/content/items/${APP_ITEM_3D}/data?f=json`);
-    result.websceneId = extractMapItemId(data);
-    notes.push(result.websceneId ? `Detected public web scene ${result.websceneId}.` : "3D app config did not expose a web scene ID.");
-  } catch (e) {
-    notes.push(`Could not read 3D app config (${(e as Error).message}).`);
-  }
-  // Detection failed (transient network/CORS)? Fall back to the verified IDs
-  // so the public HDC maps still load via the SDK's own request stack.
-  if (!result.webmapId) {
-    result.webmapId = KNOWN_WEBMAP_ID;
-    notes.push("Using known public web map ID.");
-  }
-  if (!result.websceneId) {
-    result.websceneId = KNOWN_WEBSCENE_ID;
-    notes.push("Using known public web scene ID.");
-  }
-  result.message = notes.join(" ");
-  return result;
-}
 
 // ---- Map view creation ----------------------------------------------------
 
 export interface MapHandle {
   destroy(): void;
+  setRecords(records: ParticipationRecord[]): void;
   selectRecord(recordId: string | null): void;
-  goTo3D(): Promise<string | null>; // returns error message or null
   usedFallback: boolean;
   statusMessage: string;
 }
@@ -140,10 +73,24 @@ function pinSymbol(record: ParticipationRecord, selected: boolean) {
   };
 }
 
+type GraphicCtor = typeof import("@arcgis/core/Graphic").default;
+
+function pinGraphic(Graphic: GraphicCtor, rec: ParticipationRecord, selected: boolean) {
+  const place = getPlace(effectivePlaceId(rec));
+  if (!place) return null;
+  const [lon, lat] = centroidOf(place.geometry);
+  return new Graphic({
+    geometry: { type: "point", longitude: lon, latitude: lat } as unknown as __esri.GeometryUnion,
+    symbol: pinSymbol(rec, selected) as unknown as __esri.SymbolUnion,
+    attributes: { recordId: rec.recordId, title: rec.title, status: rec.status },
+  });
+}
+
 /**
- * Create the main 2D map. Tries the detected HDC web map first; on any failure
- * falls back to a streets/satellite basemap centered on Hulhumalé. Sample
- * participation geometries are always drawn as a local graphics overlay.
+ * Create the main 2D map once. Tries the public HDC web map first; on any
+ * failure falls back to a streets basemap centered on Hulhumale. Sample
+ * participation pins live in a graphics overlay that setRecords() swaps
+ * without rebuilding the view.
  */
 export async function createMapView(
   container: HTMLDivElement,
@@ -162,49 +109,35 @@ export async function createMapView(
   let usedFallback = false;
   let statusMessage = "";
   let map: InstanceType<typeof Map>;
-
-  let detected: DetectedSource = { webmapId: KNOWN_WEBMAP_ID, websceneId: KNOWN_WEBSCENE_ID, message: "" };
   try {
-    detected = await detectHdcSources();
-  } catch {
-    /* detection failed - keep known public item IDs */
-  }
-
-  if (detected.webmapId) {
-    try {
-      const webmap = new WebMap({ portalItem: { id: detected.webmapId } });
-      await webmap.load();
-      map = webmap;
-      statusMessage = `Loaded public HDC web map (${detected.webmapId}).`;
-    } catch (e) {
-      usedFallback = true;
-      map = new Map({ basemap: "streets-vector" });
-      statusMessage = `HDC web map could not be loaded publicly (${(e as Error).message}). Showing fallback basemap with sample overlays.`;
-    }
-  } else {
+    const webmap = new WebMap({ portalItem: { id: WEBMAP_ID } });
+    await webmap.load();
+    map = webmap;
+    statusMessage = "Showing the public HDC web map.";
+  } catch (e) {
     usedFallback = true;
     map = new Map({ basemap: "streets-vector" });
-    statusMessage = detected.message
-      ? `${detected.message} Showing fallback basemap with sample overlays.`
-      : "HDC web map unavailable. Showing fallback basemap with sample overlays.";
+    statusMessage = `HDC web map could not be loaded (${(e as Error).message}). Showing fallback basemap.`;
   }
 
   const overlay = new GraphicsLayer({ title: "Sample participation areas (POC)" });
   map.add(overlay);
 
+  let records = participationRecords;
+  let selectedId: string | null = null;
   const graphicsByRecord = new globalThis.Map<string, InstanceType<typeof Graphic>>();
-  for (const rec of participationRecords) {
-    const place = getPlace(rec.canonicalPlaceId);
-    if (!place) continue;
-    const [lon, lat] = centroidOf(place.geometry);
-    const graphic = new Graphic({
-      geometry: { type: "point", longitude: lon, latitude: lat } as unknown as __esri.GeometryUnion,
-      symbol: pinSymbol(rec, false) as unknown as __esri.SymbolUnion,
-      attributes: { recordId: rec.recordId, title: rec.title, status: rec.status },
-    });
-    overlay.add(graphic);
-    graphicsByRecord.set(rec.recordId, graphic);
+
+  function redraw() {
+    overlay.removeAll();
+    graphicsByRecord.clear();
+    for (const rec of records) {
+      const g = pinGraphic(Graphic, rec, rec.recordId === selectedId);
+      if (!g) continue;
+      overlay.add(g);
+      graphicsByRecord.set(rec.recordId, g);
+    }
   }
+  redraw();
 
   const view = new MapView({
     container,
@@ -219,14 +152,6 @@ export async function createMapView(
     await view.when();
   } catch (e) {
     statusMessage += ` Map view error: ${(e as Error).message}`;
-  }
-
-  let selectedId: string | null = null;
-  function applySymbols() {
-    for (const rec of participationRecords) {
-      const g = graphicsByRecord.get(rec.recordId);
-      if (g) g.symbol = pinSymbol(rec, rec.recordId === selectedId) as unknown as __esri.SymbolUnion;
-    }
   }
 
   const clickHandle = view.on("click", async (event) => {
@@ -271,23 +196,23 @@ export async function createMapView(
       moveHandle.remove();
       view.destroy();
     },
-    selectRecord(recordId: string | null) {
-      selectedId = recordId;
-      applySymbols();
-      if (recordId) {
-        const g = graphicsByRecord.get(recordId);
-        if (g?.geometry) {
-          view.goTo({ target: g.geometry, zoom: 17 }, { duration: 600 }).catch(() => {});
-        }
-      }
+    setRecords(next) {
+      records = next;
+      redraw();
     },
-    async goTo3D() {
-      return detected.websceneId ? null : "No public web scene detected for the 3D app.";
+    selectRecord(recordId) {
+      selectedId = recordId;
+      for (const rec of records) {
+        const g = graphicsByRecord.get(rec.recordId);
+        if (g) g.symbol = pinSymbol(rec, rec.recordId === selectedId) as unknown as __esri.SymbolUnion;
+      }
+      const g = recordId ? graphicsByRecord.get(recordId) : undefined;
+      if (g?.geometry) view.goTo({ target: g.geometry, zoom: 17 }, { duration: 600 }).catch(() => {});
     },
   };
 }
 
-/** Create a 3D scene view from the detected web scene, with fallback. */
+/** Create a 3D scene view from the public web scene, with fallback. */
 export async function createSceneView(
   container: HTMLDivElement,
   participationRecords: ParticipationRecord[] = [],
@@ -304,41 +229,22 @@ export async function createSceneView(
   let message = "";
   let mapOrScene: InstanceType<typeof Map>;
   let sceneLoaded = false;
-  const detected = await detectHdcSources().catch(() => ({
-    webmapId: KNOWN_WEBMAP_ID,
-    websceneId: KNOWN_WEBSCENE_ID,
-    message: "detection failed; using known public item IDs",
-  }));
-
-  if (detected.websceneId) {
-    try {
-      const scene = new WebScene({ portalItem: { id: detected.websceneId } });
-      await scene.load();
-      mapOrScene = scene;
-      sceneLoaded = true;
-      message = `Loaded public HDC web scene (${detected.websceneId}). Click a lot for parcel details.`;
-    } catch (e) {
-      mapOrScene = new Map({ basemap: "satellite", ground: "world-elevation" });
-      message = `HDC web scene could not be loaded publicly (${(e as Error).message}). Showing fallback 3D satellite view.`;
-    }
-  } else {
+  try {
+    const scene = new WebScene({ portalItem: { id: WEBSCENE_ID } });
+    await scene.load();
+    mapOrScene = scene;
+    sceneLoaded = true;
+    message = "Showing the public HDC Land Use Plan scene. Click a lot for parcel details.";
+  } catch (e) {
     mapOrScene = new Map({ basemap: "satellite", ground: "world-elevation" });
-    message = "No public web scene detected. Showing fallback 3D satellite view of Hulhumalé.";
+    message = `HDC web scene could not be loaded (${(e as Error).message}). Showing fallback 3D satellite view.`;
   }
 
   // Same participation pins as the 2D map, draped onto the scene.
   const overlay = new GraphicsLayer({ title: "Sample participation areas (POC)", elevationInfo: { mode: "relative-to-ground", offset: 5 } });
   for (const rec of participationRecords) {
-    const place = getPlace(rec.canonicalPlaceId);
-    if (!place) continue;
-    const [lon, lat] = centroidOf(place.geometry);
-    overlay.add(
-      new Graphic({
-        geometry: { type: "point", longitude: lon, latitude: lat } as unknown as __esri.GeometryUnion,
-        symbol: pinSymbol(rec, false) as unknown as __esri.SymbolUnion,
-        attributes: { recordId: rec.recordId, title: rec.title, status: rec.status },
-      }),
-    );
+    const g = pinGraphic(Graphic, rec, false);
+    if (g) overlay.add(g);
   }
   mapOrScene.add(overlay);
 
@@ -362,14 +268,7 @@ export async function createSceneView(
   if (view.popup) view.popup.defaultPopupTemplateEnabled = true;
   await view.when().catch(() => {});
   if (sceneLoaded) {
-    // Fly to Hulhumalé so the relevant lots are in view regardless of the
-    // scene's saved island-wide viewpoint.
-    view
-      .goTo(
-        { center: HULHUMALE_CENTER, zoom: 16, tilt: 55 },
-        { duration: 1200 },
-      )
-      .catch(() => {});
+    view.goTo({ center: HULHUMALE_CENTER, zoom: 16, tilt: 55 }, { duration: 1200 }).catch(() => {});
   }
   return { destroy: () => view.destroy(), message };
 }

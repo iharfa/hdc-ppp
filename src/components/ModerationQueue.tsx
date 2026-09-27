@@ -1,23 +1,16 @@
 import { useState } from "react";
-import { moderationItems, getRecord } from "../services/dataService";
-import { getModerationOverrides, saveModerationOverride } from "../services/storage";
+import { getEffectiveModeration, getRecord } from "../services/dataService";
+import { saveModerationOverride } from "../services/storage";
 import type { ModerationItem } from "../types";
 
 export function ModerationQueue() {
-  const [overrides, setOverrides] = useState(getModerationOverrides());
-
-  function effective(item: ModerationItem): ModerationItem {
-    const o = overrides.find((x) => x.itemId === item.itemId);
-    return o ? { ...item, status: o.status, moderatorNote: o.moderatorNote ?? item.moderatorNote } : item;
-  }
+  const [items, setItems] = useState(getEffectiveModeration());
 
   function decide(item: ModerationItem, status: "removed" | "kept") {
     const note = status === "removed" ? "Removed in POC admin preview." : "Kept after review in POC admin preview.";
     saveModerationOverride({ itemId: item.itemId, status, moderatorNote: note });
-    setOverrides(getModerationOverrides());
+    setItems(getEffectiveModeration());
   }
-
-  const items = moderationItems.map(effective);
   const pending = items.filter((i) => i.status === "pending").length;
 
   return (

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { records, getRecord } from "../services/dataService";
+import { records } from "../services/dataService";
 import { useRecordFilters } from "../hooks/useRecordFilters";
 import { MapView } from "../components/MapView";
 import { FiltersSidebar } from "../components/FiltersSidebar";
@@ -9,7 +9,7 @@ import { DetailPanel } from "../components/DetailPanel";
 export function MapPage() {
   const { filters, setFilters, filtered } = useRecordFilters(records);
   const [selectedId, setSelectedId] = useState<string | null>(null);
-  const selected = selectedId ? getRecord(selectedId) : undefined;
+  const selected = filtered.find((r) => r.recordId === selectedId); // filtered out = deselected
 
   return (
     <div className="map-page">

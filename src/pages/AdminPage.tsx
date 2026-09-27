@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { records, roles, places, moderationItems } from "../services/dataService";
+import { records, roles, places, getEffectiveModeration, effectivePlaceId } from "../services/dataService";
 import { getAdminDrafts, saveAdminDraft } from "../services/storage";
 import { Logo } from "../components/Logo";
 import { StatusBadge } from "../components/StatusBadge";
@@ -43,6 +43,13 @@ export function AdminPage() {
   const [draftForm, setDraftForm] = useState({ title: "", participationType: "Public consultation", summary: "", locationName: "" });
   const [savedMsg, setSavedMsg] = useState("");
   const allowedTabs = ROLE_TABS[roleId] ?? [];
+  const moderationItems = getEffectiveModeration();
+
+  function changeRole(id: string) {
+    setRoleId(id);
+    const allowed = ROLE_TABS[id] ?? [];
+    if (!allowed.includes(tab)) setTab(allowed[0] ?? "Participation registry");
+  }
   const role = roles.find((r) => r.roleId === roleId);
 
   function saveDraft() {
@@ -68,7 +75,7 @@ export function AdminPage() {
         <label htmlFor="role-select">
           <strong>Preview as role:</strong>
         </label>
-        <select id="role-select" value={roleId} onChange={(e) => setRoleId(e.target.value)}>
+        <select id="role-select" value={roleId} onChange={(e) => changeRole(e.target.value)}>
           {roles.map((r) => (
             <option key={r.roleId} value={r.roleId}>
               {r.name}
@@ -191,12 +198,14 @@ export function AdminPage() {
               </thead>
               <tbody>
                 {records.map((r) => {
-                  const place = places.find((p) => p.canonicalPlaceId === r.canonicalPlaceId);
+                  const placeId = effectivePlaceId(r);
+                  const place = places.find((p) => p.canonicalPlaceId === placeId);
                   return (
                     <tr key={r.recordId}>
                       <td>{r.title}</td>
                       <td>
-                        <span className="alias-tag">{r.canonicalPlaceId}</span> {place?.displayName}
+                        <span className="alias-tag">{placeId}</span> {place?.displayName}
+                        {placeId !== r.canonicalPlaceId && <span className="muted"> (manually re-linked)</span>}
                       </td>
                       <td>{place?.aliases.length ?? 0}</td>
                     </tr>

@@ -17,7 +17,7 @@ import type {
   SurveyResponse,
   WorkflowStep,
 } from "../types";
-import { getLocalSubmissions } from "./storage";
+import { getHarmonizationLinks, getLocalSubmissions, getModerationOverrides } from "./storage";
 
 export const records = recordsJson as unknown as ParticipationRecord[];
 export const places = placesJson as unknown as CanonicalPlace[];
@@ -45,8 +45,22 @@ export function getCommentsForRecord(recordId: string): PublicComment[] {
   return cleanedComments.filter((c) => c.recordId === recordId);
 }
 
+/** Moderation items with any localStorage decisions from the admin queue applied. */
+export function getEffectiveModeration(): ModerationItem[] {
+  const overrides = getModerationOverrides();
+  return moderationItems.map((item) => {
+    const o = overrides.find((x) => x.itemId === item.itemId);
+    return o ? { ...item, status: o.status, moderatorNote: o.moderatorNote ?? item.moderatorNote } : item;
+  });
+}
+
 export function getModerationForRecord(recordId: string): ModerationItem[] {
-  return moderationItems.filter((m) => m.recordId === recordId);
+  return getEffectiveModeration().filter((m) => m.recordId === recordId);
+}
+
+/** Canonical place ID for a record, honouring manual re-links saved from the ID harmonization screen. */
+export function effectivePlaceId(record: ParticipationRecord): string {
+  return getHarmonizationLinks().find((l) => l.recordId === record.recordId)?.canonicalPlaceId ?? record.canonicalPlaceId;
 }
 
 export function countBy<T>(items: T[], key: (item: T) => string): { name: string; value: number }[] {

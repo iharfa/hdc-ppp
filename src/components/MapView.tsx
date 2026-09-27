@@ -22,6 +22,8 @@ export function MapView({ records, selectedId, onSelect }: Props) {
   const handleRef = useRef<MapHandle | null>(null);
   const onSelectRef = useRef(onSelect);
   onSelectRef.current = onSelect;
+  const recordsRef = useRef(records);
+  recordsRef.current = records;
 
   const [loading, setLoading] = useState(true);
   const [fatalError, setFatalError] = useState<string | null>(null);
@@ -30,7 +32,7 @@ export function MapView({ records, selectedId, onSelect }: Props) {
   const [mode, setMode] = useState<"2d" | "3d">("2d");
   const [sceneMsg, setSceneMsg] = useState("");
 
-  // (Re)create the view whenever the record set or mode changes.
+  // Create the view once per mode. Filter changes only swap the pins.
   useEffect(() => {
     let cancelled = false;
     let destroy: (() => void) | null = null;
@@ -45,7 +47,7 @@ export function MapView({ records, selectedId, onSelect }: Props) {
     container.appendChild(div);
 
     if (mode === "2d") {
-      createMapView(div, records, {
+      createMapView(div, recordsRef.current, {
         onFeatureClick: (id) => onSelectRef.current(id),
         onHover: (info) => setHover(info),
       })
@@ -56,6 +58,7 @@ export function MapView({ records, selectedId, onSelect }: Props) {
           }
           handleRef.current = handle;
           destroy = () => handle.destroy();
+          handle.setRecords(recordsRef.current); // filters may have changed while loading
           setStatusMsg(handle.statusMessage);
           setLoading(false);
         })
@@ -66,7 +69,7 @@ export function MapView({ records, selectedId, onSelect }: Props) {
           }
         });
     } else {
-      createSceneView(div, records)
+      createSceneView(div, recordsRef.current)
         .then((scene) => {
           if (cancelled) {
             scene.destroy();
@@ -90,7 +93,11 @@ export function MapView({ records, selectedId, onSelect }: Props) {
       destroy?.();
       div.remove();
     };
-  }, [records, mode]);
+  }, [mode]);
+
+  useEffect(() => {
+    handleRef.current?.setRecords(records);
+  }, [records]);
 
   useEffect(() => {
     handleRef.current?.selectRecord(selectedId);
@@ -102,17 +109,17 @@ export function MapView({ records, selectedId, onSelect }: Props) {
 
   return (
     <div className="map-container">
-      <div className="map-toolbar" style={{ position: "absolute", top: "0.75rem", right: "0.75rem", zIndex: 5, border: "1px solid var(--grey-300)", borderRadius: 8 }}>
-        <button type="button" className={`btn btn-sm ${mode === "2d" ? "btn-blue" : ""}`} onClick={() => setMode("2d")} aria-pressed={mode === "2d"}>
+      <div className="map-toolbar" role="group" aria-label="Map mode">
+        <button type="button" className={`btn btn-sm ${mode === "2d" ? "btn-primary" : ""}`} onClick={() => setMode("2d")} aria-pressed={mode === "2d"}>
           2D Map
         </button>
-        <button type="button" className={`btn btn-sm ${mode === "3d" ? "btn-blue" : ""}`} onClick={() => setMode("3d")} aria-pressed={mode === "3d"}>
+        <button type="button" className={`btn btn-sm ${mode === "3d" ? "btn-primary" : ""}`} onClick={() => setMode("3d")} aria-pressed={mode === "3d"}>
           3D View
         </button>
       </div>
-      <div ref={containerRef} style={{ height: "100%" }} />
+      <div ref={containerRef} className="map-canvas" />
       {loading && (
-        <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", background: "var(--grey-100)" }}>
+        <div className="map-loading">
           <div className="spinner" aria-label="Loading map" />
         </div>
       )}
@@ -125,7 +132,7 @@ export function MapView({ records, selectedId, onSelect }: Props) {
       )}
       {!loading && (statusMsg || sceneMsg) && (
         <div className="map-status-note" role="note">
-          {mode === "2d" ? statusMsg : sceneMsg} Sample participation overlays are POC data.
+          {mode === "2d" ? statusMsg : sceneMsg} Sample participation pins are POC data.
         </div>
       )}
     </div>

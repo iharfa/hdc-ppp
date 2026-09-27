@@ -5,9 +5,7 @@ name: GIS data backup
 # restorable copy if access to the live services is ever lost.
 
 on:
-  schedule:
-    - cron: "0 2 * * 0" # every Sunday 02:00 UTC (07:00 MVT)
-  workflow_dispatch: {} # allow manual runs from the Actions tab
+  workflow_dispatch: {} # manual runs only from the Actions tab; no schedule for now
 
 permissions:
   contents: write

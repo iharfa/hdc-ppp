@@ -18,8 +18,6 @@ export type ParticipationType =
   | "Road and mobility feedback"
   | "Public space feedback";
 
-export type VerificationMode = "Anonymous" | "eFaas verified" | "Anonymous or eFaas";
-
 export type PlaceType =
   | "plot"
   | "building"
@@ -104,7 +102,6 @@ export interface SurveyResponse {
   responseId: string;
   recordId: string;
   submittedAt: string;
-  verification: "anonymous" | "efaas-verified";
   demographics: DemographicProfile;
   answers: Record<string, string>;
   sample: true; // every generated response is labelled sample POC data
@@ -150,9 +147,6 @@ export interface ParticipationRecord {
   department: string;
   responsibleSection: string;
   relatedDepartments: string[];
-  anonymousAllowed: boolean;
-  efaasRequired: boolean;
-  verificationMode: VerificationMode;
   periodStart: string;
   periodEnd: string;
   summary: string;
@@ -220,8 +214,6 @@ export interface RecordFilters {
   types: ParticipationType[];
   islandPhase: string | "all";
   department: string | "all";
-  anonymousAllowed: "all" | "yes" | "no";
-  efaasRequired: "all" | "yes" | "no";
   dateFrom: string;
   dateTo: string;
 }

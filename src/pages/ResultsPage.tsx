@@ -1,11 +1,6 @@
 import { useMemo } from "react";
 import { Link } from "react-router-dom";
-import {
-  records,
-  sampleResponses,
-  moderationItems,
-  countBy,
-} from "../services/dataService";
+import { records, sampleResponses, getEffectiveModeration, countBy } from "../services/dataService";
 import { getLocalSubmissions } from "../services/storage";
 import { Chart, barOption, pieOption, lineOption } from "../components/Chart";
 import { StatusBadge } from "../components/StatusBadge";
@@ -16,7 +11,7 @@ export function ResultsPage() {
   const completed = records.filter((r) => r.status === "Completed");
   const ongoing = records.filter((r) => r.status === "Ongoing");
   const planned = records.filter((r) => r.status === "Planned");
-  const verified = allResponses.filter((r) => r.verification === "efaas-verified").length;
+  const moderationItems = getEffectiveModeration();
   const pendingModeration = moderationItems.filter((m) => m.status === "pending").length;
   const awaitingSpes = records.filter((r) => ["moderation", "spes-review"].includes(r.workflowStage)).length;
 
@@ -54,8 +49,6 @@ export function ResultsPage() {
     { label: "Completed records", value: completed.length },
     { label: "Planned developments", value: planned.length },
     { label: "Total responses", value: allResponses.length },
-    { label: "Verified responses", value: verified },
-    { label: "Anonymous responses", value: allResponses.length - verified },
     { label: "Average support level", value: `${avgSupport}%` },
     { label: "Items awaiting moderation", value: pendingModeration },
     { label: "Awaiting SPES decision", value: awaitingSpes },
@@ -63,7 +56,7 @@ export function ResultsPage() {
 
   return (
     <div className="page">
-      <h1>Results &amp; Dashboard</h1>
+      <h1>Results and dashboard</h1>
       <p className="muted">Aggregated view across all participation processes. Sample POC data only.</p>
 
       <div className="grid-4" style={{ marginBottom: "1rem" }}>

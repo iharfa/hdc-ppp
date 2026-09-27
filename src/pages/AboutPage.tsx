@@ -1,11 +1,8 @@
-import { Logo } from "../components/Logo";
 import { APP_ITEM_2D, APP_ITEM_3D } from "../services/arcgis";
 
 export function AboutPage() {
   return (
     <div className="page">
-      <Logo dark showName />
-      <span className="eyebrow">About the portal</span>
       <h1>About this portal</h1>
       <div className="card">
         <p className="lead">
@@ -43,7 +40,7 @@ export function AboutPage() {
       <div className="card">
         <ul>
           <li><strong>Map:</strong> browse ongoing, completed, and planned participation areas on the GIS map.</li>
-          <li><strong>Respond:</strong> answer surveys anonymously or with eFaas verification (mocked in this POC).</li>
+          <li><strong>Respond:</strong> answer surveys anonymously; responses feed moderation and results.</li>
           <li><strong>Results:</strong> after moderation and SPES review, decisions, charts, and cleaned datasets are published.</li>
           <li><strong>Admin preview:</strong> demonstrates the staff workflow from draft to archive.</li>
         </ul>
